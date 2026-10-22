@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Explore all career paths in Ghana. Find detailed information about professional, technical, business, creative, and sports careers with JOURNA.">
+    
+    <!-- Open Graph (for WhatsApp, Facebook) -->
+    <meta property="og:title" content="Career Library - JOURNA | Explore Careers in Ghana">
+    <meta property="og:description" content="Browse all career paths in Ghana. Discover professional, technical, business, creative, and sports careers with detailed information and roadmaps.">
+    <meta property="og:image" content="https://journapath.netlify.app/assets/images/career.webp">
+    <meta property="og:url" content="https://journapath.netlify.app/career-library.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Career Library - JOURNA | Explore Careers in Ghana">
+    <meta name="twitter:description" content="Browse all career paths in Ghana. Discover professional, technical, business, creative, and sports careers with JOURNA.">
+    <meta name="twitter:image" content="https://journapath.netlify.app/assets/images/career.webp">
+    <meta name="twitter:site" content="@journa_gh">
+    
+    <title>Career Library - JOURNA</title>
+    
+    <!-- Favicon / App Icon -->
+    <link rel="icon" type="image/png" href="assets/images/career.webp">
+    <link rel="apple-touch-icon" href="assets/images/career.webp">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        .library-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md);
+        }
+        
+        .library-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .library-title {
+            font-size: var(--text-2xl);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .library-subtitle {
+            color: var(--text-secondary);
+            font-size: var(--text-md);
+        }
+        
+        .public-note {
+            background: var(--gray-100);
+            border-radius: var(--radius-full);
+            padding: var(--space-xs) var(--space-md);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: var(--text-xs);
+            color: var(--text-secondary);
+            margin-top: var(--space-sm);
+        }
+        
+        .public-note i {
+            color: var(--secondary);
+        }
+        
+        /* Search Section - WITHOUT BUTTON */
+        .search-section {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: var(--space-xl);
+            border: 1px solid var(--border-color-light);
+        }
+        
+        .search-box {
+            display: flex;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: var(--space-sm) var(--space-md);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: var(--text-sm);
+            transition: border-color 0.2s;
+            width: 100%;
+        }
+        
+        .search-input:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+        
+        /* ========================================
+           FILTER CHIPS - HORIZONTAL SCROLL
+           ======================================== */
+        .filter-chips-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        
+        .filter-chips {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: var(--space-sm);
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 4px 2px 8px 2px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-light) transparent;
+        }
+        
+        .filter-chips::-webkit-scrollbar {
+            height: 4px;
+        }
+        
+        .filter-chips::-webkit-scrollbar-track {
+            background: var(--gray-100);
+            border-radius: var(--radius-full);
+        }
+        
+        .filter-chips::-webkit-scrollbar-thumb {
+            background: var(--primary-light);
+            border-radius: var(--radius-full);
+        }
+
+        .filter-chip {
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            flex-shrink: 0;
+            white-space: nowrap;
+            opacity: 0.85;
+        }
+
+        .filter-chip:hover {
+            transform: translateY(-2px);
+            opacity: 1;
+        }
+
+        .filter-chip[data-filter="all"] { background: #9CA3AF; color: white; }
+        .filter-chip[data-filter="PRO"] { background: #8B7BB5; color: white; }
+        .filter-chip[data-filter="TECH"] { background: #3EA36D; color: white; }
+        .filter-chip[data-filter="BUS"] { background: #F6B17A; color: white; }
+        .filter-chip[data-filter="CRE"] { background: #F28B6A; color: white; }
+        .filter-chip[data-filter="SPT"] { background: #44B5A6; color: white; }
+
+        .filter-chip.active {
+            opacity: 1;
+            transform: scale(1.06);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .filter-chip.active[data-filter="all"] { background: #6B7280; }
+        .filter-chip.active[data-filter="PRO"] { background: #6B5B95; }
+        .filter-chip.active[data-filter="TECH"] { background: #2E8B57; }
+        .filter-chip.active[data-filter="BUS"] { background: #F4A261; }
+        .filter-chip.active[data-filter="CRE"] { background: #E76F51; }
+        .filter-chip.active[data-filter="SPT"] { background: #2A9D8F; }
+        
+        /* Careers Grid */
+        .careers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .career-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+            cursor: pointer;
+            border: 1px solid var(--border-color-light);
+        }
+        
+        .career-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        
+        .card-header-row {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            margin-bottom: 2px;
+        }
+        
+        .career-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            flex-shrink: 0;
+        }
+        
+        .career-name {
+            font-size: var(--text-md);
+            color: var(--primary-dark);
+            margin-bottom: 0;
+            font-weight: 600;
+            flex: 1;
+        }
+        
+        .career-category {
+            display: inline-block;
+            padding: 2px 8px;
+            background: var(--gray-100);
+            border-radius: var(--radius-full);
+            font-size: var(--text-xs);
+            color: var(--text-secondary);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .career-description {
+            color: var(--text-secondary);
+            font-size: var(--text-xs);
+            line-height: 1.5;
+            margin-bottom: var(--space-sm);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .career-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: var(--space-sm);
+            padding-top: var(--space-sm);
+            border-top: 1px solid var(--border-color-light);
+        }
+        
+        .career-subjects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        
+        .subject-tag {
+            padding: 2px 6px;
+            background: var(--gray-100);
+            border-radius: var(--radius-sm);
+            font-size: var(--text-xs);
+            color: var(--text-secondary);
+        }
+        
+        .view-roadmap-btn {
+            padding: var(--space-xs) var(--space-md);
+            background: var(--primary);
+            color: white;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-size: var(--text-xs);
+            font-weight: 500;
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+        }
+        
+        .view-roadmap-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* Loading Skeleton */
+        .skeleton-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+        }
+        
+        .skeleton-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            margin-right: var(--space-xs);
+        }
+        
+        .skeleton-title {
+            height: 18px;
+            width: 60%;
+            background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: var(--radius-sm);
+        }
+        
+        .skeleton-text {
+            height: 12px;
+            width: 100%;
+            background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            margin-bottom: 4px;
+            border-radius: var(--radius-sm);
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* =========================================
+           SCROLL TO TOP BUTTON
+           ========================================= */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            font-size: 22px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .scroll-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        .scroll-top-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* =========================================
+           RESULT BAR - Scroll target
+           ========================================= */
+        .result-bar {
+            background: var(--gray-50);
+            padding: 8px 12px;
+            border-radius: var(--radius-md);
+            margin-bottom: var(--space-md);
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            scroll-margin-top: 80px;
+        }
+        .result-bar strong {
+            color: var(--primary-dark);
+        }
+
+        /* =========================================
+           RESPONSIVE
+           ========================================= */
+        @media (max-width: 768px) {
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-input {
+                width: 100%;
+            }
+            
+            .filter-chips {
+                gap: 8px;
+                padding: 4px 2px 8px 2px;
+            }
+            .filter-chip {
+                padding: 6px 14px;
+                font-size: 12px;
+            }
+            
+            .careers-grid {
+                grid-template-columns: 1fr;
+            }
+            .scroll-top-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
+            }
+            .career-icon {
+                width: 20px;
+                height: 20px;
+                font-size: 9px;
+            }
+            .career-name {
+                font-size: var(--text-base);
+            }
+            
+            .result-bar {
+                scroll-margin-top: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/career.webp" alt="JOURNA" width="60" height="60" loading="lazy">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <!-- Will be populated by header-renderer.js -->
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div id="mobileNavLinks">
+            <!-- Will be populated by header-renderer.js -->
+        </div>
+    </div>
+    
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <div class="library-container">
+        <div class="library-header">
+            <h1 class="library-title">Career Library</h1>
+            <p class="library-subtitle">Explore all careers and find your perfect path in Ghana</p>
+            <div class="public-note">
+                <i class="fas fa-globe"></i> Browse all careers - completely free
+            </div>
+        </div>
+
+        <div class="search-section" id="searchSection">
+            <!-- Search input only - NO BUTTON -->
+            <div class="search-box">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search careers by name or description..." autocomplete="off">
+            </div>
+            
+            <!-- Horizontal scroll chips -->
+            <div class="filter-chips-wrapper">
+                <div class="filter-chips" id="filterChips">
+                    <!-- Filter chips will be populated dynamically WITHOUT counts -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Result count bar - THIS IS THE SCROLL TARGET -->
+        <div class="result-bar" id="resultBar">
+            <span id="resultCountText">Loading careers...</span>
+            <span id="resultFilterInfo"></span>
+        </div>
+
+        <div id="careersGrid" class="careers-grid">
+            <!-- Loading skeletons will be shown here -->
+        </div>
+    </div>
+
+    <!-- JavaScript - Frontend-only modules -->
+    <script type="module">
+        import { initHeader } from './js/header-renderer.js';
+        import { showNotification, truncateText } from './js/utils.js';
+        import { getAllCareers, getCategoryName } from './js/config.js';
+
+        // Initialize header
+        initHeader();
+
+        // State
+        let allCareers = [];
+        let filteredCareers = [];
+        let currentFilter = 'all';
+        let searchTerm = '';
+
+        // DOM Elements
+        const careersGrid = document.getElementById('careersGrid');
+        const searchInput = document.getElementById('searchInput');
+        const filterChipsContainer = document.getElementById('filterChips');
+        const resultCountText = document.getElementById('resultCountText');
+        const resultFilterInfo = document.getElementById('resultFilterInfo');
+        const resultBar = document.getElementById('resultBar');
+
+        // Category config (NO ICONS, NO COUNTS)
+        const categoryConfig = {
+            all: { name: 'All', color: '#6B7280' },
+            PRO: { name: 'Professional', color: '#6B5B95' },
+            TECH: { name: 'Technical', color: '#2E8B57' },
+            BUS: { name: 'Business', color: '#F4A261' },
+            CRE: { name: 'Art / Performance', color: '#E76F51' },
+            SPT: { name: 'Sports', color: '#2A9D8F' }
+        };
+
+        // Debounce helper
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Load all careers
+        const loadCareers = () => {
+            allCareers = getAllCareers();
+            filteredCareers = [...allCareers];
+            displayFilterChips();
+            displayCareers();
+        };
+
+        // Display filter chips - NO ICONS, NO COUNTS
+        const displayFilterChips = () => {
+            filterChipsContainer.innerHTML = Object.keys(categoryConfig).map(category => `
+                <span class="filter-chip ${currentFilter === category ? 'active' : ''}" 
+                      data-filter="${category}"
+                      style="background: ${categoryConfig[category].color};">
+                    ${categoryConfig[category].name}
+                </span>
+            `).join('');
+            
+            document.querySelectorAll('.filter-chip').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                    chip.classList.add('active');
+                    currentFilter = chip.dataset.filter;
+                    filterCareers();
+                    // SCROLL TO RESULT BAR (not careers grid)
+                    resultBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        };
+
+        // Display careers
+        const displayCareers = () => {
+            if (filteredCareers.length === 0) {
+                resultCountText.textContent = 'No careers found';
+                resultFilterInfo.textContent = '';
+            } else {
+                const filterName = categoryConfig[currentFilter]?.name || 'All';
+                resultCountText.textContent = `${filteredCareers.length} career${filteredCareers.length > 1 ? 's' : ''} found`;
+                resultFilterInfo.textContent = currentFilter === 'all' ? '' : `(filter: ${filterName})`;
+            }
+
+            if (filteredCareers.length === 0) {
+                careersGrid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: var(--space-2xl);">
+                        <i class="fas fa-search" style="font-size: 48px; color: var(--gray-400);"></i>
+                        <h3 style="margin-top: var(--space-md);">No careers found</h3>
+                        <p style="color: var(--text-secondary);">Try adjusting your search or filter</p>
+                    </div>
+                `;
+                return;
+            }
+
+            careersGrid.innerHTML = filteredCareers.map(career => `
+                <div class="career-card" onclick="window.location.href='roadmap.html?career=${career.id}'">
+                    <div class="card-header-row">
+                        <div class="career-icon">
+                            <i class="fas fa-${getIconForCategory(career.category)}"></i>
+                        </div>
+                        <h3 class="career-name">${career.name}</h3>
+                    </div>
+                    <span class="career-category">${getCategoryName(career.category)}</span>
+                    <p class="career-description">${truncateText(career.description, 100)}</p>
+                    <div class="career-footer">
+                        <div class="career-subjects">
+                            ${(career.subjects || []).slice(0, 2).map(s => 
+                                `<span class="subject-tag">${s}</span>`
+                            ).join('')}
+                            ${(career.subjects || []).length > 2 ? 
+                                `<span class="subject-tag">+${career.subjects.length - 2}</span>` : ''}
+                        </div>
+                        <button class="view-roadmap-btn" onclick="event.stopPropagation(); window.location.href='roadmap.html?career=${career.id}'">
+                            View Roadmap
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        };
+
+        const getIconForCategory = (category) => {
+            const icons = { PRO: 'university', TECH: 'tools', BUS: 'chart-line', CRE: 'palette', SPT: 'futbol' };
+            return icons[category] || 'briefcase';
+        };
+
+        const filterCareers = () => {
+            filteredCareers = allCareers.filter(career => {
+                if (currentFilter !== 'all' && career.category !== currentFilter) return false;
+                if (searchTerm) {
+                    const term = searchTerm.toLowerCase();
+                    const nameMatch = career.name.toLowerCase().includes(term);
+                    const descMatch = career.description?.toLowerCase().includes(term) || false;
+                    return nameMatch || descMatch;
+                }
+                return true;
+            });
+            displayCareers();
+        };
+
+        // ========================================
+        // SEARCH - Live search with debounce
+        // ========================================
+        const performSearch = (value) => {
+            searchTerm = value.trim();
+            filterCareers();
+        };
+
+        const debouncedSearch = debounce(performSearch, 300);
+
+        searchInput.addEventListener('focus', function() {
+            const input = this;
+            requestAnimationFrame(() => {
+                const rect = input.getBoundingClientRect();
+                const headerHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+                const isNearTop = rect.top < 120 && rect.top > 20;
+                if (!isNearTop) {
+                    const scrollTarget = window.scrollY + rect.top - headerHeight - 10;
+                    window.scrollTo({
+                        top: scrollTarget,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        searchInput.addEventListener('input', (e) => {
+            debouncedSearch(e.target.value);
+        });
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch(searchInput.value);
+                searchInput.blur();
+            }
+        });
+
+        // Initialize
+        loadCareers();
+    </script>
+
+    <!-- Footer -->
+<div id="footer-placeholder"></div>
+<script src="js/footer.js"></script>
+
+    <!-- Scroll to Top Button -->
+    <script>
+        (function() {
+            const btn = document.createElement('button');
+            btn.id = 'scrollTopBtn';
+            btn.className = 'scroll-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            btn.setAttribute('aria-label', 'Scroll to top');
+            document.body.appendChild(btn);
+
+            let hideTimeout;
+            let isVisible = false;
+
+            const showButton = () => {
+                if (!isVisible) {
+                    btn.classList.add('visible');
+                    isVisible = true;
+                }
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(() => {
+                    btn.classList.remove('visible');
+                    isVisible = false;
+                }, 1500);
+            };
+
+            const toggleVisibility = () => {
+                if (window.scrollY > 300) {
+                    showButton();
+                } else {
+                    btn.classList.remove('visible');
+                    isVisible = false;
+                    clearTimeout(hideTimeout);
+                }
+            };
+
+            window.addEventListener('scroll', toggleVisibility, { passive: true });
+            window.addEventListener('load', toggleVisibility);
+
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                btn.classList.remove('visible');
+                isVisible = false;
+                clearTimeout(hideTimeout);
+            });
+
+            btn.addEventListener('mousedown', (e) => {
+                e.preventDefault();
+            });
+        })();
+    </script>
+</body>
+</html>

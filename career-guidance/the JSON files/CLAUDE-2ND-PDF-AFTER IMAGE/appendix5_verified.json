@@ -1,0 +1,338 @@
+{
+  "_method": "Appendix 5: STEM Schools & SHS's Offering STEM Subjects, extracted from the source PDF's vector geometry using the same validated method as the other tables: grid detection, ink-pixel mark detection for the 7 STEM subject columns (Engineering Science, Bio-Medical Science, Aviation & Aerospace Engineering, Computing, Robotics, Agric Science, Manufacturing), OCR for identity fields. 22 schools total -- includes both dedicated STEM-type schools and regular SHS/SHTS schools that offer specific STEM elective subjects alongside their main programs. No printed subject-count column exists to cross-validate against, but all 22 rows show clean, unambiguous ink signal (150+ pixel count for marks vs. 0 for blanks) and plausible subject combinations.",
+  "Ashanti": [
+    {
+      "sn": "1",
+      "school_name": "Bosomtwe Girls STEM Senior High",
+      "district": "Bosomtwe",
+      "school_code": "0051616",
+      "location": "Deduako",
+      "gender": "Girls",
+      "status": "Day/Boarding",
+      "sch_type": "STEM",
+      "stem_subjects": [
+        "Engineering Science",
+        "Bio-Medical Science",
+        "Aviation & Aerospace Engineering",
+        "Computing",
+        "Robotics"
+      ]
+    },
+    {
+      "sn": "2",
+      "school_name": "Bosomtwe STEM Academy",
+      "district": "Bosomtwe",
+      "school_code": "0051617",
+      "location": "Jachie",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "STEM",
+      "stem_subjects": [
+        "Engineering Science",
+        "Bio-Medical Science",
+        "Computing",
+        "Robotics"
+      ]
+    },
+    {
+      "sn": "3",
+      "school_name": "Prempeh College",
+      "district": "Kumasi Metro",
+      "school_code": "0050108",
+      "location": "Sofoline-Kumasi",
+      "gender": "Boys",
+      "status": "Day/Boarding",
+      "sch_type": "SHS",
+      "stem_subjects": [
+        "Bio-Medical Science",
+        "Robotics"
+      ]
+    },
+    {
+      "sn": "4",
+      "school_name": "Opoku Ware School",
+      "district": "Kumasi Metro",
+      "school_code": "0050110",
+      "location": "Santasi-Kumasi",
+      "gender": "Boys",
+      "status": "Day/Boarding",
+      "sch_type": "SHS",
+      "stem_subjects": [
+        "Bio-Medical Science",
+        "Robotics"
+      ]
+    },
+    {
+      "sn": "5",
+      "school_name": "KNUST Senior High",
+      "district": "Kumasi Metro",
+      "school_code": "0050109",
+      "location": "KNUST",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "SHS",
+      "stem_subjects": [
+        "Engineering Science"
+      ]
+    },
+    {
+      "sn": "6",
+      "school_name": "Afua Kobi Ampem Girls' Senior High",
+      "district": "Atwima Kwanwoma",
+      "school_code": "0051701",
+      "location": "Trabuom",
+      "gender": "Girls",
+      "status": "Day/Boarding",
+      "sch_type": "SHS",
+      "stem_subjects": [
+        "Aviation & Aerospace Engineering",
+        "Computing",
+        "Robotics"
+      ]
+    },
+    {
+      "sn": "7",
+      "school_name": "Kumasi Academy",
+      "district": "Asokore Mampong Municipal",
+      "school_code": "0050105",
+      "location": "Asokore Mampong",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "SHS",
+      "stem_subjects": [
+        "Bio-Medical Science",
+        "Computing",
+        "Robotics"
+      ]
+    },
+    {
+      "sn": "8",
+      "school_name": "Mancell Girls' Senior High/Tech",
+      "district": "Oforikrom Municipal",
+      "school_code": "0050159",
+      "location": "Oduom",
+      "gender": "Girls",
+      "status": "Day/Boarding",
+      "sch_type": "SHTS",
+      "stem_subjects": [
+        "Engineering Science",
+        "Bio-Medical Science"
+      ]
+    },
+    {
+      "sn": "9",
+      "school_name": "Ghana STEM Technical School",
+      "district": "Bosomtwe",
+      "school_code": "0051620",
+      "location": "Sewua",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "STEM/TECH",
+      "stem_subjects": [
+        "Engineering Science",
+        "Bio-Medical Science",
+        "Computing",
+        "Robotics"
+      ]
+    },
+    {
+      "sn": "10",
+      "school_name": "J.A. Kufour STEM Technical School",
+      "district": "Atwima Nwabiagya North",
+      "school_code": "0050811",
+      "location": "Dabaa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "STEM",
+      "stem_subjects": [
+        "Bio-Medical Science",
+        "Aviation & Aerospace Engineering",
+        "Computing",
+        "Robotics"
+      ]
+    }
+  ],
+  "Bono": [
+    {
+      "sn": "11",
+      "school_name": "Koase Senior High/Tech",
+      "district": "Wenchi Municipal",
+      "school_code": "0060603",
+      "location": "Koase/Wenchi",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "SHTS",
+      "stem_subjects": [
+        "Bio-Medical Science",
+        "Robotics"
+      ]
+    },
+    {
+      "sn": "12",
+      "school_name": "Sunyani Senior High",
+      "district": "Sunyani Municipal",
+      "school_code": "0060104",
+      "location": "Sunyani",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "SHS",
+      "stem_subjects": [
+        "Bio-Medical Science"
+      ]
+    }
+  ],
+  "Eastern": [
+    {
+      "sn": "13",
+      "school_name": "Abomosu STEM Senior High",
+      "district": "Atiwa West",
+      "school_code": "0021315",
+      "location": "Abomosu",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "STEM",
+      "stem_subjects": [
+        "Engineering Science",
+        "Bio-Medical Science",
+        "Computing",
+        "Robotics"
+      ]
+    },
+    {
+      "sn": "14",
+      "school_name": "Methodist Girls Senior High, Mamfe",
+      "district": "Akwapim North Municipal",
+      "school_code": "0020410",
+      "location": "Mamfe",
+      "gender": "Girls",
+      "status": "Day/Boarding",
+      "sch_type": "SHS",
+      "stem_subjects": [
+        "Bio-Medical Science",
+        "Robotics"
+      ]
+    },
+    {
+      "sn": "15",
+      "school_name": "Presby Boys Model Senior High",
+      "district": "Denkyembour",
+      "school_code": "0021106",
+      "location": "Boadua",
+      "gender": "Boys",
+      "status": "Day/Boarding",
+      "sch_type": "SHTS",
+      "stem_subjects": [
+        "Computing"
+      ]
+    }
+  ],
+  "Greater Accra": [
+    {
+      "sn": "16",
+      "school_name": "Accra Senior High",
+      "district": "Accra Metro",
+      "school_code": "0010106",
+      "location": "Asylum Down",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "SHS",
+      "stem_subjects": [
+        "Bio-Medical Science"
+      ]
+    },
+    {
+      "sn": "17",
+      "school_name": "Achimota Senior High",
+      "district": "Okaikwei North Municipal",
+      "school_code": "0010110",
+      "location": "Achimota",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "SHS",
+      "stem_subjects": [
+        "Agric Science"
+      ]
+    },
+    {
+      "sn": "18",
+      "school_name": "Accra STEM Academy",
+      "district": "Ayawaso West Municipal",
+      "school_code": "0012305",
+      "location": "East Legon",
+      "gender": "Mixed",
+      "status": "Day",
+      "sch_type": "STEM",
+      "stem_subjects": [
+        "Engineering Science",
+        "Bio-Medical Science",
+        "Aviation & Aerospace Engineering",
+        "Computing"
+      ]
+    }
+  ],
+  "North East": [
+    {
+      "sn": "19",
+      "school_name": "Kpasenpke STEM Senior High",
+      "district": "West Mamprusi",
+      "school_code": "0080609",
+      "location": "Kpasenkpe",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "STEM",
+      "stem_subjects": [
+        "Bio-Medical Science",
+        "Computing",
+        "Robotics",
+        "Agric Science"
+      ]
+    }
+  ],
+  "Western": [
+    {
+      "sn": "20",
+      "school_name": "Ghana Senior High/Tech",
+      "district": "Sekondi Takoradi Metro",
+      "school_code": "0040104",
+      "location": "Takoradi",
+      "gender": "Boys",
+      "status": "Day/Boarding",
+      "sch_type": "SHTS",
+      "stem_subjects": [
+        "Aviation & Aerospace Engineering",
+        "Manufacturing"
+      ]
+    },
+    {
+      "sn": "21",
+      "school_name": "Fijai Senior High",
+      "district": "Sekondi Takoradi Metro",
+      "school_code": "0040105",
+      "location": "Sekondi",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "SHS",
+      "stem_subjects": [
+        "Bio-Medical Science",
+        "Robotics"
+      ]
+    }
+  ],
+  "Western North": [
+    {
+      "sn": "22",
+      "school_name": "Awaso STEM Senior High",
+      "district": "Bibiani/Anhwiaso/ Bekwai",
+      "school_code": "0040706",
+      "location": "Awaso",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "sch_type": "STEM",
+      "stem_subjects": [
+        "Engineering Science",
+        "Bio-Medical Science",
+        "Robotics"
+      ]
+    }
+  ]
+}

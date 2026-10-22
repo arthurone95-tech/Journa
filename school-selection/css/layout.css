@@ -1,0 +1,141 @@
+/* ========================================
+   Layout - Grid, containers, page structure
+======================================== */
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* ----------------------------------------
+   Sticky site header
+   ----------------------------------------
+   layout.js injects the demo banner and the .navbar into #site-header. A
+   `position: sticky` box can only travel inside its own containing block, and
+   #site-header was only as tall as its own content - so the navbar could not
+   stick and scrolled away with the page. Taking #site-header out of the box
+   tree with `display: contents` makes the injected banner and navbar direct
+   children of <body>, so .navbar (already `position: sticky; top: 0`) now
+   pins to the top of the viewport while the thin notice banner scrolls away. */
+#site-header {
+    display: contents;
+}
+
+/* Grid System - Note: .grid and .flex are now defined in utilities.css */
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Flex Utilities - Note: .flex is now defined in utilities.css */
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.gap-xs {
+    gap: var(--space-xs);
+}
+
+.gap-sm {
+    gap: var(--space-sm);
+}
+
+.gap-md {
+    gap: var(--space-md);
+}
+
+.gap-lg {
+    gap: var(--space-lg);
+}
+
+/* Page Sections */
+.section {
+    padding: var(--space-2xl) 0;
+}
+
+.section-sm {
+    padding: var(--space-xl) 0;
+}
+
+.section-lg {
+    padding: var(--space-3xl) 0;
+}
+
+/* Header */
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+}
+
+.section-title {
+    font-size: var(--text-3xl);
+    color: var(--primary-dark);
+    margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+    font-size: var(--text-md);
+    color: var(--text-secondary);
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+    .grid-cols-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-cols-3, .grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+}

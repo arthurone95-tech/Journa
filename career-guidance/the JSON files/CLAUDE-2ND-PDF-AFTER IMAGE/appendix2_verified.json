@@ -1,0 +1,2002 @@
+{
+  "_method": "Appendix 2: Elective Technical Subjects of Secondary/Technical Schools (SHTS), extracted from the source PDF's vector geometry using the same validated method as the main SHS register and Appendix 1: grid lines detected programmatically, subject marks (X) detected via ink-pixel presence per cell (threshold and padding calibrated per page), school/region fields read via OCR. This appendix has no printed 'No. of subjects' column to cross-validate against (unlike the main register and Appendix 1), so counts could not be automatically verified the same way -- however the same detection method that achieved 96.5%+ accuracy elsewhere was used, and a manual review of page 1 showed clean, unambiguous results (no empty rows, no implausible subject counts).",
+  "Ahafo": [
+    {
+      "sn": "1",
+      "school_name": "Ahafoman Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "2",
+      "school_name": "Boakye Tromo Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "3",
+      "school_name": "Gyamfi Kumanini Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "4",
+      "school_name": "Danso Agyei Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Ashanti": [
+    {
+      "sn": "5",
+      "school_name": "Agona Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "6",
+      "school_name": "Akrofuom Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "7",
+      "school_name": "Akwesi Awobaa Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "8",
+      "school_name": "Armed Forces Senior High/Tech, Kumasi",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "9",
+      "school_name": "Atwima Kwanwoma Snr High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "10",
+      "school_name": "Bodomase Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "11",
+      "school_name": "Bonwire Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "12",
+      "school_name": "Bosome Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "13",
+      "school_name": "Effiduase Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Technical Drawing"
+      ]
+    },
+    {
+      "sn": "14",
+      "school_name": "Ejisu Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "15",
+      "school_name": "Esaase Bontefufuo Snr. High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "16",
+      "school_name": "Gyaama Pensan SHTS",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Electronics"
+      ]
+    },
+    {
+      "sn": "17",
+      "school_name": "Jacobu Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "18",
+      "school_name": "Juaso Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "19",
+      "school_name": "KNUST Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Electrical Eng Tech",
+        "Electronics",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "20",
+      "school_name": "Kofi Agyei SHTS",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "21",
+      "school_name": "Kofiase Adventist Snr High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "22",
+      "school_name": "Kwanwoma Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "23",
+      "school_name": "Maabang Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "24",
+      "school_name": "Mpasatia Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "25",
+      "school_name": "Nkawie Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "26",
+      "school_name": "Obuasi Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "27",
+      "school_name": "Ofoase Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "28",
+      "school_name": "Opoku Agyeman Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Elective ICT",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "29",
+      "school_name": "Presby Senior High/Tech, Kwamang",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "30",
+      "school_name": "Sekyedumase Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "31",
+      "school_name": "Spiritan Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "32",
+      "school_name": "St. George's Senior High Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Electronics",
+        "Metal Work"
+      ]
+    },
+    {
+      "sn": "33",
+      "school_name": "St. Joseph Senior High/Tech, Ahwiren",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "34",
+      "school_name": "Christ the King Cath., Obuasi",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Elective ICT",
+        "Elective Physics",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "35",
+      "school_name": "Ghana STEM Technical School",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Electrical Eng Tech",
+        "Plumbing"
+      ]
+    },
+    {
+      "sn": "36",
+      "school_name": "Owerriman Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Bono": [
+    {
+      "sn": "37",
+      "school_name": "Badu Senior High/Technical School",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "38",
+      "school_name": "Bandaman Senior High Technical Sch",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "39",
+      "school_name": "Duadaso No. 1 Senior High/Tech. Sch.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Agric Mech Tech",
+        "Auto Electric",
+        "Building Const Tech",
+        "Electrical Eng Tech",
+        "Hosp & Cat Mgt",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "40",
+      "school_name": "Goka Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "41",
+      "school_name": "Koase Senior High Technical School",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "42",
+      "school_name": "Methodist SHTS",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "43",
+      "school_name": "Nkrankwanta Comm Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "44",
+      "school_name": "Twene Amanfo Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Electrical Eng Tech",
+        "Metal Work",
+        "Motor Vehicle Tech",
+        "Welding & Fabr Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "45",
+      "school_name": "Wamanafo Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Bono East": [
+    {
+      "sn": "46",
+      "school_name": "Kwame Danso Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Electrical Eng Tech",
+        "Electronics",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "47",
+      "school_name": "Nkoranza Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "48",
+      "school_name": "Tuobodom Senior High Tech. Sch",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work"
+      ]
+    },
+    {
+      "sn": "49",
+      "school_name": "Yeji Senior High Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Central": [
+    {
+      "sn": "50",
+      "school_name": "Abakrampa Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "51",
+      "school_name": "Assin North Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Electrical Eng Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "52",
+      "school_name": "Bontrase Senior High Tech. Sch",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Electronics",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "53",
+      "school_name": "Dunkwa Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Elective ICT",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "54",
+      "school_name": "Effutu Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "55",
+      "school_name": "Ekumfi T. |. Ahmadiiyya SHTS",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "56",
+      "school_name": "Enyan Denkyira Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "57",
+      "school_name": "Gomoa Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "58",
+      "school_name": "Jukwa Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "59",
+      "school_name": "Komenda Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "60",
+      "school_name": "Kwegyir Aggrey Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "61",
+      "school_name": "Mando Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "62",
+      "school_name": "Mankessim Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work"
+      ]
+    },
+    {
+      "sn": "63",
+      "school_name": "Mfantsipim School",
+      "gender": "Boys",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "64",
+      "school_name": "Moree Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective ICT",
+        "Elective Maths",
+        "Elective Physics",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "65",
+      "school_name": "Nyakrom Senior High Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective Maths",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "66",
+      "school_name": "Obiri Yeboah Senior High/Technical",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "67",
+      "school_name": "Obrachire Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "68",
+      "school_name": "Oguaa Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "69",
+      "school_name": "Potsin T.I. Ahm. Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Elective ICT",
+        "Elective Maths",
+        "Elective Physics",
+        "Hosp & Cat Mgt",
+        "Metal Work",
+        "Technical Drawing"
+      ]
+    },
+    {
+      "sn": "70",
+      "school_name": "Twifo Hemang Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "71",
+      "school_name": "Brakwa Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Eastern": [
+    {
+      "sn": "72",
+      "school_name": "Adjena Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "73",
+      "school_name": "Akokoaso Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "74",
+      "school_name": "Akro Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Electric",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "75",
+      "school_name": "Akroso Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "76",
+      "school_name": "Akuse Methodist Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "77",
+      "school_name": "Attafuah Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective ICT",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "78",
+      "school_name": "Boso Senior High Technical",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "79",
+      "school_name": "Kade Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "80",
+      "school_name": "Kibi Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Electronics",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "81",
+      "school_name": "Koforidua Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "82",
+      "school_name": "Kraboa-Coaltar Presby Snr. High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "83",
+      "school_name": "Kwabeng Anglican Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "84",
+      "school_name": "Kwahu Ridge Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "85",
+      "school_name": "Mem-Chemfre Comm. Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "86",
+      "school_name": "New Nsutam Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "87",
+      "school_name": "Osino Presby Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "88",
+      "school_name": "Presby Senior High/Tech, Larteh",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "89",
+      "school_name": "Presby Senior High/Tech, Aburi",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "90",
+      "school_name": "Presby Senior High/Tech, Adukrom",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "91",
+      "school_name": "St. Dominic's Senior High/Tech, Pepease",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Electronics",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "92",
+      "school_name": "St. Fidelis Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "93",
+      "school_name": "St. Francis Senior High/Tech, Akim Oda",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Metal Work",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "94",
+      "school_name": "St. Stephen's Presby Snr. High/Tech, Asiakwa",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "95",
+      "school_name": "St. Thomas Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective ICT",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "96",
+      "school_name": "Suhum Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "97",
+      "school_name": "Asesewa Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "98",
+      "school_name": "Mem-Chemfre Comm. Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Technical Drawing"
+      ]
+    }
+  ],
+  "G. Accra": [
+    {
+      "sn": "99",
+      "school_name": "Accra Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "100",
+      "school_name": "Ada Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "101",
+      "school_name": "Amasaman Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "102",
+      "school_name": "Chemu Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "103",
+      "school_name": "Kaneshie Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "104",
+      "school_name": "Kinbu Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "105",
+      "school_name": "Kwabenya Comm. Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work"
+      ]
+    },
+    {
+      "sn": "106",
+      "school_name": "Ningo Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "107",
+      "school_name": "Osudoku Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "108",
+      "school_name": "St. Margaret Mary Snr.High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "109",
+      "school_name": "Tema Manhean Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    }
+  ],
+  "North East": [
+    {
+      "sn": "110",
+      "school_name": "Bunkpurugu Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "111",
+      "school_name": "Janga Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "112",
+      "school_name": "Langbinsi Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "113",
+      "school_name": "Sakogu Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "114",
+      "school_name": "Walewale Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "115",
+      "school_name": "Yagaba Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "116",
+      "school_name": "Chereponi Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "117",
+      "school_name": "Bimbagu Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Technical Drawing"
+      ]
+    },
+    {
+      "sn": "118",
+      "school_name": "Presby SHTS, Nankpanduri",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Electrical Eng Tech"
+      ]
+    }
+  ],
+  "Northern": [
+    {
+      "sn": "119",
+      "school_name": "Dagbon State Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Electrical Eng Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "120",
+      "school_name": "Tamale Senior High .",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "121",
+      "school_name": "Vitting Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "122",
+      "school_name": "Nanton Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Oti": [
+    {
+      "sn": "123",
+      "school_name": "Bowiri Comm. Day Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "124",
+      "school_name": "Dodi-Papase Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "125",
+      "school_name": "Kete Krachi Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "126",
+      "school_name": "Kpassa Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "127",
+      "school_name": "Nkwanta Comm.Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "128",
+      "school_name": "Okadjakrom Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "129",
+      "school_name": "Oti Senior High/Tech Sch",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "130",
+      "school_name": "Tapaman Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "131",
+      "school_name": "Baglo Ridge Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Savannah": [
+    {
+      "sn": "132",
+      "school_name": "Ndewura Jakpa Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Electrical Eng Tech",
+        "Electronics",
+        "Metal Work",
+        "Motor Vehicle Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "133",
+      "school_name": "St. Anthony of Padua Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "134",
+      "school_name": "Tuna Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Agric Mech Tech",
+        "Building Const Tech",
+        "Electrical Eng Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Upper East": [
+    {
+      "sn": "135",
+      "school_name": "Awe Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "136",
+      "school_name": "Bawku Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "137",
+      "school_name": "Gowrie Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "138",
+      "school_name": "Nabango Senior High Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "139",
+      "school_name": "Sandema Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "140",
+      "school_name": "Tongo Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective Maths",
+        "Elective Physics",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "141",
+      "school_name": "Zamse Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "142",
+      "school_name": "Zebilla Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "143",
+      "school_name": "St. John's Integrated Snr. High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Elective ICT",
+        "Elective Maths",
+        "Elective Physics",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Upper West": [
+    {
+      "sn": "144",
+      "school_name": "Eremon Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Electronics",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "145",
+      "school_name": "Kaleo Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "146",
+      "school_name": "St. Augustine Senior High/Tech, Saan Charikpong",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Electrical Eng Tech",
+        "Hosp & Cat Mgt",
+        "Welding & Fabr Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "147",
+      "school_name": "Tumu Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "148",
+      "school_name": "Wa Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Volta": [
+    {
+      "sn": "149",
+      "school_name": "Abor Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "150",
+      "school_name": "Abutia Senior High/Tchnical",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "151",
+      "school_name": "Afadjato Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "152",
+      "school_name": "Afife Senior High Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "153",
+      "school_name": "Akatsi Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "154",
+      "school_name": "Akome Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "155",
+      "school_name": "Akpafu Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "156",
+      "school_name": "Alavanyo Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "157",
+      "school_name": "Anlo Awomefia Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "158",
+      "school_name": "Atiavi Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "159",
+      "school_name": "Dabala Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "160",
+      "school_name": "Keta Senior High/Tech .",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Electronics",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "161",
+      "school_name": "Klikor Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Electronics",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "162",
+      "school_name": "Kpeve Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "163",
+      "school_name": "Mafi-Kumasi Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "164",
+      "school_name": "Mawuli School, Ho",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics"
+      ]
+    },
+    {
+      "sn": "165",
+      "school_name": "Mepe St. Kizito Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "166",
+      "school_name": "Peki Senior High/Technical",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "167",
+      "school_name": "Shia Senior HighTechnical",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "168",
+      "school_name": "Sokode Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "169",
+      "school_name": "Tongor Senior High Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech"
+      ]
+    },
+    {
+      "sn": "170",
+      "school_name": "Tsiame Senior High",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Elective ICT"
+      ]
+    },
+    {
+      "sn": "171",
+      "school_name": "Tsito Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "172",
+      "school_name": "Weta Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "173",
+      "school_name": "Wovenu Senior High Technical",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "174",
+      "school_name": "Vakpo Senior High/Technical",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "175",
+      "school_name": "Aflao Community SHTS",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Elective ICT",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "176",
+      "school_name": "Keta Business College",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Technical Drawing",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Western": [
+    {
+      "sn": "177",
+      "school_name": "Asankrangwa Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "178",
+      "school_name": "Baidoo Bonso Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Elective ICT",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "179",
+      "school_name": "Benso Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work"
+      ]
+    },
+    {
+      "sn": "180",
+      "school_name": "Bompeh Senior High./Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "181",
+      "school_name": "Daboase Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "182",
+      "school_name": "Diabene Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Building Const Tech",
+        "Metal Work"
+      ]
+    },
+    {
+      "sn": "183",
+      "school_name": "Esiama Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "184",
+      "school_name": "Ghana Senior High/Tech",
+      "gender": "Boys",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "185",
+      "school_name": "Prestea Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Metal Work",
+        "Woodwork"
+      ]
+    }
+  ],
+  "Western North": [
+    {
+      "sn": "186",
+      "school_name": "Bia Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "187",
+      "school_name": "Bibiani Senior High/Tech.",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "188",
+      "school_name": "Nana Brentu Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Auto Mechanics",
+        "Building Const Tech",
+        "Woodwork"
+      ]
+    },
+    {
+      "sn": "189",
+      "school_name": "Sefwi-Wiawso Senior High/Tech",
+      "gender": "Mixed",
+      "technical_subjects": [
+        "Applied Electricity",
+        "Metal Work",
+        "Woodwork"
+      ]
+    }
+  ]
+}

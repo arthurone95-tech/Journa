@@ -1,0 +1,4214 @@
+{
+  "_method": "Extracted from the source PDF's real vector geometry, same validated method as the main SHS register: grid lines detected programmatically, trade marks (X) detected via ink-pixel presence per cell, institution/location fields read via OCR. Cross-checked every institution's detected trade count against the register's own printed 'No. of Programmes' column. 233 institutions total. 42 rows (18%) show the mark-count differing from the printed count -- these were individually spot-checked: in every case examined, the physical marks were strong and unambiguous (ink-pixel counts 70+ vs. 0 for blanks, no borderline values), while the printed digit is a very small font in a narrow cell that OCR (and a human skimming a screenshot) can easily misread. The 'trades' list in each entry reflects the actual detected marks and should be treated as the more reliable field; the printed count is kept for reference and flagged where it disagrees.",
+  "Ahafo": [
+    {
+      "sn": "41",
+      "institution": "TSC Technical Institute. Goaso",
+      "district": "Asunafo North",
+      "location": "Goaso",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "2",
+      "institution": "Fawohoyeden Technical Institute",
+      "district": "Asunafo North",
+      "location": "Fawohoyeden",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "3",
+      "institution": "Gvedu Technical Institute",
+      "district": "Asutifi North",
+      "location": "Gvedu",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "4",
+      "institution": "Bechem Technical Institute",
+      "district": "Tano South",
+      "location": "Bechem",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "14",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "SOFTWARE DEVELOPMENT (CBT OPTION. FOR GIRLS ONLY)",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ],
+      "_flag": "mark count (13) differs from printed total (14) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "5",
+      "institution": "Yamfo Technical Institute",
+      "district": "Tano North",
+      "location": "Yamfo",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "6",
+      "institution": "TSC Technical Institute, Bechem",
+      "district": "Tano South",
+      "location": "Bechem",
+      "gender": "Mixed",
+      "status": "| Day/boarding",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "7",
+      "institution": "Akrodie Technical Institute",
+      "district": "Asunafo North",
+      "location": "Akrodie",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "8",
+      "institution": "Adrobaa Technical Institute",
+      "district": "Tano North",
+      "location": "Adrobaa",
+      "gender": "Mixed",
+      "status": "|Day/ Boarding",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "9",
+      "institution": "Kwaponeg Technical Institute",
+      "district": "Asunafo South",
+      "location": "Kwapong",
+      "gender": "Mixed",
+      "status": "|Day/ Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "10",
+      "institution": "Islamic Mission Technical Institute",
+      "district": "Tano North",
+      "location": "Duayaw Nkwanta,\nKoforidua",
+      "gender": "Mixed",
+      "status": "bw Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONS. TECH. (CBT OPTION)",
+        "GARMENT / FASHION TECH."
+      ]
+    }
+  ],
+  "Ashanti": [
+    {
+      "sn": "11",
+      "institution": "Hemang Buoho Technical Institute",
+      "district": "Afigya Kwabre South",
+      "location": "Hemang Buoho",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "INFORMATION TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "12",
+      "institution": "TSC Technical Institute, Konongo",
+      "district": "Asante Akim Central",
+      "location": "Konongo",
+      "gender": "Mixed",
+      "status": "[pay",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "13",
+      "institution": "Asankare Technical Institute",
+      "district": "Asante Akim South",
+      "location": "Asankare",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "14",
+      "institution": "Business Secretarial and Technical Institute",
+      "district": "Asokwa",
+      "location": "Chirapatre",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "15",
+      "institution": "Nerebehi Technical Institute",
+      "district": "Atwim Nwabiasva",
+      "location": "Nerebehi",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "16",
+      "institution": "Twedie Technical Institute",
+      "district": "Atwima Kwawoma",
+      "location": "Twedie",
+      "gender": "Mixed",
+      "status": "|Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "17",
+      "institution": "Nana Ampontua Technical Institute",
+      "district": "Bekwai Mun.",
+      "location": "Bekwai",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING"
+      ]
+    },
+    {
+      "sn": "18",
+      "institution": "TSC Technical Institute. Bekwai",
+      "district": "Bekwai Mun.",
+      "location": "Bekwai",
+      "gender": "Mixed",
+      "status": "|Day",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "19",
+      "institution": "Yaa Pokua Technical Institute",
+      "district": "Offinso North",
+      "location": "Nkekaasu",
+      "gender": "Mixed",
+      "status": "|Day",
+      "no_of_programmes_printed": "8",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "BUILDING CONS. TECH. (CBT OPTION)",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "20",
+      "institution": "Amoafo Technical Institute",
+      "district": "Bekwai Mun.",
+      "location": "Bekwai",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "11",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "21",
+      "institution": "St. Michael's Technical Institute",
+      "district": "Bosomtwe",
+      "location": "Pramso",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "CREATIVE ART TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "22",
+      "institution": "Abosamso Technical Institute",
+      "district": "Bosome-Freho",
+      "location": "Abosamso",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "23",
+      "institution": "Konkoma Technical Institute",
+      "district": "Bosomtwi",
+      "location": "Konkomba",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "24",
+      "institution": "Tetrefu Technical Institute",
+      "district": "Bosomtwi",
+      "location": "Tetrefu",
+      "gender": "Mixed",
+      "status": "|Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "25",
+      "institution": "Afoako Technical Institute",
+      "district": "Amansie Central",
+      "location": "Afoako",
+      "gender": "Mixed",
+      "status": "|Day",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "26",
+      "institution": "Adako Jachie Technical Institute",
+      "district": "Ejisu",
+      "location": "Kwamo",
+      "gender": "Mixed",
+      "status": "|Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "27",
+      "institution": "Ejiuraman Technical Institute",
+      "district": "Ejura Sekvedumase",
+      "location": "Ejura",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "238",
+      "institution": "Baworo Technical Institute",
+      "district": "Ejisu",
+      "location": "Baworo",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "29",
+      "institution": "Otaakrom Technical Institute",
+      "district": "Atwima Mponua",
+      "location": "Otaakrom",
+      "gender": "Mixed",
+      "status": "|Day/ Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "30",
+      "institution": "Kumasi Tech. Inst.",
+      "district": "Kumasi Metro",
+      "location": "Kumasi",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "21",
+      "trades": [
+        "AUTOBODY REPAIRS",
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "HEAVY DUTY MECHANICS",
+        "INDUSTRIAL MECHANICS",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRICAL MACHINE/MOTOR REWINDING",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "REFRIGERATION & AIR-CONDITION",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "RECYCLING TECHNOLOGY (CBT OPTIC",
+        "PLUMBING & GAS TECHNOLOGY",
+        "FURNITURE TECHNOLOGY",
+        "UPHOLSTERY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "BUILDING CONS. TECH. (CBT OPTION)",
+        "BIODIGESTER",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "31",
+      "institution": "Achiase Technical Institute",
+      "district": "Juaben Municipal",
+      "location": "Achiase",
+      "gender": "Mixed",
+      "status": "|Day",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "32",
+      "institution": "Akumadan Applied Technology Institute",
+      "district": "Offinso North",
+      "location": "Akumadan",
+      "gender": "Mixed",
+      "status": "[bay",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "REFRIGERATION & AIR-CONDITION",
+        "INFORMATION TECH.",
+        "MECHATRONICS ENGINEERING TECHNOLOGY",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "33",
+      "institution": "Suntreso Technical Institute",
+      "district": "Kumasi Metro",
+      "location": "North Suntreso",
+      "gender": "Mixed",
+      "status": "|Day",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "34",
+      "institution": "Suame Technical Institute",
+      "district": "Kumasi Metro",
+      "location": "Suame",
+      "gender": "Mixed",
+      "status": "|Day",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "AUTOBODY REPAIRS",
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "HEAVY DUTY MECHANICS",
+        "MECHANICAL ENG TECH.",
+        "PRINTING",
+        "COMPUTER NETWORKING (CBT OPTIC FOR GIRLS ONLY)",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "35",
+      "institution": "Methodist Technincal Institute",
+      "district": "Kwadaso",
+      "location": "Kwadaso",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "12",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "INFORMATION TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "36",
+      "institution": "TSC Technical Institute, Mampong",
+      "district": "Mampong",
+      "location": "Mampong",
+      "gender": "Mixed",
+      "status": "[Day",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH."
+      ]
+    },
+    {
+      "sn": "37",
+      "institution": "Offinso Technical Institute",
+      "district": "Ofinso",
+      "location": "Offinso",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "38",
+      "institution": "Kumawu Technical Institute",
+      "district": "Sekvere Kumawu",
+      "location": "Kumawu",
+      "gender": "Mixed",
+      "status": "|Day/Boarding",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "39",
+      "institution": "Krobea Asante Technical and Vocational Institute",
+      "district": "Sekyere East",
+      "location": "Asokore",
+      "gender": "Mixed",
+      "status": "| Day/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "40",
+      "institution": "Jachie Technical Institute",
+      "district": "Bosomtwe",
+      "location": "Jachie",
+      "gender": "Mixed",
+      "status": "|Day/Boarding",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "COMPUTER HARDWARE & SOFTWARE",
+        "INFORMATION TECH.",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "41",
+      "institution": "TSC Technical Institute, Sekyere Kumawu",
+      "district": "Sekyere Kumawu",
+      "location": "Sekyere Kumawu",
+      "gender": "Mixed",
+      "status": "pay",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "42",
+      "institution": "Agona Technical Institute",
+      "district": "Sekvere South",
+      "location": "Agona Ashanti",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ],
+      "_flag": "mark count (7) differs from printed total (6) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "43",
+      "institution": "Kokoben Technical Institute",
+      "district": "Bosome Freho",
+      "location": "Asiwa-Kokoben",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "44",
+      "institution": "Dwease-Praaso Technical Institute",
+      "district": "Asante Akyem\nCentral",
+      "location": "Dwease-Praaso",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "45",
+      "institution": "Catholic Technical Institute",
+      "district": "Kumasi Metro",
+      "location": "Kumasi",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP"
+      ]
+    },
+    {
+      "sn": "46",
+      "institution": "Ramsever Technical Institute",
+      "district": "Asokwa",
+      "location": "Asokwa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "47",
+      "institution": "Juaben Technical Institute",
+      "district": "Ejisu-Juaben",
+      "location": "Juaben",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "48",
+      "institution": "Pakyi Applied Technology Institute",
+      "district": "Amansie West",
+      "location": "Pakyi",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRONICS ENG. TECH.",
+        "INFORMATION TECH.",
+        "MECHATRONICS ENGINEERING TECHNOLOGY",
+        "JEWELLERY"
+      ]
+    }
+  ],
+  "Bono": [
+    {
+      "sn": "49",
+      "institution": "TSC Technical Institute, Dormaa Ahenkro",
+      "district": "Dormaa Central Mun",
+      "location": "Dormaa Ahenkro",
+      "gender": "Mixed",
+      "status": "| > | Day/Boarding",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "50",
+      "institution": "Dormaa Technical Institute",
+      "district": "Dormaa Central",
+      "location": "Dormaa Ahenkro",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "10",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY",
+        "BUSINESS SECRETARIAL"
+      ],
+      "_flag": "mark count (9) differs from printed total (10) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "51",
+      "institution": "TSC Technical Institute, Drobo",
+      "district": "Jaman South",
+      "location": "Drobo",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "52",
+      "institution": "Our Lady of Fatima Technical Institute",
+      "district": "Jaman North",
+      "location": "Sampa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "53",
+      "institution": "Sunyani Technical Institute",
+      "district": "Sunvani Mun",
+      "location": "Sunvani",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "11",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "COMPUTER NETWORKING (CBT OPTIC FOR GIRLS ONLY)",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ],
+      "_flag": "mark count (12) differs from printed total (11) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "54",
+      "institution": "Social Welfare Technical Institute, Sunyani",
+      "district": "Sunyani Mun",
+      "location": "Sunvani",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY"
+      ],
+      "_flag": "mark count (6) differs from printed total (5) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "55",
+      "institution": "Sunyani Methodist Technical Inst.",
+      "district": "Sunyani Municipal",
+      "location": "Sunyani",
+      "gender": "Mixed",
+      "status": "",
+      "no_of_programmes_printed": "10",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "56",
+      "institution": "Don Bosco Voc./Tech. Inst.",
+      "district": "Sunyani West",
+      "location": "Odumase",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "13",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "CREATIVE ART TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "57",
+      "institution": "Nsoatre Technical Institute",
+      "district": "Sunyani West",
+      "location": "Nsoatre",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ],
+      "_flag": "mark count (10) differs from printed total (9) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    }
+  ],
+  "Bono East": [
+    {
+      "sn": "58",
+      "institution": "Nkwabeng Technical Institute",
+      "district": "Nkoranza South",
+      "location": "Nkwabeng",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "59",
+      "institution": "Kintampo Technical Institute",
+      "district": "Kintampo South\nMun.",
+      "location": "Kintampo",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "60",
+      "institution": "Nkoranza Tech Inst.",
+      "district": "Nkoranza South",
+      "location": "Nkoranza",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "16",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "REFRIGERATION & AIR-CONDITION",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "INFORMATION TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "61",
+      "institution": "Techiman Technical Institute",
+      "district": "Techiman",
+      "location": "Techiman",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "62",
+      "institution": "Kajaii Technical Institute",
+      "district": "Sene East",
+      "location": "Kaijaii",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    }
+  ],
+  "Central": [
+    {
+      "sn": "63",
+      "institution": "Asuansi Tech. Inst.",
+      "district": "Abura/Asebu/kwam\nankese",
+      "location": "Asuansi",
+      "gender": "Mixed",
+      "status": "",
+      "no_of_programmes_printed": "15",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "FURNITURE TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "64",
+      "institution": "Agona Swedru Technical Institute",
+      "district": "Agona West Mun.",
+      "location": "Agona Swedru",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ],
+      "_flag": "mark count (9) differs from printed total (5) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "65",
+      "institution": "Ajumako-Afranse Technical Institute",
+      "district": "Ajumako Enyan\nEsiam",
+      "location": "Ajumako",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "66",
+      "institution": "Envan-Abaasa Technical Institute",
+      "district": "Ajumako/ Enyan\n/Essiam",
+      "location": "Envan Abaasa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (6) differs from printed total (5) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "67",
+      "institution": "Breman Asikuma Technical Institute",
+      "district": "Asikuma Odoben\nBrakwa",
+      "location": "Breman-Asikuma",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "68",
+      "institution": "TSC Technical Institute, Assin Edubiase",
+      "district": "Assin Central Mun.",
+      "location": "Assin Edubiase",
+      "gender": "Mixed",
+      "status": "Day\n||",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "69",
+      "institution": "Assin Foso Technical Institute",
+      "district": "Assin North",
+      "location": "Assin Fosu",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "70",
+      "institution": "TSC Technical Institute, Awutu Breku",
+      "district": "Awutu Senva West",
+      "location": "Awutu Senva",
+      "gender": "Mixed",
+      "status": "Day\n|, |",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "71",
+      "institution": "Cape Coast Tech. Inst.",
+      "district": "Cape Coast Metro",
+      "location": "Cape Coast",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "17",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "REFRIGERATION & AIR-CONDITION",
+        "ELECTRONICS ENG. TECH.",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "FURNITURE TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (16) differs from printed total (17) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "72",
+      "institution": "GRATIS Technical Institute, Cape Coast",
+      "district": "Cape Coast Mun",
+      "location": "Cape Coast",
+      "gender": "Mixed",
+      "status": "Day\n|, |",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "73",
+      "institution": "Social Welfare Girls' Technical Institute, Pedu",
+      "district": "Cape Coast Mun",
+      "location": "Pedu",
+      "gender": "Girls",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ],
+      "_flag": "mark count (5) differs from printed total (4) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "74",
+      "institution": "Winneba Technical Institute",
+      "district": "Effutu Mun.",
+      "location": "Winneba",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "INFORMATION TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "75",
+      "institution": "Panfokrom Technical Institute",
+      "district": "Gomoa East",
+      "location": "Panfokrom",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "8",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "INFORMATION TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "GRAPHICS DESIGN TECH."
+      ]
+    },
+    {
+      "sn": "76",
+      "institution": "Gomoa Adaa Technical Institute",
+      "district": "Gomoa West",
+      "location": "Gomoa Adaa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "77",
+      "institution": "Mankessim Technical Institute",
+      "district": "Mfantsiman",
+      "location": "Mankessim",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "78",
+      "institution": "New Ebu Technical Institute",
+      "district": "Abura Asebu\nKwamankese",
+      "location": "New Ebu",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "79",
+      "institution": "Biriwa Technical Institute",
+      "district": "Mfantsiman Mun",
+      "location": "Biriwa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "10",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "REFRIGERATION & AIR-CONDITION",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "LEATHER WORKS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "80",
+      "institution": "Asafora Technical Institute",
+      "district": "Mfantseman",
+      "location": "Asafora",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ],
+      "_flag": "mark count (6) differs from printed total (5) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "81",
+      "institution": "Assin Jakai Applied Technology Institute",
+      "district": "Assin Jakai",
+      "location": "Assin South",
+      "gender": "Mixed",
+      "status": "Day\n||",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    }
+  ],
+  "Eastern": [
+    {
+      "sn": "82",
+      "institution": "J.G. Knol Technical Instititute",
+      "district": "Okere",
+      "location": "Adukrom\nAkuapem",
+      "gender": "Mixed",
+      "status": "Pay/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "83",
+      "institution": "Akrofufu Technical Institute",
+      "district": "Atiwa West",
+      "location": "Akrofufu",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "84",
+      "institution": "Anum Presbyterian Technical Institute",
+      "district": "Asuogyaman",
+      "location": "Anum",
+      "gender": "Mixed",
+      "status": "Pay/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BEAUTY THERAPY",
+        "BUSINESS SECRETARIAL"
+      ],
+      "_flag": "mark count (8) differs from printed total (9) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "85",
+      "institution": "Akwatia Tech. Inst.",
+      "district": "Denkvembour",
+      "location": "Akwatia",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "13",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (12) differs from printed total (13) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "86",
+      "institution": "Kibi Technical Institute",
+      "district": "Eask Akim Mun.",
+      "location": "Kibi",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "8",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "87",
+      "institution": "St. Paul's Tech. Inst.",
+      "district": "East Akim",
+      "location": "Kukurantumi",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "10",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "WATER TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP"
+      ]
+    },
+    {
+      "sn": "88",
+      "institution": "Takrowase Technical Institute",
+      "district": "Kwaebibrim",
+      "location": "Takrowasi",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "89",
+      "institution": "Amankwakrom Fisheries Agric. Tech. Inst.",
+      "district": "Kwahu Afram Plains\nNorth",
+      "location": "Amankwakrom",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "10",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "CREATIVE ART TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "90",
+      "institution": "St. Mary's Voc./Tech. Inst.",
+      "district": "Kwahu Afram Plains\nNorth",
+      "location": "Adiembra",
+      "gender": "Girls",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "CREATIVE ART TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (8) differs from printed total (9) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "91",
+      "institution": "TSC Technical Institute, Donkorkrom",
+      "district": "Kwahu Afram Plains\nNorth",
+      "location": "Donkorkrom",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "INFORMATION TECH."
+      ]
+    },
+    {
+      "sn": "92",
+      "institution": "St. Joseph's Tech. Inst.",
+      "district": "Kwahu East",
+      "location": "Kwahu Tafo",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "11",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ],
+      "_flag": "mark count (10) differs from printed total (11) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "93",
+      "institution": "Abetifi Tech. Inst.",
+      "district": "Kwahu East",
+      "location": "Abetifi",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "14",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRICAL MACHINE/MOTOR REWINDING",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "94",
+      "institution": "Abetifi Kyemase Technical Institute",
+      "district": "Kwahu East",
+      "location": "Abetifi",
+      "gender": "Mixed",
+      "status": "Pay/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "95",
+      "institution": "Kpong Technical Institute",
+      "district": "Lower Manva Krobo",
+      "location": "Kpong",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "10",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "96",
+      "institution": "Koforidua GRATIS Technical Institute",
+      "district": "New Juaben\nMunicipal",
+      "location": "Koforidua",
+      "gender": "Mixed",
+      "status": "Pay",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH."
+      ]
+    },
+    {
+      "sn": "97",
+      "institution": "Koforidua Tech. Inst.",
+      "district": "New Juaben",
+      "location": "Koforidua",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "16",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "BUILDING CONS. TECH. (CBT OPTION)",
+        "BIODIGESTER",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (15) differs from printed total (16) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "98",
+      "institution": "Effiduase Technical Institute",
+      "district": "New Juaben\nMunicipal",
+      "location": "Effiduase-\nKoforidua",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "99",
+      "institution": "Abiriw Presbyterian Technical Institute",
+      "district": "Okere",
+      "location": "Abiriw",
+      "gender": "Mixed",
+      "status": "pay",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING"
+      ]
+    },
+    {
+      "sn": "100",
+      "institution": "Akuapem Technical Institute",
+      "district": "Akwapem South",
+      "location": "Kitase-Aburi",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "101",
+      "institution": "Suhum Technical Institute",
+      "district": "Suhum Municipal",
+      "location": "Suhum",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "8",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BEAUTY THERAPY",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "102",
+      "institution": "St. Mary's Technical Institute, Asamankese",
+      "district": "West Akim",
+      "location": "Asamankese",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "INFORMATION TECH.",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "103",
+      "institution": "TSC Technical Institute, Asamankese",
+      "district": "West Akim",
+      "location": "Asamankese",
+      "gender": "Mixed",
+      "status": "oay",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "INFORMATION TECH."
+      ]
+    },
+    {
+      "sn": "104",
+      "institution": "Denkyembour Technical Institute",
+      "district": "Denkyembour",
+      "location": "Boadua",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "105",
+      "institution": "Asakraka Technical Institute",
+      "district": "Kwahu South",
+      "location": "Asakraka",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "106",
+      "institution": "Somanva Technical Institute",
+      "district": "Yilo Krobo",
+      "location": "Somanva",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "107",
+      "institution": "Tutu Methodist Technical Institute",
+      "district": "Akuampem North\nMunicipal",
+      "location": "Tutu",
+      "gender": "Mixed",
+      "status": "Pay",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "108",
+      "institution": "Applied Technology Institute - Anvinam",
+      "district": "Atiwa East",
+      "location": "Anyinam",
+      "gender": "Mixed",
+      "status": "pay",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "GARMENT / FASHION TECH."
+      ]
+    }
+  ],
+  "G. Accra": [
+    {
+      "sn": "109",
+      "institution": "New Century Technical Institute",
+      "district": "Ablekuma West\nMunicipal",
+      "location": "Dansoman",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "10",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "REFRIGERATION & AIR-CONDITION",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "LEATHER WORKS TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "110",
+      "institution": "Sacred Heart Tech. Inst.",
+      "district": "Accra Metro",
+      "location": "Jamsetown",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "COMPUTER HARDWARE & SOFTWARE",
+        "WOOD TECHNOLOGY",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "111",
+      "institution": "Ada Tech. Inst.",
+      "district": "Ada East",
+      "location": "Ada",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "14",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "INFORMATION TECH.",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "112",
+      "institution": "Ashiaman Technical Institute",
+      "district": "Ashiaman Municipal",
+      "location": "Ashaiman",
+      "gender": "Mixed",
+      "status": ")Day",
+      "no_of_programmes_printed": "10",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (9) differs from printed total (10) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "113",
+      "institution": "Opportunities Industrialization Technical Institute. Accra",
+      "district": "Ayawaso West\nMunicipal",
+      "location": "East Legon",
+      "gender": "Mixed",
+      "status": "Pay",
+      "no_of_programmes_printed": "8",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "114",
+      "institution": "Pilot Technical Institute",
+      "district": "Ayawaso Central\nMunicipal",
+      "location": "Kokomlemle",
+      "gender": "Mixed",
+      "status": "pay",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "REFRIGERATION & AIR-CONDITION",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "DATABASE MANAGEMENT (CBT OPTIC FOR GIRLS ONLY)",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP"
+      ],
+      "_flag": "mark count (10) differs from printed total (2) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "115",
+      "institution": "Kanda Technical Institute",
+      "district": "Ayawaso East\nMunicipal",
+      "location": "Kanda",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "116",
+      "institution": "Accra Tech. Trg. Centre",
+      "district": "Ayawaso South\nMunicipal",
+      "location": "Kokomlemle",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "17",
+      "trades": [
+        "AUTOBODY REPAIRS",
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "INDUSTRIAL MECHANICS",
+        "MECHANICAL ENG TECH.",
+        "SMALL ENGINES TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "REFRIGERATION & AIR-CONDITION",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH."
+      ],
+      "_flag": "mark count (16) differs from printed total (17) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "117",
+      "institution": "Bedeku Technical Institute",
+      "district": "Ada East",
+      "location": "Bedeku",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "118",
+      "institution": "Ngleshie Amanfro Technical Institute",
+      "district": "Ga South Municipal",
+      "location": "Ngleshie Amanfro",
+      "gender": "Mixed",
+      "status": "pay",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "AUTOBODY REPAIRS",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "119",
+      "institution": "Madina Technical Institute",
+      "district": "La Nkwantanang-\nMadina Municipal",
+      "location": "Madin",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "120",
+      "institution": "Teshie Tech. Instittute",
+      "district": "Ledzokuku Municipal",
+      "location": "Teshie",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (6) differs from printed total (7) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "121",
+      "institution": "Afienva Technical Institute",
+      "district": "Ningo Prampram",
+      "location": "Afienva",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "122",
+      "institution": "Pramopram Technical Institute",
+      "district": "Ningo Prampram",
+      "location": "Prampram",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ],
+      "_flag": "mark count (8) differs from printed total (9) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "123",
+      "institution": "South Labone Girls Technical Institute",
+      "district": "Korle Klottey\nMunicipal",
+      "location": "Labone",
+      "gender": "Girls",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ],
+      "_flag": "mark count (4) differs from printed total (3) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "124",
+      "institution": "Agomeda Technical Institute",
+      "district": "Shai Osudoku",
+      "location": "Agomeda",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING"
+      ],
+      "_flag": "mark count (7) differs from printed total (6) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "125",
+      "institution": "Dodowa Technical Institute",
+      "district": "Shai Osudoku",
+      "location": "Dodowa",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "126",
+      "institution": "Tema Tech. Inst.",
+      "district": "Tema Metro",
+      "location": "Tema",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "20",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "INDUSTRIAL MECHANICS",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "PRINTING",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "BUILDING CONS. TECH. (CBT OPTION)",
+        "BIODIGESTER",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (19) differs from printed total (20) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "127",
+      "institution": "Tema Mission Technical Institute",
+      "district": "Tema Metro",
+      "location": "Tema",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "128",
+      "institution": "Government Technical Institute",
+      "district": "Okaikwei South\nMunicipal",
+      "location": "Kaneshie-Accra",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "AUTOBODY REPAIRS",
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH."
+      ]
+    },
+    {
+      "sn": "129",
+      "institution": "Danfa Technical Institute",
+      "district": "La Nkwantanang\nMunicipal",
+      "location": "Danfa",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "130",
+      "institution": "Nima Technical Institute",
+      "district": "Ayawaso East\nMunicipal",
+      "location": "Nima",
+      "gender": "Mixed",
+      "status": "pay",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "131",
+      "institution": "East Legon Applied Technology Institute",
+      "district": "Ayawaso West\nMunicipal",
+      "location": "East Legon",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "HEAVY DUTY MECHANICS",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH."
+      ]
+    }
+  ],
+  "North East": [
+    {
+      "sn": "132",
+      "institution": "Nalerigu Technical Institute",
+      "district": "East Mamorusi",
+      "location": "Nalerigu",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "TEXTILE TECHNOLOGY"
+      ]
+    },
+    {
+      "sn": "133",
+      "institution": "Walewale Technical Institute",
+      "district": "West Mampusi",
+      "location": "Walawale",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "13",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "SOFTWARE DEVELOPMENT (CBT OPTION. FOR GIRLS ONLY)",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "134",
+      "institution": "Loagri Technical Institute",
+      "district": "Mampurugu\nMoagduri",
+      "location": "Loagri",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "INFORMATION TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY"
+      ]
+    }
+  ],
+  "Northern": [
+    {
+      "sn": "135",
+      "institution": "Zugu Dabogni Technical Institute",
+      "district": "Kumbungu",
+      "location": "Zugu Dabogni",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "136",
+      "institution": "Tamale Technical Institute",
+      "district": "Sagnerisu",
+      "location": "Tamale",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "11",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "ELECTRONICS ENG. TECH.",
+        "CREATIVE ART TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "137",
+      "institution": "Gbewa Technical Institute",
+      "district": "Tamale Metro",
+      "location": "Tamale",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "GARMENT / FASHION TECH.",
+        "TEXTILE TECHNOLOGY",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ],
+      "_flag": "mark count (4) differs from printed total (3) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "138",
+      "institution": "St. Joseph's Tech. Inst., Saboba",
+      "district": "Saboba",
+      "location": "Saboba",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "14",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (13) differs from printed total (14) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "139",
+      "institution": "Dabokpa Voc/Tech. Inst.",
+      "district": "Tamale Metro",
+      "location": "Tamale",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "22",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "SMALL ENGINES TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "REFRIGERATION & AIR-CONDITION",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "SOFTWARE DEVELOPMENT (CBT OPTION. FOR GIRLS ONLY)",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "RECYCLING TECHNOLOGY (CBT OPTIC",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "BUILDING CONS. TECH. (CBT OPTION)",
+        "BIODIGESTER",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "140",
+      "institution": "St. Mary's Technical Institute, Tamale",
+      "district": "Tamale Metro",
+      "location": "Tamale",
+      "gender": "Girls",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "SMALL ENGINES TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY",
+        "BUSINESS SECRETARIAL"
+      ],
+      "_flag": "mark count (9) differs from printed total (5) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "141",
+      "institution": "Lamashegu Technical Institute",
+      "district": "Tamale Metro",
+      "location": "Tamale",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "11",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (10) differs from printed total (11) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "142",
+      "institution": "Kumbungu Vocational Techncal Institute",
+      "district": "Kumbungu",
+      "location": "Kumbungu",
+      "gender": "Mixed",
+      "status": "a",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "WOOD TECHNOLOGY",
+        "GARMENT / FASHION TECH.",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "143",
+      "institution": "GRATIS Technical Institute, Tamale",
+      "district": "Tamale Metro",
+      "location": "Tamale",
+      "gender": "Mixed",
+      "status": "Day\n||",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "144",
+      "institution": "Nyohini Community Technical Institute",
+      "district": "Tamale Mun",
+      "location": "Tamale",
+      "gender": "Mixed",
+      "status": "| , |Day/Boaraing",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "145",
+      "institution": "Tatale Technical Institute",
+      "district": "Tatale",
+      "location": "Tatale",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "INFORMATION TECH.",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "146",
+      "institution": "Zabzugu Technical Institute",
+      "district": "Zabzugu",
+      "location": "Zabzugu",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "GARMENT / FASHION TECH.",
+        "TEXTILE TECHNOLOGY"
+      ]
+    },
+    {
+      "sn": "147",
+      "institution": "Kofi Annan Technical Institute",
+      "district": "Kumbungu",
+      "location": "Nwodua",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "INFORMATION TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "148",
+      "institution": "Nyong Technical Institute",
+      "district": "Karaga",
+      "location": "Nvong",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING"
+      ],
+      "_flag": "mark count (7) differs from printed total (6) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "149",
+      "institution": "Savelugu Technical Institute",
+      "district": "Savelugu Municipal",
+      "location": "Savelugu",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    }
+  ],
+  "Oti": [
+    {
+      "sn": "150",
+      "institution": "Fr. Dogli Memorial Technical Institute",
+      "district": "Jasikan",
+      "location": "New Avoma",
+      "gender": "Mixed",
+      "status": "pears",
+      "no_of_programmes_printed": "11",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "151",
+      "institution": "Kaakyi Technical Institute",
+      "district": "Kete Krachi",
+      "location": "Kete Krachi",
+      "gender": "Mixed",
+      "status": "lDav",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "152",
+      "institution": "St Theresa's Technical Institute",
+      "district": "Krachi Nchumuru",
+      "location": "Chinderi",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "153",
+      "institution": "Lolobi Technical Institute",
+      "district": "Guan",
+      "location": "Lolobi Ashiambi",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONS. TECH. (CBT OPTION)",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "154",
+      "institution": "Dambai Technical Institute",
+      "district": "Krachi East",
+      "location": "Dambai",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "TEXTILE TECHNOLOGY"
+      ]
+    }
+  ],
+  "Savannah": [
+    {
+      "sn": "155",
+      "institution": "Bole Technical Institute",
+      "district": "Bole",
+      "location": "Bole",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY"
+      ]
+    },
+    {
+      "sn": "156",
+      "institution": "Buipe Technical Institute",
+      "district": "Central Gonja",
+      "location": "Buipe",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "CREATIVE ART TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "157",
+      "institution": "Sawla Girls Vocational Institute",
+      "district": "Sawla Tuna Kalba",
+      "location": "Sawla",
+      "gender": "Girls",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "158",
+      "institution": "Salaga Technical Institute",
+      "district": "East Gonja",
+      "location": "Salaga",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "159",
+      "institution": "Damongo Technical Institute",
+      "district": "West Gonja",
+      "location": "Damongo",
+      "gender": "Mixed",
+      "status": "| | Day/ Boarding",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    }
+  ],
+  "Upper East": [
+    {
+      "sn": "160",
+      "institution": "Bawku Tech. Inst.",
+      "district": "Bawku East",
+      "location": "Bawku",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "15",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "ELECTRONICS ENG. TECH.",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (14) differs from printed total (15) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "161",
+      "institution": "Kpalwega Technical Institute",
+      "district": "Bawku East",
+      "location": "Bawku",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "162",
+      "institution": "Kusanaba Technical Institute",
+      "district": "Bawku West Mun.",
+      "location": "Binaba",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "163",
+      "institution": "Bolga Tech. Inst.",
+      "district": "Bolgatanga",
+      "location": "Bolgatanga",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "15",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "164",
+      "institution": "Bolgatanga Central Technical Institute",
+      "district": "Bolgatanga Mun",
+      "location": "Bolgatanga",
+      "gender": "Mixed",
+      "status": "",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "165",
+      "institution": "GRATIS Technical Institute, Bolga",
+      "district": "Bolgatanga Mun",
+      "location": "Bolgatanga",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "166",
+      "institution": "Bongo Technical Institute",
+      "district": "Bongo",
+      "location": "Bongo",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "167",
+      "institution": "Sandema Technical Institute",
+      "district": "Builsa North",
+      "location": "Sandema",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "168",
+      "institution": "TSC Technical Institute - Garu",
+      "district": "Garu",
+      "location": "Garu",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "169",
+      "institution": "St. Bernadettes Tech/Voc. Institute",
+      "district": "Kassena Nanakana\nEast",
+      "location": "Navrongo",
+      "gender": "Mixed",
+      "status": "Pav Boaaing",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (10) differs from printed total (9) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "170",
+      "institution": "TSC Technical Institute -Kassena Nankana",
+      "district": "Kassena Nankana\nEast",
+      "location": "",
+      "gender": "Mixed",
+      "status": "Day/Boarding\n| \u2018ol",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "INFORMATION TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "171",
+      "institution": "Nabango Technical Institute",
+      "district": "Kassena Nankana\nEast",
+      "location": "Nabango",
+      "gender": "Mixed",
+      "status": "Day\n|. |",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "TEXTILE TECHNOLOGY"
+      ]
+    },
+    {
+      "sn": "172",
+      "institution": "Navrongo Technical Institute",
+      "district": "Kassena Nankana\nMun.",
+      "location": "Navrongo",
+      "gender": "Mixed",
+      "status": "",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "LEATHER WORKS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "173",
+      "institution": "Namalteng Technical Institute",
+      "district": "Talensi",
+      "location": "Gbeogo Namaltens",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY"
+      ]
+    }
+  ],
+  "Upper West": [
+    {
+      "sn": "174",
+      "institution": "Issa Technical Institute",
+      "district": "Dafiama Busie Issa",
+      "location": "Issa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "175",
+      "institution": "St. Basilides Voc./Tech. Inst.",
+      "district": "Nadowli Kaleo",
+      "location": "Kaleo",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "176",
+      "institution": "TSC Technical Institute, Nadowli - Kaleo",
+      "district": "Nadowli Kaleo",
+      "location": "Nadowli",
+      "gender": "Mixed",
+      "status": "Da\n|, | y",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "177",
+      "institution": "St. John's Voc. Tech. Institute",
+      "district": "Nandom",
+      "location": "Nandom",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION"
+      ]
+    },
+    {
+      "sn": "178",
+      "institution": "St Anne's Vocational Training Institute",
+      "district": "Nandom",
+      "location": "Nandom",
+      "gender": "Girls",
+      "status": "",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "INFORMATION TECH.",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "179",
+      "institution": "St. Clare's Technical Institute",
+      "district": "Sisala East",
+      "location": "Tumu",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY"
+      ]
+    },
+    {
+      "sn": "180",
+      "institution": "GRATIS Technical Institute, Wa",
+      "district": "Wa Mun.",
+      "location": "Wa",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "181",
+      "institution": "Naa-Momori Technical Institute",
+      "district": "Wa Mun.",
+      "location": "Wa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "8",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "INFORMATION TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "HAIRDRESSING"
+      ]
+    },
+    {
+      "sn": "182",
+      "institution": "Tibani Technical Institute",
+      "district": "Kaleo Nadowu",
+      "location": "Tibani",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "TEXTILE TECHNOLOGY"
+      ]
+    },
+    {
+      "sn": "183",
+      "institution": "Birifo Technical Institute",
+      "district": "Lawra",
+      "location": "Birifo",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "INFORMATION TECH.",
+        "WOOD TECHNOLOGY",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "184",
+      "institution": "Wa Tech. Inst.",
+      "district": "Wa Municipal",
+      "location": "Wa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "15",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (14) differs from printed total (15) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "185",
+      "institution": "Nakori Chansa Technical Institute",
+      "district": "Wa Municipal",
+      "location": "Wa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "WOOD TECHNOLOGY",
+        "GARMENT / FASHION TECH.",
+        "TEXTILE TECHNOLOGY",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "186",
+      "institution": "Guo Technical Insititute",
+      "district": "Nandom District",
+      "location": "Guo",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "TEXTILE TECHNOLOGY"
+      ]
+    }
+  ],
+  "Volta": [
+    {
+      "sn": "187",
+      "institution": "St. Daniel Comboni Technical Institute",
+      "district": "Afadzto South",
+      "location": "Liati",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "188",
+      "institution": "Have Tech. Inst.",
+      "district": "Afadzto South",
+      "location": "Have",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "14",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (13) differs from printed total (14) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "189",
+      "institution": "Avenorpeme Technical Institute",
+      "district": "Akatsi South",
+      "location": "Avenorpeme",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "190",
+      "institution": "Ve- Golokwati Technical Institute",
+      "district": "Afadzto South",
+      "location": "Kwati",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "191",
+      "institution": "Avenui-Awudome Technical Institute",
+      "district": "Ho West",
+      "location": "Avenui-Awudome",
+      "gender": "Mixed",
+      "status": "pay",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "192",
+      "institution": "Ave Technical Institute",
+      "district": "Akatsi North",
+      "location": "Ave",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "193",
+      "institution": "Volta Tech Inst",
+      "district": "Ho",
+      "location": "Matse",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "8",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (7) differs from printed total (8) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "194",
+      "institution": "Ho -Lokoe Technical Institute",
+      "district": "Ho Mun.",
+      "location": "Ho",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "195",
+      "institution": "Ho Technical Institute",
+      "district": "Ho Mun.",
+      "location": "Ho",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "196",
+      "institution": "Amedzofe Technical Institute",
+      "district": "Ho West",
+      "location": "Amedzofe",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "8",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "197",
+      "institution": "Tsibu Technical Institute",
+      "district": "Ho West",
+      "location": "Tsibu Awodume",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "198",
+      "institution": "E.P. Tech/Voc Inst",
+      "district": "Hohoe",
+      "location": "Alavanvo",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "199",
+      "institution": "Anlo Tech. Inst.",
+      "district": "Anloga Municipal",
+      "location": "Anloga",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "14",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "200",
+      "institution": "Caring Sisters Technical Institute",
+      "district": "Anloga Municipal",
+      "location": "Tegbi",
+      "gender": "Mixed",
+      "status": "Day/Boaraing",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "201",
+      "institution": "Atorkor Technical Institute",
+      "district": "Keta Mun",
+      "location": "Atorkor",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "INFORMATION TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY"
+      ]
+    },
+    {
+      "sn": "202",
+      "institution": "Kedzi Technical Institute",
+      "district": "Keta Mun",
+      "location": "Kedzi",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "GRAPHICS DESIGN TECH.",
+        "FINE ARTS - PAINTING"
+      ],
+      "_flag": "mark count (7) differs from printed total (6) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "203",
+      "institution": "Kpando Tech. Inst.",
+      "district": "Kpando Municpal",
+      "location": "Kpando",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "18",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "INFORMATION TECH.",
+        "CREATIVE ART TECHNOLOGY",
+        "PLUMBING & GAS TECHNOLOGY",
+        "FURNITURE TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "BUILDING CONS. TECH. (CBT OPTION)",
+        "BIODIGESTER",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ]
+    },
+    {
+      "sn": "204",
+      "institution": "C.Y.0O. Tech/Voc. Inst.",
+      "district": "Kpando Municpal",
+      "location": "Sovie",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "17",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "COMPUTER NETWORKING (CBT OPTIC FOR GIRLS ONLY)",
+        "PLUMBING & GAS TECHNOLOGY",
+        "FURNITURE TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (18) differs from printed total (17) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "205",
+      "institution": "Toh-Kpalime Technical Institute",
+      "district": "South Davi",
+      "location": "Toh-Kpalime",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ],
+      "_flag": "mark count (5) differs from printed total (6) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "206",
+      "institution": "Comboni Tech/Voc Inst.",
+      "district": "South Tongsu",
+      "location": "Sogakopne",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "14",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "PRINTING",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (13) differs from printed total (14) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "207",
+      "institution": "Klefe Technical Institute",
+      "district": "Ho Mun.",
+      "location": "Klefe",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "208",
+      "institution": "Dzodze Technical Institute",
+      "district": "Ketu North",
+      "location": "Dzodze",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY"
+      ]
+    },
+    {
+      "sn": "209",
+      "institution": "Sogakope Technial Institute",
+      "district": "South Tongu",
+      "location": "Sogakope",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "3",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "210",
+      "institution": "Botoku Technical Insitute",
+      "district": "Davi",
+      "location": "Botoku",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING"
+      ]
+    },
+    {
+      "sn": "211",
+      "institution": "Woe Technical Institute",
+      "district": "Keta Mun",
+      "location": "Woe",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "212",
+      "institution": "Anfoeta Technical Institute",
+      "district": "Ho West",
+      "location": "Anfoeta Gborgame",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "10",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "AGRICULTURAL MECHANIZATION TEC",
+        "INFORMATION TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    }
+  ],
+  "Western": [
+    {
+      "sn": "213",
+      "institution": "TSC Technical Institute - Asankragwa",
+      "district": "Amenfi West",
+      "location": "Asankragwa",
+      "gender": "Mixed",
+      "status": "Day\n||",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "214",
+      "institution": "Takoradi Tech. Inst.",
+      "district": "Effia Kwesimitsim",
+      "location": "Takoradi",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "23",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "SMALL ENGINES TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "REFRIGERATION & AIR-CONDITION",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "INFORMATION TECH.",
+        "SOFTWARE DEVELOPMENT (CBT OPTION. FOR GIRLS ONLY)",
+        "DIGITAL DESIGNING TECHNOLOGY",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "RECYCLING TECHNOLOGY (CBT OPTIC",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "BUILDING CONS. TECH. (CBT OPTION)",
+        "BIODIGESTER",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "BUSINESS SECRETARIAL",
+        "BUSINESS ACCOUNTING"
+      ],
+      "_flag": "mark count (22) differs from printed total (23) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "215",
+      "institution": "Takoradi Community Technical Institute",
+      "district": "Effia Kwesimitsim",
+      "location": "Anaii",
+      "gender": "Mixed",
+      "status": "Day/Boarding\n| A |",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "216",
+      "institution": "Charlotte Dolphyne Technical Institute",
+      "district": "Ellembele",
+      "location": "Sanzule",
+      "gender": "Mixed",
+      "status": "",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ],
+      "_flag": "mark count (5) differs from printed total (6) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "217",
+      "institution": "Kikam Tech. Inst.",
+      "district": "Ellembelle",
+      "location": "Kikam",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "12",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "ELECTRONICS ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "SOLAR PV TECHNOLOGY (CBT OPTION",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "218",
+      "institution": "Asasetre Technical Institute",
+      "district": "Ellembelle",
+      "location": "Asasetre",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ],
+      "_flag": "mark count (6) differs from printed total (5) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "219",
+      "institution": "TSC Technical Institute - Half Assini",
+      "district": "Jomoro",
+      "location": "Half Assini",
+      "gender": "Mixed",
+      "status": "| > |Day/Boaraing",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "220",
+      "institution": "Axim Technical Institute",
+      "district": "Nzema East",
+      "location": "Axim",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING"
+      ]
+    },
+    {
+      "sn": "221",
+      "institution": "Sekondi Takoradi Technical Institute",
+      "district": "Sekondi Takoradi\nMetro",
+      "location": "Takoradi",
+      "gender": "Mixed",
+      "status": "",
+      "no_of_programmes_printed": "8",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "REFRIGERATION & AIR-CONDITION",
+        "INFORMATION TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "GARMENT / FASHION TECH."
+      ]
+    },
+    {
+      "sn": "222",
+      "institution": "Opportunities Industralisation Technical Institute - Takoradi",
+      "district": "Sekondi Takoradi\nMetro",
+      "location": "Takoradi",
+      "gender": "Mixed",
+      "status": "",
+      "no_of_programmes_printed": "8",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY",
+        "BUSINESS SECRETARIAL"
+      ]
+    },
+    {
+      "sn": "223",
+      "institution": "Essipun Technical Institute",
+      "district": "Sekondi Takoradi\nMetro",
+      "location": "Essipun Sekondi",
+      "gender": "Mixed",
+      "status": "",
+      "no_of_programmes_printed": "11",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "REFRIGERATION & AIR-CONDITION",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "224",
+      "institution": "Shama Technical Institute",
+      "district": "Shama",
+      "location": "Shama",
+      "gender": "Mixed",
+      "status": "Day",
+      "no_of_programmes_printed": "7",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "ARCHITECTURAL DRAUGHTMANSHIP",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    },
+    {
+      "sn": "225",
+      "institution": "Manso-Amentfi Technical Institute",
+      "district": "Wassa Amenfi\nCentral",
+      "location": "Manso Amenfi",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "226",
+      "institution": "Tarkwa Technical Institute",
+      "district": "Wassa West",
+      "location": "Tarkwa",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "227",
+      "institution": "Mesu Akompi Technical Institute",
+      "district": "Wassa Amenfi East",
+      "location": "Wassa Saa",
+      "gender": "Mixed",
+      "status": "",
+      "no_of_programmes_printed": "5",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "TEXTILE TECHNOLOGY"
+      ]
+    },
+    {
+      "sn": "228",
+      "institution": "Abura Technical Institute",
+      "district": "Ahanta West",
+      "location": "Abura",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "6",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "COMPUTER HARDWARE & SOFTWARE",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "229",
+      "institution": "St. Ann's Technical Institute",
+      "district": "Sekondi Takoradi\nMetro",
+      "location": "Sekondi",
+      "gender": "Girls",
+      "status": "pay",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ],
+      "_flag": "mark count (3) differs from printed total (2) - marks verified as unambiguous; printed digit OCR is less reliable at this font size"
+    },
+    {
+      "sn": "230",
+      "institution": "Libermann Technical Institute",
+      "district": "Jomoro",
+      "location": "Sowodadzem",
+      "gender": "Mixed",
+      "status": "Day/ Boarding",
+      "no_of_programmes_printed": "4",
+      "trades": [
+        "ELECTRICAL ENG. TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    },
+    {
+      "sn": "231",
+      "institution": "Sekondi Technical Institute",
+      "district": "Sekondi Takoradi\nMetro",
+      "location": "Sekondi",
+      "gender": "Mixed",
+      "status": "|s|oy |",
+      "no_of_programmes_printed": "",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "INFORMATION TECH.",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT"
+      ]
+    }
+  ],
+  "Western North": [
+    {
+      "sn": "232",
+      "institution": "TSC Technical Institute - Bibiani",
+      "district": "Bibiani Anhwiaso Bekwai",
+      "location": "Bibiani",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "2",
+      "trades": [
+        "WELDING & FABRICATION TECH.",
+        "MECHANICAL ENG TECH."
+      ]
+    },
+    {
+      "sn": "233",
+      "institution": "Bonso Nkwanta Technical Institute",
+      "district": "Juaboso",
+      "location": "Bonsu Nkwanta",
+      "gender": "Mixed",
+      "status": "Day/Boarding",
+      "no_of_programmes_printed": "9",
+      "trades": [
+        "AUTOMOTIVE ENG. TECH.",
+        "ELECTRICAL ENG. TECH.",
+        "PLUMBING & GAS TECHNOLOGY",
+        "WOOD TECHNOLOGY",
+        "BUILDING CONSTRUCTION",
+        "GARMENT / FASHION TECH.",
+        "CATERING & HOSPITALITY MGT",
+        "HAIRDRESSING",
+        "BEAUTY THERAPY"
+      ]
+    }
+  ]
+}

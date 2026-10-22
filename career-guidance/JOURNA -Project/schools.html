@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Find SHS, STEM, and TVET schools across all 16 regions of Ghana. Browse the official GES 2025 Second Cycle Schools Register with JOURNA.">
+    
+    <!-- Open Graph (for WhatsApp, Facebook) -->
+    <meta property="og:title" content="Schools Directory - JOURNA | Find Schools in Ghana">
+    <meta property="og:description" content="Browse SHS, STEM, and TVET schools across all 16 regions of Ghana. Find the right school for your career goals.">
+    <meta property="og:image" content="https://journapath.netlify.app/assets/images/career.webp">
+    <meta property="og:url" content="https://journapath.netlify.app/schools.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Schools Directory - JOURNA | Find Schools in Ghana">
+    <meta name="twitter:description" content="Browse SHS, STEM, and TVET schools across all 16 regions of Ghana.">
+    <meta name="twitter:image" content="https://journapath.netlify.app/assets/images/career.webp">
+    <meta name="twitter:site" content="@journa_gh">
+    
+    <title>Schools Directory - JOURNA</title>
+    
+    <!-- Favicon / App Icon -->
+    <link rel="icon" type="image/png" href="assets/images/career.webp">
+    <link rel="apple-touch-icon" href="assets/images/career.webp">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        /* ========================================
+           Schools Page - Custom Styles
+           ======================================== */
+        .schools-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md);
+        }
+        
+        .schools-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .schools-title {
+            font-size: var(--text-2xl);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .schools-subtitle {
+            color: var(--text-secondary);
+            font-size: var(--text-md);
+        }
+        
+        .public-note {
+            background: var(--gray-100);
+            border-radius: var(--radius-full);
+            padding: var(--space-xs) var(--space-md);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: var(--text-xs);
+            color: var(--text-secondary);
+            margin-top: var(--space-sm);
+            white-space: nowrap;
+        }
+        
+        @media (max-width: 480px) {
+            .public-note {
+                white-space: normal;
+                gap: 4px;
+                padding: var(--space-xs) var(--space-sm);
+                font-size: 10px;
+            }
+        }
+        
+        .public-note i {
+            color: var(--secondary);
+            font-size: 11px;
+        }
+        
+        /* Context Banner */
+        .context-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            color: white;
+            margin-bottom: var(--space-xl);
+            display: none;
+        }
+        
+        .context-banner h2 {
+            color: white;
+            margin-bottom: var(--space-xs);
+            font-size: var(--text-lg);
+        }
+        
+        .context-banner p {
+            opacity: 0.9;
+            margin-bottom: 0;
+            font-size: var(--text-sm);
+        }
+        
+        .context-banner .program-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            margin-top: var(--space-sm);
+        }
+        
+        .context-banner .program-tag {
+            padding: 4px 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: var(--radius-full);
+            font-size: var(--text-xs);
+        }
+        
+        /* Filter Section - Cleaner, without icons on labels */
+        .filter-section {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: var(--space-xl);
+            border: 1px solid var(--border-color-light);
+        }
+        
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .filter-group {
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .filter-group label {
+            display: block;
+            font-size: var(--text-sm);
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .filter-group input,
+        .filter-group select {
+            width: 100%;
+            padding: var(--space-sm) var(--space-md);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-size: var(--text-sm);
+            background: white;
+            transition: all var(--transition-fast);
+        }
+        
+        .filter-group input:focus,
+        .filter-group select:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+        
+        /* Stats Bar - This is the scroll target */
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            background: var(--gray-50);
+            border-radius: var(--radius-md);
+            padding: var(--space-sm) var(--space-md);
+            margin-top: var(--space-sm);
+            border: 1px solid var(--border-color-light);
+            scroll-margin-top: 80px;
+        }
+        
+        .stats-bar .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: var(--text-xs);
+            color: var(--text-secondary);
+            background: white;
+            padding: 4px 10px;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-color-light);
+        }
+        
+        .stats-bar .stat-item strong {
+            color: var(--primary-dark);
+        }
+        
+        /* ========================================
+           SCHOOL CARDS - REDESIGNED (compact)
+           ======================================== */
+        .schools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .school-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color-light);
+            transition: all var(--transition-base);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .school-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        
+        .school-card .school-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: 2px;
+        }
+        
+        .school-card .school-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .school-card .school-name {
+            font-size: var(--text-md);
+            color: var(--primary-dark);
+            font-weight: 600;
+            line-height: 1.2;
+            flex: 1;
+        }
+        
+        .school-card .school-code {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-left: 2px;
+        }
+        
+        .school-card .school-type-badge {
+            display: inline-block;
+            padding: 1px 8px;
+            border-radius: var(--radius-full);
+            font-size: 10px;
+            font-weight: 500;
+            margin-left: 4px;
+            flex-shrink: 0;
+        }
+        
+        .school-card .school-type-badge.public {
+            background: rgba(30, 123, 107, 0.15);
+            color: var(--secondary);
+        }
+        
+        .school-card .school-type-badge.private {
+            background: rgba(244, 162, 97, 0.15);
+            color: var(--accent-dark);
+        }
+        
+        .school-card .school-location {
+            font-size: var(--text-xs);
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+        
+        .school-card .school-location i {
+            color: var(--secondary);
+            width: 14px;
+            font-size: 11px;
+        }
+        
+        .school-card .school-programs {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 2px 4px;
+            font-size: var(--text-xs);
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        
+        .school-card .program-name {
+            color: var(--text-secondary);
+        }
+        
+        .school-card .program-comma {
+            color: var(--text-muted);
+        }
+        
+        .school-card .program-more {
+            color: var(--primary);
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .school-card .program-more:hover {
+            text-decoration: underline;
+        }
+        
+        .school-card .school-status {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+        
+        .school-card .school-status i {
+            color: var(--secondary);
+            width: 14px;
+            font-size: 11px;
+        }
+        
+        .school-card .school-footer {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            margin-top: 4px;
+            padding-top: 4px;
+            border-top: 1px solid var(--border-color-light);
+            flex-wrap: wrap;
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+        }
+        
+        .school-card .school-footer .sep {
+            color: var(--border-color);
+        }
+        
+        .school-card .school-gender {
+            color: var(--text-secondary);
+        }
+        
+        .school-card .school-footer .click-hint {
+            color: var(--primary);
+            font-weight: 500;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+        
+        .school-card .school-footer .click-hint i {
+            font-size: 10px;
+        }
+        
+        .school-card .school-footer .click-hint:hover {
+            text-decoration: underline;
+        }
+        
+        /* ========================================
+           LOAD MORE / PAGINATION
+           ======================================== */
+        .load-more-container {
+            display: flex;
+            justify-content: center;
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+        
+        .load-more-btn {
+            padding: var(--space-md) var(--space-xl);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .load-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .load-more-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .load-more-btn .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        .load-more-btn.loading .spinner {
+            display: inline-block;
+        }
+        
+        .load-more-btn.loading .btn-text {
+            display: none;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .load-more-info {
+            text-align: center;
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-top: var(--space-sm);
+        }
+        
+        .no-results {
+            grid-column: 1/-1;
+            text-align: center;
+            padding: var(--space-2xl);
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px dashed var(--border-color);
+        }
+        
+        .no-results i {
+            font-size: 48px;
+            color: var(--gray-400);
+            margin-bottom: var(--space-md);
+        }
+        
+        .no-results h3 {
+            color: var(--text-secondary);
+        }
+        
+        /* Loading Skeleton */
+        .skeleton-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-md);
+            border: 1px solid var(--border-color-light);
+            min-height: 160px;
+        }
+        
+        .skeleton-header {
+            display: flex;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .skeleton-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        .skeleton-title {
+            height: 18px;
+            width: 70%;
+            background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: var(--radius-sm);
+        }
+        
+        .skeleton-text {
+            height: 12px;
+            width: 100%;
+            background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            margin-bottom: 4px;
+            border-radius: var(--radius-sm);
+        }
+        
+        .skeleton-text.short {
+            width: 60%;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* ========================================
+           SCHOOL DETAIL MODAL - Updated with accessibility
+           ======================================== */
+        .school-detail-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            padding: var(--space-md);
+            backdrop-filter: blur(4px);
+        }
+        
+        .school-detail-modal.active {
+            display: flex;
+        }
+        
+        .school-detail-modal-content {
+            background: white;
+            border-radius: var(--radius-lg);
+            max-width: 700px;
+            width: 100%;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            animation: modalSlideIn 0.3s ease;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        
+        .school-detail-modal-header {
+            padding: var(--space-md) var(--space-lg);
+            border-bottom: 1px solid var(--border-color-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            gap: var(--space-sm);
+            background: var(--gray-50);
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        }
+        
+        .school-detail-modal-header h2 {
+            font-size: var(--text-lg);
+            color: var(--primary-dark);
+            margin-bottom: 2px;
+            flex: 1;
+        }
+        
+        .school-detail-modal-header .subtitle {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+        }
+        
+        .school-detail-modal-header .modal-close-btn {
+            background: none;
+            border: none;
+            font-size: var(--text-xl);
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 4px 8px;
+            transition: color var(--transition-fast);
+            flex-shrink: 0;
+            line-height: 1;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .school-detail-modal-header .modal-close-btn:hover {
+            background: var(--gray-200);
+            color: var(--danger);
+        }
+        
+        .school-detail-modal-header .modal-close-btn:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+        
+        .school-detail-modal-body {
+            padding: var(--space-lg);
+            overflow-y: auto;
+            flex: 1;
+        }
+        
+        .detail-horizontal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm) var(--space-lg);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 1px solid var(--border-color-light);
+        }
+        
+        .detail-horizontal .detail-item {
+            display: flex;
+            flex-direction: column;
+            flex: 0 1 auto;
+            min-width: 100px;
+        }
+        
+        .detail-horizontal .detail-item .detail-label {
+            font-size: var(--text-xs);
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .detail-horizontal .detail-item .detail-label i {
+            width: 14px;
+            color: var(--primary);
+        }
+        
+        .detail-horizontal .detail-item .detail-value {
+            font-size: var(--text-sm);
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        .detail-row {
+            margin-top: var(--space-sm);
+        }
+        
+        .detail-row .detail-label {
+            font-size: var(--text-xs);
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        .detail-row .detail-label i {
+            width: 16px;
+            color: var(--primary);
+        }
+        
+        .programs-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 4px;
+        }
+        
+        .programs-list .program-tag {
+            padding: 4px 12px;
+            background: var(--gray-100);
+            border-radius: var(--radius-full);
+            font-size: var(--text-xs);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color-light);
+        }
+        
+        .school-detail-modal-footer {
+            padding: var(--space-sm) var(--space-lg);
+            border-top: 1px solid var(--border-color-light);
+            text-align: center;
+            font-size: var(--text-xs);
+            color: var(--text-secondary);
+            background: var(--gray-50);
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        }
+        
+        /* =========================================
+           SCROLL TO TOP BUTTON
+           ========================================= */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            font-size: 22px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .scroll-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        .scroll-top-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .filter-row {
+                flex-direction: column;
+            }
+            
+            .filter-group {
+                min-width: 100%;
+            }
+            
+            .schools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .school-card {
+                padding: var(--space-sm);
+            }
+            
+            .school-card .school-footer {
+                gap: 4px 8px;
+            }
+            
+            .school-detail-modal-content {
+                max-height: 95vh;
+                border-radius: var(--radius-md);
+                max-width: 100%;
+            }
+            
+            .load-more-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .scroll-top-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
+            }
+
+            .detail-horizontal {
+                gap: var(--space-xs) var(--space-sm);
+            }
+            
+            .detail-horizontal .detail-item {
+                min-width: 80px;
+                flex: 0 1 auto;
+            }
+            
+            .detail-horizontal .detail-item .detail-value {
+                font-size: var(--text-xs);
+            }
+            
+            .school-detail-modal-body {
+                padding: var(--space-md);
+            }
+            
+            .stats-bar {
+                scroll-margin-top: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/career.webp" alt="JOURNA" width="60" height="60" loading="lazy">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <!-- Will be populated by header-renderer.js -->
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div id="mobileNavLinks">
+            <!-- Will be populated by header-renderer.js -->
+        </div>
+    </div>
+    
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <div class="schools-container">
+        <!-- Header -->
+        <div class="schools-header">
+            <h1 class="schools-title">Schools Directory</h1>
+            <p class="schools-subtitle">Find SHS, STEM, and TVET schools across Ghana</p>
+            <div class="public-note">
+                <i class="fas fa-globe"></i> Official GES 2025 Second Cycle Schools Register
+            </div>
+        </div>
+
+        <!-- Context Banner -->
+        <div class="context-banner" id="contextBanner">
+            <h2 id="contextTitle">Schools for <span id="contextCareerName">Your Career</span></h2>
+            <p id="contextDescription">Below are schools that offer programs leading to this career path.</p>
+            <div class="program-tags" id="contextProgramTags">
+                <!-- Program tags will be populated here -->
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section" id="filterSection">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="searchInput">Search</label>
+                    <input type="text" id="searchInput" placeholder="School name, location, or program..." autocomplete="off" />
+                </div>
+                <div class="filter-group">
+                    <label for="regionFilter">Region</label>
+                    <select id="regionFilter">
+                        <option value="all">All Regions</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="programFilter">Program</label>
+                    <select id="programFilter">
+                        <option value="all">All Programs</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="genderFilter">Gender</label>
+                    <select id="genderFilter">
+                        <option value="all">All</option>
+                        <option value="Mixed">Mixed</option>
+                        <option value="Boys">Boys Only</option>
+                        <option value="Girls">Girls Only</option>
+                    </select>
+                </div>
+            </div>
+            <div class="stats-bar" id="statsBar">
+                <span class="stat-item"><strong id="totalCount">0</strong> schools found</span>
+                <span class="stat-item"><i class="fas fa-map-marker-alt"></i> <span id="regionCount">0</span> regions</span>
+                <span class="stat-item"><i class="fas fa-graduation-cap"></i> <span id="programCount">0</span> programs</span>
+            </div>
+        </div>
+
+        <!-- Schools Grid -->
+        <div id="schoolsGrid" class="schools-grid">
+            <!-- Loading skeletons will be shown here -->
+        </div>
+
+        <!-- Load More -->
+        <div class="load-more-container" id="loadMoreContainer">
+            <button class="load-more-btn" id="loadMoreBtn">
+                <span class="spinner"></span>
+                <span class="btn-text"><i class="fas fa-plus-circle"></i> Load More Schools</span>
+            </button>
+        </div>
+        <div class="load-more-info" id="loadMoreInfo"></div>
+    </div>
+
+    <!-- ========================================
+         SCHOOL DETAIL MODAL - Updated with ARIA
+         ======================================== -->
+    <div id="schoolDetailModal" class="school-detail-modal" role="dialog" aria-modal="true" aria-labelledby="modalSchoolName">
+        <div class="school-detail-modal-content">
+            <div class="school-detail-modal-header">
+                <div>
+                    <h2 id="modalSchoolName">School Name</h2>
+                    <div class="subtitle" id="modalSchoolLocation">Location</div>
+                </div>
+                <button class="modal-close-btn" id="modalDetailCloseBtn" aria-label="Close school details">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="school-detail-modal-body" id="modalSchoolBody">
+                <!-- Details will be populated here -->
+            </div>
+            <div class="school-detail-modal-footer">
+                <i class="fas fa-info-circle"></i> Click outside or press ESC to close
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type="module">
+        import { initHeader } from './js/header-renderer.js';
+        import { showNotification } from './js/utils.js';
+        import { getAllSchools, getRegions, getAllPrograms } from './js/school-data.js';
+        import { getCareerById, getCategoryName } from './js/config.js';
+
+        // Initialize header
+        initHeader();
+
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const careerParam = urlParams.get('career');
+        const programParam = urlParams.get('program');
+
+        // ========================================
+        // PAGINATION CONFIGURATION
+        // ========================================
+        const ITEMS_PER_PAGE = 20;
+        let currentPage = 1;
+        let isLoading = false;
+
+        // State
+        let allSchools = [];
+        let filteredSchools = [];
+        let visibleSchools = [];
+        let currentRegion = 'all';
+        let currentProgram = programParam || 'all';
+        let currentGender = 'all';
+        let searchTerm = '';
+        let contextCareer = null;
+
+        // DOM Elements
+        const schoolsGrid = document.getElementById('schoolsGrid');
+        const searchInput = document.getElementById('searchInput');
+        const regionFilter = document.getElementById('regionFilter');
+        const programFilter = document.getElementById('programFilter');
+        const genderFilter = document.getElementById('genderFilter');
+        const totalCount = document.getElementById('totalCount');
+        const regionCount = document.getElementById('regionCount');
+        const programCount = document.getElementById('programCount');
+        const contextBanner = document.getElementById('contextBanner');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        const loadMoreContainer = document.getElementById('loadMoreContainer');
+        const loadMoreInfo = document.getElementById('loadMoreInfo');
+        const statsBar = document.getElementById('statsBar');
+
+        // Modal Elements
+        const schoolDetailModal = document.getElementById('schoolDetailModal');
+        const modalSchoolName = document.getElementById('modalSchoolName');
+        const modalSchoolLocation = document.getElementById('modalSchoolLocation');
+        const modalSchoolBody = document.getElementById('modalSchoolBody');
+        const modalDetailCloseBtn = document.getElementById('modalDetailCloseBtn');
+
+        // Load schools
+        const loadSchools = () => {
+            allSchools = getAllSchools();
+            filteredSchools = [...allSchools];
+            
+            populateRegionFilter();
+            populateProgramFilter();
+            
+            handleUrlParams();
+            
+            resetPagination();
+            displaySchools();
+            updateStats();
+            updateLoadMoreInfo();
+        };
+
+        const resetPagination = () => {
+            currentPage = 1;
+            visibleSchools = [];
+            loadMoreBtn.disabled = false;
+            loadMoreBtn.classList.remove('loading');
+            loadMoreBtn.querySelector('.btn-text').innerHTML = '<i class="fas fa-plus-circle"></i> Load More Schools';
+        };
+
+        // ========================================
+        // DISPLAY SCHOOLS - REDESIGNED CARDS
+        // ========================================
+        const displaySchools = () => {
+            const startIndex = 0;
+            const endIndex = currentPage * ITEMS_PER_PAGE;
+            const schoolsToShow = filteredSchools.slice(startIndex, endIndex);
+            
+            visibleSchools = schoolsToShow;
+
+            if (schoolsToShow.length === 0 && filteredSchools.length === 0) {
+                schoolsGrid.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-school"></i>
+                        <h3>No schools found</h3>
+                        <p>Try adjusting your filters or search term.</p>
+                    </div>
+                `;
+                loadMoreContainer.style.display = 'none';
+                loadMoreInfo.textContent = '';
+                return;
+            }
+
+            if (schoolsToShow.length === 0) {
+                schoolsGrid.innerHTML = `
+                    <div class="no-results">
+                        <i class="fas fa-school"></i>
+                        <h3>No more schools to show</h3>
+                        <p>All ${filteredSchools.length} schools have been loaded.</p>
+                    </div>
+                `;
+                loadMoreContainer.style.display = 'none';
+                return;
+            }
+
+            // Build compact card HTML
+            const cardsHtml = schoolsToShow.map(school => {
+                const programs = school.programs || [];
+                const totalPrograms = programs.length;
+                
+                let programsHtml = '';
+                const maxDisplay = 3;
+                const displayPrograms = programs.slice(0, maxDisplay);
+                
+                if (totalPrograms === 0) {
+                    programsHtml = '<span style="color:var(--text-muted);">No programs listed</span>';
+                } else {
+                    displayPrograms.forEach((p, idx) => {
+                        programsHtml += `<span class="program-name">${p}</span>`;
+                        if (idx < displayPrograms.length - 1) {
+                            programsHtml += `<span class="program-comma">, </span>`;
+                        }
+                    });
+                    if (totalPrograms > maxDisplay) {
+                        const remaining = totalPrograms - maxDisplay;
+                        programsHtml += ` <span class="program-more" onclick="event.stopPropagation(); window.openSchoolDetail(${school.id})">+${remaining} more</span>`;
+                    }
+                }
+
+                let footerHtml = '';
+                
+                if (school.gender) {
+                    footerHtml += `<span class="school-gender"><i class="fas fa-${school.gender === 'Boys' ? 'male' : school.gender === 'Girls' ? 'female' : 'venus-mars'}"></i> ${school.gender}</span>`;
+                }
+                
+                if (school.school_type) {
+                    if (footerHtml) footerHtml += `<span class="sep">•</span>`;
+                    footerHtml += `<span>${school.school_type}</span>`;
+                }
+                
+                if (school.status) {
+                    if (footerHtml) footerHtml += `<span class="sep">•</span>`;
+                    footerHtml += `<span><i class="fas fa-bed"></i> ${school.status}</span>`;
+                }
+
+                return `
+                    <div class="school-card" onclick="window.openSchoolDetail(${school.id})">
+                        <div class="school-header">
+                            <div class="school-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div class="school-name">
+                                ${school.name}
+                                <span class="school-code">${school.code || ''}</span>
+                                <span class="school-type-badge ${school.category}">${school.category === 'public' ? 'Public' : 'Private'}</span>
+                            </div>
+                        </div>
+                        <div class="school-location">
+                            <i class="fas fa-map-marker-alt"></i> ${school.location || ''}${school.location && school.region ? ', ' : ''}${school.region || ''}
+                            ${school.district ? ` (${school.district})` : ''}
+                        </div>
+                        <div class="school-programs">
+                            ${programsHtml}
+                        </div>
+                        <div class="school-footer">
+                            ${footerHtml}
+                            <span class="click-hint">details <i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            if (currentPage === 1) {
+                schoolsGrid.innerHTML = cardsHtml;
+            } else {
+                const existingCards = schoolsGrid.querySelectorAll('.school-card');
+                const existingIds = new Set();
+                existingCards.forEach(card => {
+                    const onclick = card.getAttribute('onclick');
+                    if (onclick) {
+                        const match = onclick.match(/\d+/);
+                        if (match) existingIds.add(parseInt(match[0]));
+                    }
+                });
+                
+                const newSchools = schoolsToShow.filter(s => !existingIds.has(s.id));
+                if (newSchools.length > 0) {
+                    const newCardsHtml = newSchools.map(school => {
+                        const programs = school.programs || [];
+                        const totalPrograms = programs.length;
+                        let programsHtml = '';
+                        const maxDisplay = 3;
+                        const displayPrograms = programs.slice(0, maxDisplay);
+                        
+                        if (totalPrograms === 0) {
+                            programsHtml = '<span style="color:var(--text-muted);">No programs listed</span>';
+                        } else {
+                            displayPrograms.forEach((p, idx) => {
+                                programsHtml += `<span class="program-name">${p}</span>`;
+                                if (idx < displayPrograms.length - 1) {
+                                    programsHtml += `<span class="program-comma">, </span>`;
+                                }
+                            });
+                            if (totalPrograms > maxDisplay) {
+                                const remaining = totalPrograms - maxDisplay;
+                                programsHtml += ` <span class="program-more" onclick="event.stopPropagation(); window.openSchoolDetail(${school.id})">+${remaining} more</span>`;
+                            }
+                        }
+
+                        let footerHtml = '';
+                        if (school.gender) {
+                            footerHtml += `<span class="school-gender"><i class="fas fa-${school.gender === 'Boys' ? 'male' : school.gender === 'Girls' ? 'female' : 'venus-mars'}"></i> ${school.gender}</span>`;
+                        }
+                        if (school.school_type) {
+                            if (footerHtml) footerHtml += `<span class="sep">•</span>`;
+                            footerHtml += `<span>${school.school_type}</span>`;
+                        }
+                        if (school.status) {
+                            if (footerHtml) footerHtml += `<span class="sep">•</span>`;
+                            footerHtml += `<span><i class="fas fa-bed"></i> ${school.status}</span>`;
+                        }
+
+                        return `
+                            <div class="school-card" onclick="window.openSchoolDetail(${school.id})">
+                                <div class="school-header">
+                                    <div class="school-icon">
+                                        <i class="fas fa-school"></i>
+                                    </div>
+                                    <div class="school-name">
+                                        ${school.name}
+                                        <span class="school-code">${school.code || ''}</span>
+                                        <span class="school-type-badge ${school.category}">${school.category === 'public' ? 'Public' : 'Private'}</span>
+                                    </div>
+                                </div>
+                                <div class="school-location">
+                                    <i class="fas fa-map-marker-alt"></i> ${school.location || ''}${school.location && school.region ? ', ' : ''}${school.region || ''}
+                                    ${school.district ? ` (${school.district})` : ''}
+                                </div>
+                                <div class="school-programs">
+                                    ${programsHtml}
+                                </div>
+                                <div class="school-footer">
+                                    ${footerHtml}
+                                    <span class="click-hint">details <i class="fas fa-chevron-right"></i></span>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+                    schoolsGrid.insertAdjacentHTML('beforeend', newCardsHtml);
+                }
+            }
+
+            const totalLoaded = Math.min(currentPage * ITEMS_PER_PAGE, filteredSchools.length);
+            const hasMore = totalLoaded < filteredSchools.length;
+            
+            if (hasMore) {
+                loadMoreContainer.style.display = 'flex';
+                loadMoreBtn.disabled = false;
+                loadMoreBtn.classList.remove('loading');
+                const remaining = filteredSchools.length - totalLoaded;
+                loadMoreBtn.querySelector('.btn-text').innerHTML = `<i class="fas fa-plus-circle"></i> Load ${Math.min(remaining, ITEMS_PER_PAGE)} More Schools (${remaining} remaining)`;
+            } else {
+                loadMoreContainer.style.display = 'none';
+                if (filteredSchools.length > 0) {
+                    loadMoreInfo.textContent = `All ${filteredSchools.length} schools loaded`;
+                } else {
+                    loadMoreInfo.textContent = '';
+                }
+            }
+        };
+
+        const loadMoreSchools = () => {
+            if (isLoading) return;
+            
+            const totalLoaded = currentPage * ITEMS_PER_PAGE;
+            if (totalLoaded >= filteredSchools.length) {
+                loadMoreBtn.disabled = true;
+                return;
+            }
+            
+            isLoading = true;
+            loadMoreBtn.classList.add('loading');
+            
+            setTimeout(() => {
+                currentPage++;
+                displaySchools();
+                updateLoadMoreInfo();
+                isLoading = false;
+                loadMoreBtn.classList.remove('loading');
+            }, 300);
+        };
+
+        const updateLoadMoreInfo = () => {
+            const totalLoaded = Math.min(currentPage * ITEMS_PER_PAGE, filteredSchools.length);
+            if (filteredSchools.length > 0) {
+                loadMoreInfo.textContent = `Showing ${totalLoaded} of ${filteredSchools.length} schools`;
+            }
+        };
+
+        // ========================================
+        // HANDLE URL PARAMETERS
+        // ========================================
+        const handleUrlParams = () => {
+            if (careerParam) {
+                const careerId = parseInt(careerParam);
+                const career = getCareerById(careerId);
+                
+                if (career) {
+                    contextCareer = career;
+                    showContextBanner(career);
+                    
+                    const careerPrograms = career.programs || { primary: [], secondary: [] };
+                    const relevantPrograms = [...(careerPrograms.primary || []), ...(careerPrograms.secondary || [])];
+                    
+                    if (relevantPrograms.length > 0) {
+                        currentProgram = relevantPrograms[0];
+                        programFilter.value = currentProgram;
+                        filterSchools();
+                    }
+                }
+            } else if (programParam) {
+                currentProgram = programParam;
+                programFilter.value = currentProgram;
+                showProgramContextBanner(programParam);
+                filterSchools();
+            }
+        };
+
+        const showContextBanner = (career) => {
+            contextBanner.style.display = 'block';
+            document.getElementById('contextCareerName').textContent = career.name;
+            document.getElementById('contextTitle').innerHTML = `Schools for <span id="contextCareerName">${career.name}</span>`;
+            document.getElementById('contextDescription').textContent = 
+                `Below are schools that offer programs leading to a career as a ${career.name}.`;
+            
+            const careerPrograms = career.programs || { primary: [], secondary: [] };
+            const allPrograms = [...(careerPrograms.primary || []), ...(careerPrograms.secondary || [])];
+            const tagsHtml = allPrograms.map(p => 
+                `<span class="program-tag">${p}</span>`
+            ).join('');
+            document.getElementById('contextProgramTags').innerHTML = tagsHtml || '<span class="program-tag">No specific programs listed</span>';
+        };
+
+        const showProgramContextBanner = (program) => {
+            contextBanner.style.display = 'block';
+            document.getElementById('contextCareerName').textContent = program;
+            document.getElementById('contextTitle').innerHTML = `Schools offering <span id="contextCareerName">${program}</span>`;
+            document.getElementById('contextDescription').textContent = 
+                `Below are schools that offer the ${program} program.`;
+            document.getElementById('contextProgramTags').innerHTML = 
+                `<span class="program-tag">${program}</span>`;
+        };
+
+        // ========================================
+        // FILTERS
+        // ========================================
+        const populateRegionFilter = () => {
+            const regions = getRegions();
+            regions.sort();
+            regions.forEach(region => {
+                const option = document.createElement('option');
+                option.value = region;
+                option.textContent = region;
+                regionFilter.appendChild(option);
+            });
+        };
+
+        const populateProgramFilter = () => {
+            const programs = getAllPrograms();
+            programs.sort();
+            programs.forEach(program => {
+                const option = document.createElement('option');
+                option.value = program;
+                option.textContent = program;
+                programFilter.appendChild(option);
+            });
+        };
+
+        const filterSchools = () => {
+            filteredSchools = allSchools.filter(school => {
+                if (currentRegion !== 'all' && school.region !== currentRegion) return false;
+                if (currentProgram !== 'all' && (!school.programs || !school.programs.includes(currentProgram))) return false;
+                if (currentGender !== 'all' && school.gender !== currentGender) return false;
+                
+                if (searchTerm) {
+                    const term = searchTerm.toLowerCase();
+                    const nameMatch = school.name.toLowerCase().includes(term);
+                    const locMatch = school.location?.toLowerCase().includes(term) || false;
+                    const regionMatch = school.region?.toLowerCase().includes(term) || false;
+                    const districtMatch = school.district?.toLowerCase().includes(term) || false;
+                    const programMatch = school.programs ? school.programs.some(p => p.toLowerCase().includes(term)) : false;
+                    return nameMatch || locMatch || regionMatch || districtMatch || programMatch;
+                }
+                
+                return true;
+            });
+            
+            resetPagination();
+            displaySchools();
+            updateStats();
+            updateLoadMoreInfo();
+        };
+
+        // ========================================
+        // STATS
+        // ========================================
+        const updateStats = () => {
+            totalCount.textContent = filteredSchools.length;
+            
+            const regions = new Set(filteredSchools.map(s => s.region));
+            regionCount.textContent = regions.size;
+            
+            const programs = new Set();
+            filteredSchools.forEach(s => {
+                if (s.programs) {
+                    s.programs.forEach(p => programs.add(p));
+                }
+            });
+            programCount.textContent = programs.size;
+        };
+
+        // ========================================
+        // SCHOOL DETAIL MODAL
+        // ========================================
+        let lastFocusedElement = null;
+        
+        window.openSchoolDetail = (schoolId) => {
+            let school = visibleSchools.find(s => s.id === schoolId);
+            if (!school) {
+                school = allSchools.find(s => s.id === schoolId);
+            }
+            if (!school) {
+                showNotification('School not found', 'error');
+                return;
+            }
+
+            lastFocusedElement = document.activeElement;
+
+            modalSchoolName.textContent = school.name;
+            modalSchoolLocation.textContent = `${school.location || ''}${school.location && school.region ? ', ' : ''}${school.region || ''}`;
+
+            const programs = school.programs || [];
+            const programsHtml = programs.length > 0 
+                ? programs.map(p => `<span class="program-tag">${p}</span>`).join('')
+                : '<span style="color:var(--text-muted);font-size:var(--text-xs);">No programs listed</span>';
+
+            let detailsHtml = `
+                <div class="detail-horizontal">
+                    <div class="detail-item">
+                        <div class="detail-label"><i class="fas fa-map-marker-alt"></i> Location</div>
+                        <div class="detail-value">${school.location || 'Not specified'}${school.district ? ` (${school.district})` : ''}</div>
+                    </div>
+            `;
+
+            if (school.region) {
+                detailsHtml += `
+                    <div class="detail-item">
+                        <div class="detail-label"><i class="fas fa-map"></i> Region</div>
+                        <div class="detail-value">${school.region}</div>
+                    </div>
+                `;
+            }
+
+            detailsHtml += `
+                    <div class="detail-item">
+                        <div class="detail-label"><i class="fas fa-venus-mars"></i> Gender</div>
+                        <div class="detail-value">${school.gender || 'Mixed'}</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label"><i class="fas fa-building"></i> Type</div>
+                        <div class="detail-value">${school.school_type || 'SHS'} <span style="color:var(--text-muted);font-size:var(--text-xs);">(${school.category === 'public' ? 'Public' : 'Private'})</span></div>
+                    </div>
+            `;
+
+            if (school.status) {
+                detailsHtml += `
+                    <div class="detail-item">
+                        <div class="detail-label"><i class="fas fa-bed"></i> Status</div>
+                        <div class="detail-value">${school.status}</div>
+                    </div>
+                `;
+            }
+
+            detailsHtml += `
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label"><i class="fas fa-graduation-cap"></i> Programs Offered (${programs.length})</div>
+                    <div class="programs-list">${programsHtml}</div>
+                </div>
+            `;
+
+            if (school.code) {
+                detailsHtml += `
+                    <div class="detail-row">
+                        <div class="detail-label"><i class="fas fa-hashtag"></i> School Code</div>
+                        <div class="detail-value" style="font-family:monospace;font-size:var(--text-sm);">${school.code}</div>
+                    </div>
+                `;
+            }
+
+            modalSchoolBody.innerHTML = detailsHtml;
+
+            schoolDetailModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            setTimeout(() => {
+                modalDetailCloseBtn.focus();
+            }, 50);
+        };
+
+        const closeDetailModal = () => {
+            schoolDetailModal.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            if (lastFocusedElement && lastFocusedElement.focus) {
+                setTimeout(() => lastFocusedElement.focus(), 50);
+            }
+            lastFocusedElement = null;
+        };
+
+        modalDetailCloseBtn.addEventListener('click', closeDetailModal);
+        schoolDetailModal.addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeDetailModal();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (schoolDetailModal.classList.contains('active')) {
+                    closeDetailModal();
+                }
+            }
+        });
+
+        loadMoreBtn.addEventListener('click', loadMoreSchools);
+
+        // ========================================
+        // FILTER EVENT LISTENERS
+        // ========================================
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value;
+            filterSchools();
+        });
+
+        regionFilter.addEventListener('change', (e) => {
+            currentRegion = e.target.value;
+            filterSchools();
+            statsBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        programFilter.addEventListener('change', (e) => {
+            currentProgram = e.target.value;
+            filterSchools();
+            statsBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        genderFilter.addEventListener('change', (e) => {
+            currentGender = e.target.value;
+            filterSchools();
+            statsBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        searchInput.addEventListener('focus', function() {
+            const input = this;
+            requestAnimationFrame(() => {
+                const rect = input.getBoundingClientRect();
+                const headerHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+                const isNearTop = rect.top < 120 && rect.top > 20;
+                if (!isNearTop) {
+                    const scrollTarget = window.scrollY + rect.top - headerHeight - 10;
+                    window.scrollTo({
+                        top: scrollTarget,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchTerm = searchInput.value.trim();
+                filterSchools();
+                statsBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                searchInput.blur();
+            }
+        });
+
+        // Show loading skeletons initially
+        const showSkeletons = () => {
+            schoolsGrid.innerHTML = Array(6).fill(0).map(() => `
+                <div class="skeleton-card">
+                    <div class="skeleton-header">
+                        <div class="skeleton-icon"></div>
+                        <div style="flex:1;">
+                            <div class="skeleton-title"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text short"></div>
+                    <div class="skeleton-text" style="width:40%;"></div>
+                </div>
+            `).join('');
+        };
+
+        // Initialize
+        showSkeletons();
+        setTimeout(() => {
+            loadSchools();
+        }, 300);
+    </script>
+
+  <!-- Footer -->
+<div id="footer-placeholder"></div>
+<script src="js/footer.js"></script>
+
+    <!-- Scroll to Top Button -->
+    <script>
+        (function() {
+            const btn = document.createElement('button');
+            btn.id = 'scrollTopBtn';
+            btn.className = 'scroll-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            btn.setAttribute('aria-label', 'Scroll to top');
+            document.body.appendChild(btn);
+
+            let hideTimeout;
+            let isVisible = false;
+
+            const showButton = () => {
+                if (!isVisible) {
+                    btn.classList.add('visible');
+                    isVisible = true;
+                }
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(() => {
+                    btn.classList.remove('visible');
+                    isVisible = false;
+                }, 1500);
+            };
+
+            const toggleVisibility = () => {
+                if (window.scrollY > 300) {
+                    showButton();
+                } else {
+                    btn.classList.remove('visible');
+                    isVisible = false;
+                    clearTimeout(hideTimeout);
+                }
+            };
+
+            window.addEventListener('scroll', toggleVisibility, { passive: true });
+            window.addEventListener('load', toggleVisibility);
+
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                btn.classList.remove('visible');
+                isVisible = false;
+                clearTimeout(hideTimeout);
+            });
+
+            btn.addEventListener('mousedown', (e) => {
+                e.preventDefault();
+            });
+        })();
+    </script>
+</body>
+</html>

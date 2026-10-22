@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Description -->
+    <meta name="description" content="JOURNA - Find your perfect career path in Ghana. Take our free career assessment to discover careers matching your interests, with school recommendations and roadmaps.">
+    
+    <!-- Open Graph (for WhatsApp, Facebook) -->
+    <meta property="og:title" content="JOURNA - Career Guidance for Ghanaian Students">
+    <meta property="og:description" content="Find your perfect career path in Ghana. Free career assessment, school recommendations, and roadmaps.">
+    <meta property="og:image" content="https://journapath.netlify.app/assets/images/career.webp">
+    <meta property="og:url" content="https://journapath.netlify.app/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JOURNA - Career Guidance for Ghanaian Students">
+    <meta name="twitter:description" content="Find your perfect career path in Ghana. Free career assessment.">
+    <meta name="twitter:image" content="https://journapath.netlify.app/assets/images/career.webp">
+    <meta name="twitter:site" content="@journa_gh">
+    
+    <title>JOURNA - Find Your Career Path in Ghana</title>
+    
+    <!-- Favicon / App Icon -->
+    <link rel="icon" type="image/png" href="assets/images/career.webp">
+    <link rel="apple-touch-icon" href="assets/images/career.webp">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        /* Quick Access Section */
+        .quick-access {
+            padding: var(--space-2xl) 0;
+            background-color: var(--white);
+        }
+        
+        .access-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-xl);
+        }
+        
+        .access-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl) var(--space-lg);
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+            border: 1px solid var(--border-color-light);
+        }
+        
+        .access-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        
+        .access-card i {
+            font-size: var(--text-3xl);
+            color: var(--primary);
+            margin-bottom: var(--space-md);
+        }
+        
+        .access-card h3 {
+            font-size: var(--text-md);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .access-card p {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+        
+        /* Career Categories - Compact 5 Cards */
+        .career-categories-compact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .category-card-compact {
+            flex: 1;
+            min-width: 150px;
+            max-width: 190px;
+            background: white;
+            border-radius: 12px;
+            padding: 16px 12px;
+            text-align: center;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color-light);
+            cursor: default;
+        }
+        
+        .category-card-compact:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .category-card-compact i {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        
+        .category-card-compact h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--primary-dark);
+        }
+        
+        .category-card-compact p {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+        
+        /* Category Colors */
+        .cat-pro i { color: #6B5B95; }
+        .cat-tech i { color: #2E8B57; }
+        .cat-bus i { color: #F4A261; }
+        .cat-cre i { color: #E76F51; }
+        .cat-spt i { color: #2A9D8F; }
+        
+        /* Button Styles */
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            color: white;
+            border-color: var(--primary-dark);
+            transform: scale(1.02);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .btn-large {
+            padding: var(--space-md) var(--space-xl);
+            font-size: var(--text-base);
+        }
+        
+        /* Browse All Careers Button */
+        .btn-browse {
+            padding: 14px 32px;
+            font-size: 16px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-browse:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-browse:active {
+            transform: scale(0.98);
+        }
+        
+        /* CTA Buttons */
+        .btn-outline-light {
+            background: white;
+            color: var(--primary) !important;
+            border: none;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: var(--text-base);
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .btn-outline-light:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            background: white;
+            color: var(--primary-dark) !important;
+        }
+        
+        .btn-light {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 2px solid white;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: var(--text-base);
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-light:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: var(--space-md);
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            max-width: 500px;
+            width: 100%;
+            max-height: 80vh;
+            border-radius: 20px;
+            overflow: hidden;
+            animation: modalFadeIn 0.3s ease;
+            position: relative;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .modal-header {
+            padding: 16px 20px;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h3 {
+            margin: 0;
+            font-size: 18px;
+            color: white;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background var(--transition-fast);
+        }
+        
+        .modal-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .modal-close:focus-visible {
+            outline: 2px solid white;
+            outline-offset: 2px;
+        }
+        
+        .modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            max-height: calc(80vh - 60px);
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+        
+        .modal-body h4 {
+            color: var(--primary-dark);
+            margin: 16px 0 8px;
+        }
+        
+        .modal-body p {
+            margin-bottom: 12px;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            padding: var(--space-2xl) 0;
+            background-color: var(--gray-50);
+            text-align: center;
+        }
+        
+        .benefits-section h2 {
+            font-size: var(--text-2xl);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            max-width: 900px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .benefit-card i {
+            font-size: var(--text-2xl);
+            color: var(--secondary);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .benefit-card h3 {
+            font-size: var(--text-md);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .benefit-card p {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            font-size: 22px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .scroll-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        
+        .scroll-top-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* Home Statistics Section */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+            justify-items: center;
+        }
+        
+        .stat-item {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+        }
+        
+        /* ========================================
+           HERO SECTION - Fix for large screens
+           ======================================== */
+@media (min-width: 1050px) {
+    .hero-container {
+        align-items: flex-start;
+        padding-top: 0;  /* ← removed all padding */
+    }
+    
+    .hero-content {
+        padding-top: 0;  /* ← removed all padding */
+    }
+    
+    .hero-image {
+        align-self: center;
+    }
+}
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .access-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .category-card-compact {
+                min-width: 130px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .access-grid {
+                grid-template-columns: 1fr;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+            }
+            .career-categories-compact {
+                gap: 12px;
+            }
+            .category-card-compact {
+                min-width: calc(33% - 12px);
+                padding: 12px 8px;
+            }
+            .category-card-compact i {
+                font-size: 24px;
+            }
+            .category-card-compact h4 {
+                font-size: 13px;
+            }
+            .category-card-compact p {
+                font-size: 10px;
+            }
+            .scroll-top-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-sm);
+                margin-top: var(--space-md);
+            }
+            .stat-number {
+                font-size: var(--text-lg);
+            }
+            .stat-label {
+                font-size: var(--text-xs);
+            }
+            
+            .btn-light,
+            .btn-outline-light {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .category-card-compact {
+                min-width: calc(50% - 12px);
+            }
+            .stat-number {
+                font-size: var(--text-md);
+            }
+            .stat-label {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/career.webp" alt="JOURNA" width="60" height="60">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <!-- Will be populated by header-renderer.js -->
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div id="mobileNavLinks">
+            <!-- Will be populated by header-renderer.js -->
+        </div>
+    </div>
+    
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Your <span class="text-gradient">Perfect Career</span> Path</h1>
+                <p class="hero-subtitle">Designed for Ghanaian students. Find careers that match your interests, strengths, and goals. Make informed decisions about your future.</p>
+                <div class="hero-buttons">
+                    <a href="assessment.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-compass"></i> Take Free Assessment
+                    </a>
+                    <a href="career-library.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-briefcase"></i> Browse Careers
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">76</span>
+                        <span class="stat-label">Career Paths</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">980+</span>
+                        <span class="stat-label">Schools</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">JHS</span>
+                        <span class="stat-label">to Career Success</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/hero-image.webp" alt="Students planning careers" class="hero-img" width="800" height="533">
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Section -->
+    <section class="quick-access">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Start Exploring</h2>
+                <p class="section-subtitle">No account needed. Start right away.</p>
+            </div>
+            <div class="access-grid">
+                <a href="assessment.html" class="access-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Career Assessment</h3>
+                    <p>Find careers that match your interests</p>
+                </a>
+                <a href="career-library.html" class="access-card">
+                    <i class="fas fa-books"></i>
+                    <h3>Career Library</h3>
+                    <p>Browse all careers and opportunities</p>
+                </a>
+                <a href="shs-recommendation.html" class="access-card">
+                    <i class="fas fa-school"></i>
+                    <h3>Programs / Courses</h3>
+                    <p>Find the right program for your goals</p>
+                </a>
+                <a href="roadmap.html" class="access-card">
+                    <i class="fas fa-road"></i>
+                    <h3>Career Roadmaps</h3>
+                    <p>See the path from JHS to your career</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose JOURNA?</h2>
+                <p class="section-subtitle">Built specifically for Ghanaian students to make better career decisions</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <h3 class="feature-title">Personalized Guidance</h3>
+                    <p class="feature-description">Get career suggestions based on your interests, favorite subjects, and strengths.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="feature-title">SHS/SHTS/TVET/STEM Program Matching</h3>
+                    <p class="feature-description">Know exactly which program to choose for your dream career.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 class="feature-title">Clear Pathways</h3>
+                    <p class="feature-description">See the complete journey from JHS to your chosen career, including all steps.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="feature-title">Local Opportunities</h3>
+                    <p class="feature-description">Discover professional, technical, and entrepreneurial careers that exist in Ghana.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Save Your Results</h3>
+                    <p class="feature-description">Your results are saved locally. Come back anytime to review them.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Free Forever</h3>
+                    <p class="feature-description">No cost for students. Quality career guidance should be accessible to all.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Four simple steps to discover your career path</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Take the Assessment</h3>
+                        <p class="step-description">Answer 13 simple questions about what you enjoy and your favorite subjects. No account needed.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Get Recommendations</h3>
+                        <p class="step-description">Receive personalized career matches with detailed information immediately.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Explore Careers</h3>
+                        <p class="step-description">Browse career details, requirements, and roadmaps.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Save Your Results</h3>
+                        <p class="step-description">Your results are automatically saved in your browser. You can download them anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Categories Preview -->
+    <section id="careers" class="career-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explore Career Paths</h2>
+                <p class="section-subtitle">From university degrees to skilled trades and entrepreneurship</p>
+            </div>
+            
+            <div class="career-categories-compact">
+                <div class="category-card-compact cat-pro">
+                    <i class="fas fa-university"></i>
+                    <h4>Professional</h4>
+                    <p>University-based careers</p>
+                </div>
+                <div class="category-card-compact cat-tech">
+                    <i class="fas fa-tools"></i>
+                    <h4>Technical</h4>
+                    <p>Skilled trades, hands-on</p>
+                </div>
+                <div class="category-card-compact cat-bus">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Business</h4>
+                    <p>Entrepreneurship, management</p>
+                </div>
+                <div class="category-card-compact cat-cre">
+                    <i class="fas fa-palette"></i>
+                    <h4>Creative</h4>
+                    <p>Arts, design, media</p>
+                </div>
+                <div class="category-card-compact cat-spt">
+                    <i class="fas fa-futbol"></i>
+                    <h4>Sports</h4>
+                    <p>Performance, athletics</p>
+                </div>
+            </div>
+            
+            <div class="center-text">
+                <a href="career-library.html" class="btn-browse">Browse All Careers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Save Your Results</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-save"></i>
+                    <h3>Auto-Save</h3>
+                    <p>Your results are automatically saved in your browser</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-download"></i>
+                    <h3>Download Results</h3>
+                    <p>Export your matches as PDF to keep forever</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Share with Family</h3>
+                    <p>Share your results with parents and teachers via email</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trusted by Students</h2>
+                <p class="section-subtitle">Real stories from students who found their path</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>I was confused about which program to choose. JOURNA showed me that my interest in fixing things could lead to a career in engineering.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Kwame A.</h4>
+                            <p>SHS Student, Accra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>I never considered technical careers until I took the assessment. Now I'm on track to become an electrician and I couldn't be happier.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Abena M.</h4>
+                            <p>JHS Student, Kumasi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>The roadmap feature helped me understand exactly what subjects I need. I'm now confidently pursuing my dream career.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Emmanuel K.</h4>
+                            <p>SHS Student, Cape Coast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Discover Your Path?</h2>
+                <p class="cta-text">Start now - completely free. No account needed!</p>
+                <div class="flex gap-md justify-center flex-wrap">
+                    <a href="assessment.html" class="btn btn-light btn-large">Take Assessment</a>
+                    <a href="career-library.html" class="btn btn-outline-light btn-large">Browse Careers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script src="js/footer.js"></script>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="privacyModalTitle">Privacy Policy</h3>
+                <button class="modal-close" onclick="closeModal('privacyModal')" aria-label="Close privacy policy">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Your Privacy Matters</strong></p>
+                <p>At JOURNA, we take your privacy seriously. This Privacy Policy explains how we handle your information.</p>
+                
+                <h4>Information We Collect</h4>
+                <p>We do NOT collect or store any personal information. All assessment answers and career results are saved locally in your browser only. No data is sent to any server.</p>
+                
+                <h4>Local Storage</h4>
+                <p>Your assessment answers and career matches are stored only on your device using your browser's local storage. You can clear this data at any time by clearing your browser history.</p>
+                
+                <h4>Cookies</h4>
+                <p>We do not use tracking cookies. The only storage used is for saving your assessment progress locally.</p>
+                
+                <h4>Third-Party Services</h4>
+                <p>We use Google Fonts and Font Awesome icons, which may collect anonymized usage data as per their privacy policies.</p>
+                
+                <h4>Your Rights</h4>
+                <p>Since we don't collect any personal data, there is no information to access, modify, or delete. All your data stays on your device.</p>
+                
+                <p><em>Last updated: March 2026</em></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="termsModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="termsModalTitle">Terms of Service</h3>
+                <button class="modal-close" onclick="closeModal('termsModal')" aria-label="Close terms of service">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Welcome to JOURNA!</strong></p>
+                <p>By using JOURNA, you agree to these simple terms.</p>
+                
+                <h4>Free Service</h4>
+                <p>JOURNA is completely free to use. There are no hidden costs, subscriptions, or premium features.</p>
+                
+                <h4>Career Guidance Only</h4>
+                <p>The career recommendations provided are for guidance purposes only. We encourage you to discuss your career plans with teachers, counselors, and family members.</p>
+                
+                <h4>Accuracy of Information</h4>
+                <p>We strive to provide accurate and up-to-date career information based on the Ghanaian education system. However, career paths may vary and we recommend verifying with official institutions.</p>
+                
+                <h4>No Account Required</h4>
+                <p>You do not need to create an account to use JOURNA. All your data stays on your device.</p>
+                
+                <h4>Age Requirement</h4>
+                <p>JOURNA is designed for students. By using this service, you confirm that you are using it for educational purposes.</p>
+                
+                <h4>Changes to Terms</h4>
+                <p>We may update these terms from time to time. Continued use of the site means acceptance of any changes.</p>
+                
+                <p><em>Last updated: March 2026</em></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript - Module for header -->
+    <script type="module">
+        import { initHeader } from './js/header-renderer.js';
+        import { showNotification } from './js/utils.js';
+        
+        // Initialize header
+        initHeader();
+        
+        // Show welcome notification only once per browser session
+        if (!sessionStorage.getItem('journa_welcome_shown')) {
+            showNotification('Welcome to JOURNA! Find your career path today.', 'info', 4000);
+            sessionStorage.setItem('journa_welcome_shown', 'true');
+        }
+    </script>
+    
+    <!-- JavaScript - Regular script for modal functions -->
+    <script>
+        // Store the last focused element before modal opens
+        let lastFocusedElement = null;
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+            
+            lastFocusedElement = document.activeElement;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            setTimeout(() => {
+                const focusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                if (focusable) {
+                    focusable.focus();
+                } else {
+                    modal.setAttribute('tabindex', '-1');
+                    modal.focus();
+                }
+            }, 50);
+            
+            modal.addEventListener('keydown', trapFocus);
+        }
+        
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+            
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            modal.removeEventListener('keydown', trapFocus);
+            
+            if (lastFocusedElement && lastFocusedElement.focus) {
+                setTimeout(() => lastFocusedElement.focus(), 50);
+            }
+            lastFocusedElement = null;
+        }
+        
+        function trapFocus(e) {
+            const modal = e.currentTarget;
+            const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            if (focusableElements.length === 0) return;
+            
+            const firstFocusable = focusableElements[0];
+            const lastFocusable = focusableElements[focusableElements.length - 1];
+            
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusable) {
+                        e.preventDefault();
+                        lastFocusable.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusable) {
+                        e.preventDefault();
+                        firstFocusable.focus();
+                    }
+                }
+            }
+        }
+        
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = '';
+                if (lastFocusedElement && lastFocusedElement.focus) {
+                    setTimeout(() => lastFocusedElement.focus(), 50);
+                }
+                lastFocusedElement = null;
+            }
+        };
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const openModals = document.querySelectorAll('.modal.active');
+                openModals.forEach(modal => {
+                    const modalId = modal.id;
+                    closeModal(modalId);
+                });
+            }
+        });
+        
+        // Footer links (only if they exist)
+        const privacyLink = document.getElementById('privacyPolicyLink');
+        const termsLink = document.getElementById('termsOfServiceLink');
+
+        if (privacyLink) {
+            privacyLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal('privacyModal');
+            });
+        }
+
+        if (termsLink) {
+            termsLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                openModal('termsModal');
+            });
+        }
+
+        // Scroll to Top Button
+        (function() {
+            const btn = document.createElement('button');
+            btn.id = 'scrollTopBtn';
+            btn.className = 'scroll-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            btn.setAttribute('aria-label', 'Scroll to top');
+            document.body.appendChild(btn);
+
+            let hideTimeout;
+            let isVisible = false;
+
+            const showButton = () => {
+                if (!isVisible) {
+                    btn.classList.add('visible');
+                    isVisible = true;
+                }
+                clearTimeout(hideTimeout);
+                hideTimeout = setTimeout(() => {
+                    btn.classList.remove('visible');
+                    isVisible = false;
+                }, 1500);
+            };
+
+            const toggleVisibility = () => {
+                if (window.scrollY > 300) {
+                    showButton();
+                } else {
+                    btn.classList.remove('visible');
+                    isVisible = false;
+                    clearTimeout(hideTimeout);
+                }
+            };
+
+            window.addEventListener('scroll', toggleVisibility, { passive: true });
+            window.addEventListener('load', toggleVisibility);
+
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                btn.classList.remove('visible');
+                isVisible = false;
+                clearTimeout(hideTimeout);
+            });
+
+            btn.addEventListener('mousedown', (e) => {
+                e.preventDefault();
+            });
+        })();
+    </script>
+</body>
+</html>

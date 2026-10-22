@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Take JOURNA's free career assessment for Ghanaian students. Answer 13 questions to discover careers that match your interests, strengths, and goals.">
+    
+    <!-- Open Graph (for WhatsApp, Facebook) -->
+    <meta property="og:title" content="Career Assessment - JOURNA | Discover Your Path in Ghana">
+    <meta property="og:description" content="Take our free career assessment. Answer 13 questions to discover careers that match your interests and goals in Ghana.">
+    <meta property="og:image" content="https://journapath.netlify.app/assets/images/career.webp">
+    <meta property="og:url" content="https://journapath.netlify.app/assessment.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Career Assessment - JOURNA | Discover Your Path in Ghana">
+    <meta name="twitter:description" content="Take our free career assessment. Discover careers that match your interests and goals.">
+    <meta name="twitter:image" content="https://journapath.netlify.app/assets/images/career.webp">
+    <meta name="twitter:site" content="@journa_gh">
+    
+    <title>Career Assessment - JOURNA</title>
+    
+    <!-- Favicon / App Icon -->
+    <link rel="icon" type="image/png" href="assets/images/career.webp">
+    <link rel="apple-touch-icon" href="assets/images/career.webp">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        /* Assessment-specific styles */
+        .assessment-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md);
+        }
+        
+        .assessment-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .assessment-title {
+            font-size: var(--text-2xl);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .assessment-subtitle {
+            color: var(--text-secondary);
+            font-size: var(--text-md);
+        }
+        
+        .public-note {
+            background: var(--gray-100);
+            border-radius: var(--radius-full);
+            padding: var(--space-xs) var(--space-md);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: var(--text-xs);
+            color: var(--text-secondary);
+            margin-top: var(--space-sm);
+        }
+        
+        .public-note i {
+            color: var(--secondary);
+        }
+        
+        /* Progress Bar */
+        .progress-container {
+            margin-bottom: var(--space-xl);
+        }
+        
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--space-sm);
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: var(--radius-full);
+            transition: width var(--transition-base);
+            width: 0%;
+        }
+        
+        /* Question Card */
+        .question-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-lg);
+            margin-bottom: var(--space-xl);
+            animation: slideIn var(--transition-base);
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .question-number {
+            font-size: var(--text-sm);
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--space-sm);
+        }
+        
+        .question-text {
+            font-size: var(--text-xl);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-lg);
+            line-height: 1.4;
+        }
+        
+        /* ==========================================
+           OPTIONS GRID - REDUCED HEIGHT
+           ========================================== */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-sm);
+        }
+        
+        .grid-option {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            padding: var(--space-md) var(--space-sm);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-align: left;
+            background: white;
+            min-height: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-option::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: transparent;
+            transition: background 0.25s ease;
+            border-radius: var(--radius-md) 0 0 var(--radius-md);
+        }
+        
+        .grid-option:hover {
+            border-color: var(--primary);
+            background: var(--gray-50);
+            transform: translateY(-2px);
+        }
+        
+        .grid-option.selected {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            box-shadow: 0 8px 24px rgba(10, 36, 114, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .grid-option.selected::before {
+            background: var(--accent);
+        }
+        
+        .grid-option.selected .option-label {
+            color: white;
+        }
+
+        .grid-option.selected .option-check {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+        
+        .option-label {
+            font-size: var(--text-sm);
+            color: var(--text-primary);
+            font-weight: 500;
+            line-height: 1.3;
+            flex: 1;
+            min-width: 0;
+            transition: color 0.25s ease;
+        }
+
+        /* Check indicator matching roadmap style */
+        .option-check {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid var(--gray-300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.25s ease;
+            color: transparent;
+            font-size: 10px;
+            margin-left: auto;
+        }
+        
+        .multi-select-note {
+            font-size: var(--text-xs);
+            color: var(--secondary);
+            margin-top: var(--space-xs);
+            text-align: right;
+            font-weight: 500;
+        }
+        
+        .multi-select-note .selected-count {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        /* Navigation Buttons */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: var(--space-xl);
+        }
+        
+        .btn-navigation {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm) var(--space-lg);
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-md);
+            background: white;
+            color: var(--text-secondary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .btn-navigation:hover:not(:disabled) {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateX(-4px);
+        }
+        
+        .btn-navigation.next:hover:not(:disabled) {
+            transform: translateX(4px);
+        }
+        
+        .btn-navigation:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .btn-submit {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border: none;
+            padding: var(--space-md) var(--space-xl);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Save Results Modal */
+        .save-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: var(--space-md);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .save-modal.active {
+            display: flex;
+        }
+        
+        .save-modal-content {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            animation: slideUp 0.3s ease;
+            position: relative;
+        }
+        
+        .save-modal-content i {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: var(--space-md);
+        }
+        
+        .save-modal-content h3 {
+            font-size: var(--text-xl);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .save-modal-content p {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .save-modal-buttons {
+            display: flex;
+            gap: var(--space-sm);
+        }
+        
+        .save-modal-buttons .btn {
+            flex: 1;
+        }
+        
+        .save-modal-buttons .btn:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Loading State */
+        .skeleton-loader {
+            background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: var(--radius-md);
+            height: 200px;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Notification / Toast Padding Adjustment for Close Icon Spacing */
+        .notification, .toast {
+            padding-right: 40px !important;
+        }
+        
+        /* ==========================================
+           RESPONSIVE
+           ========================================== */
+        @media (max-width: 768px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-xs);
+            }
+            
+            .grid-option {
+                padding: var(--space-sm) var(--space-md);
+                min-height: 44px;
+            }
+            
+            .option-label {
+                font-size: var(--text-sm);
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+            
+            .btn-navigation {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .save-modal-buttons {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .grid-option {
+                padding: var(--space-xs) var(--space-sm);
+                min-height: 40px;
+            }
+            
+            .option-label {
+                font-size: 13px;
+            }
+            
+            .question-text {
+                font-size: var(--text-lg);
+            }
+            
+            .question-card {
+                padding: var(--space-lg);
+            }
+        }
+
+        @media (min-width: 579px) and (max-width: 1272px) {
+    .notification, .toast {
+        white-space: nowrap;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/career.webp" alt="JOURNA" width="60" height="60" loading="lazy">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <!-- Will be populated by header-renderer.js -->
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <div id="mobileNavLinks">
+            <!-- Will be populated by header-renderer.js -->
+        </div>
+    </div>
+    
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <div class="assessment-container">
+        <!-- Header -->
+        <div class="assessment-header">
+            <h1 class="assessment-title">Career Assessment</h1>
+            <p class="assessment-subtitle">Answer 13 questions to discover careers that match your interests</p>
+            <div class="public-note">
+                <i class="fas fa-save"></i> Your answers are automatically saved
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container" id="progressContainer" style="display: none;">
+            <div class="progress-info">
+                <span id="currentQuestionDisplay">Question 1 of 13</span>
+                <span id="progressPercentage">0% Complete</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <!-- Question Container -->
+        <div id="questionContainer"></div>
+
+        <!-- Loading State -->
+        <div id="loadingContainer" style="text-align: center; padding: var(--space-2xl);">
+            <div class="skeleton-loader"></div>
+            <p style="margin-top: var(--space-md); color: var(--text-secondary);">Loading questions...</p>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="save-modal" role="dialog" aria-modal="true" aria-labelledby="resultsModalTitle">
+        <div class="save-modal-content">
+            <i class="fas fa-chart-line" aria-hidden="true"></i>
+            <h3 id="resultsModalTitle">Assessment Complete!</h3>
+            <p>Your career matches are ready. View your results now or come back anytime - they're saved in your browser.</p>
+            <div class="save-modal-buttons">
+                <button class="btn btn-primary" id="viewResultsBtn">View Results</button>
+                <button class="btn btn-outline" id="closeModalBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript - Frontend-only modules -->
+    <script type="module">
+        import { initHeader } from './js/header-renderer.js';
+        import { showNotification } from './js/utils.js';
+        import { 
+            QUESTIONS, 
+            loadQuestions, 
+            saveAnswer, 
+            getSavedAnswers,
+            clearAnswers,
+            calculateAndSaveResults,
+            getAnsweredCount,
+            isAssessmentComplete
+        } from './js/assessment.js';
+
+        // Initialize the header
+        initHeader();
+
+        // State
+        let currentIndex = 0;
+        let questions = [];
+        let answers = {};
+
+        // DOM Elements
+        const loadingContainer = document.getElementById('loadingContainer');
+        const progressContainer = document.getElementById('progressContainer');
+        const questionContainer = document.getElementById('questionContainer');
+        const resultsModal = document.getElementById('resultsModal');
+        
+        // Initialize assessment
+        const initAssessment = async () => {
+            try {
+                questions = loadQuestions();
+                
+                if (questions && questions.length > 0) {
+                    const savedAnswers = getSavedAnswers();
+                    answers = savedAnswers;
+                    
+                    loadingContainer.style.display = 'none';
+                    progressContainer.style.display = 'block';
+                    questionContainer.style.display = 'block';
+                    
+                    renderQuestion();
+                } else {
+                    showNotification('Failed to load questions', 'error');
+                }
+            } catch (error) {
+                console.error('Initialization failed:', error);
+                loadingContainer.innerHTML = `
+                    <div style="text-align: center; padding: var(--space-2xl);">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 48px; color: var(--danger);"></i>
+                        <h3 style="margin-top: var(--space-md);">Failed to Load Questions</h3>
+                        <button class="btn btn-primary" onclick="location.reload()">Retry</button>
+                    </div>
+                `;
+            }
+        };
+
+        // Render current question
+        const renderQuestion = () => {
+            const question = questions[currentIndex];
+            if (!question) return;
+
+            const progress = ((currentIndex + 1) / questions.length) * 100;
+            document.getElementById('progressFill').style.width = `${progress}%`;
+            document.getElementById('progressPercentage').textContent = `${Math.round(progress)}% Complete`;
+            document.getElementById('currentQuestionDisplay').textContent = 
+                `Question ${currentIndex + 1} of ${questions.length}`;
+
+            const currentAnswer = answers[question.id];
+            const isMultiSelect = question.type === 'multi';
+            
+            let selectedAnswers = [];
+            if (isMultiSelect && currentAnswer) {
+                selectedAnswers = Array.isArray(currentAnswer) ? currentAnswer : [currentAnswer];
+            }
+            
+            let optionsHtml = `
+                <div class="options-grid">
+                    ${question.options.map(opt => {
+                        let isSelected = false;
+                        if (isMultiSelect) {
+                            isSelected = selectedAnswers.includes(opt.text);
+                        } else {
+                            isSelected = currentAnswer === opt.text;
+                        }
+                        
+                        return `
+                            <div class="grid-option ${isSelected ? 'selected' : ''}" 
+                                 data-value="${opt.text.replace(/'/g, "&apos;")}"
+                                 onclick="window.handleOptionClick(${question.id}, '${opt.text.replace(/'/g, "\\'")}', ${isMultiSelect})">
+                                <span class="option-label">${opt.text}</span>
+                                <span class="option-check"><i class="fas fa-check"></i></span>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+            
+            // Add selection count note for multi-select
+            if (isMultiSelect && question.maxSelections) {
+                optionsHtml += `
+                    <div class="multi-select-note">
+                        <span class="selected-count">${selectedAnswers.length}</span> / ${question.maxSelections} selected
+                    </div>
+                `;
+            }
+            
+            let isNextEnabled = false;
+            if (isMultiSelect) {
+                isNextEnabled = selectedAnswers.length > 0;
+            } else {
+                isNextEnabled = !!currentAnswer;
+            }
+            
+            questionContainer.innerHTML = `
+                <div class="question-card">
+                    <div class="question-number">Question ${currentIndex + 1}</div>
+                    <h2 class="question-text">${question.text}</h2>
+                    
+                    ${optionsHtml}
+                    
+                    <div class="navigation-buttons">
+                        <button class="btn-navigation" onclick="window.previousQuestion()" 
+                                ${currentIndex === 0 ? 'disabled' : ''}>
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        
+                        ${currentIndex === questions.length - 1 
+                            ? `<button class="btn-submit" onclick="window.submitAssessment()" 
+                                    ${!isNextEnabled ? 'disabled' : ''}>
+                                    See My Results
+                               </button>`
+                            : `<button class="btn-navigation next" onclick="window.nextQuestion()" 
+                                    ${!isNextEnabled ? 'disabled' : ''}>
+                                    Next <i class="fas fa-arrow-right"></i>
+                               </button>`
+                        }
+                    </div>
+                </div>
+            `;
+        };
+
+        // Handle option click
+        window.handleOptionClick = (questionId, answerText, isMultiSelect) => {
+            const question = questions.find(q => q.id === questionId);
+            if (!question) return;
+            
+            let currentAnswer = answers[questionId];
+            
+            if (isMultiSelect) {
+                let selected = Array.isArray(currentAnswer) ? [...currentAnswer] : (currentAnswer ? [currentAnswer] : []);
+                const index = selected.indexOf(answerText);
+                
+                if (index === -1) {
+                    if (selected.length < (question.maxSelections || 3)) {
+                        selected.push(answerText);
+                    } else {
+                        showNotification(`You can select up to ${question.maxSelections || 3} options only` , 'warning');
+                        return;
+                    }
+                } else {
+                    selected.splice(index, 1);
+                }
+                
+                saveAnswer(questionId, selected);
+                answers[questionId] = selected;
+            } else {
+                saveAnswer(questionId, answerText);
+                answers[questionId] = answerText;
+            }
+            
+            // Update UI
+            const options = document.querySelectorAll('.grid-option');
+            options.forEach(opt => {
+                const optValue = opt.getAttribute('data-value');
+                if (isMultiSelect) {
+                    const selectedAnswers = answers[questionId] || [];
+                    if (selectedAnswers.includes(optValue)) {
+                        opt.classList.add('selected');
+                    } else {
+                        opt.classList.remove('selected');
+                    }
+                } else {
+                    if (optValue === answerText) {
+                        opt.classList.add('selected');
+                    } else {
+                        opt.classList.remove('selected');
+                    }
+                }
+            });
+            
+            // Update selection count for multi-select
+            if (isMultiSelect && question.maxSelections) {
+                const selectedCount = (answers[questionId] || []).length;
+                const note = document.querySelector('.multi-select-note');
+                if (note) {
+                    note.innerHTML = `<span class="selected-count">${selectedCount}</span> / ${question.maxSelections} selected`;
+                }
+            }
+            
+            const nextBtn = document.querySelector('.btn-navigation.next');
+            const submitBtn = document.querySelector('.btn-submit');
+            const hasAnswer = isMultiSelect ? (answers[questionId] || []).length > 0 : !!answers[questionId];
+            
+            if (nextBtn) nextBtn.disabled = !hasAnswer;
+            if (submitBtn) submitBtn.disabled = !hasAnswer;
+        };
+
+        // Navigation
+        window.nextQuestion = () => {
+            if (currentIndex < questions.length - 1) {
+                currentIndex++;
+                renderQuestion();
+            }
+        };
+        
+        window.previousQuestion = () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderQuestion();
+            }
+        };
+
+        let lastFocusedElement = null;
+
+        window.submitAssessment = () => {
+            const answeredCount = getAnsweredCount();
+            
+            if (answeredCount < questions.length) {
+                showNotification(`Please answer all questions. ${questions.length - answeredCount} remaining.`, 'warning');
+                return;
+            }
+            
+            showNotification('Calculating your results...', 'info');
+            
+            const results = calculateAndSaveResults();
+            
+            if (results && results.primary && results.primary.length > 0) {
+                showNotification('Assessment complete!', 'success');
+                
+                lastFocusedElement = document.activeElement;
+                
+                const modal = document.getElementById('resultsModal');
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                setTimeout(() => {
+                    const viewBtn = document.getElementById('viewResultsBtn');
+                    if (viewBtn) viewBtn.focus();
+                }, 50);
+                
+                document.getElementById('viewResultsBtn').onclick = () => {
+                    closeModal();
+                    window.location.href = 'results.html';
+                };
+                
+                document.getElementById('closeModalBtn').onclick = () => {
+                    closeModal();
+                };
+            } else {
+                showNotification('Error calculating results', 'error');
+            }
+        };
+        
+        function closeModal() {
+            const modal = document.getElementById('resultsModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            if (lastFocusedElement && lastFocusedElement.focus) {
+                setTimeout(() => lastFocusedElement.focus(), 50);
+            }
+            lastFocusedElement = null;
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('resultsModal');
+                if (modal.classList.contains('active')) {
+                    closeModal();
+                }
+            }
+        });
+
+        document.getElementById('resultsModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeModal();
+            }
+        });
+
+        initAssessment();
+    </script>
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+<script src="js/footer.js"></script>
+</body>
+</html>
