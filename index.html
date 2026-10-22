@@ -3,43 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Journa - Career Guidance and School Selection for Ghanaian Students</title>
-<meta name="description" content="Journa helps Ghanaian students choose a career and a school. Explore careers, take the assessment, find the right programme, and prepare your school selections.">
+<title>Journa — Career Guidance and School Selection for Ghanaian Students</title>
+<meta name="description" content="Journa brings career discovery and school selection into one app. Explore 76 careers, take the 13-question assessment, read the selection guidelines and review your school choices.">
+
+<meta name="theme-color" content="#1E3A8A">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="assets/journa/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/journa/icons/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
+<!-- The shared application shell: design tokens, app bar, install prompt. -->
+<link rel="stylesheet" href="assets/journa/shell.css">
+
 <style>
 /* ============================================================
-   JOURNA landing page - self-contained styles.
-   Deliberately scoped to this file only so the two applications
-   in career-guidance/ and school-selection/ keep their own designs.
-   Palette matches the shared design tokens used by both apps.
+   JOURNA — application home.
+   Page styles only. The design tokens, colours, spacing rhythm
+   and chrome come from the shared shell (assets/journa/shell.css)
+   so the home page and the two services read as one product.
    ============================================================ */
 
 :root {
-  --jn-navy: #1E3A8A;
-  --jn-navy-dark: #0A2472;
-  --jn-navy-light: #3B5BA5;
-  --jn-teal: #1E7B6B;
-  --jn-teal-light: #2A9D8F;
-  --jn-orange: #F4A261;
-  --jn-coral: #E76F51;
-  --jn-ink: #1A2233;
-  --jn-body: #46536B;
-  --jn-muted: #5C6A85;
-  --jn-line: #E2E8F2;
-  --jn-bg: #F6F8FC;
-  --jn-white: #FFFFFF;
-  --jn-radius: 16px;
-  --jn-radius-sm: 10px;
-  --jn-shadow-sm: 0 1px 2px rgba(26, 34, 51, .06), 0 2px 8px rgba(26, 34, 51, .04);
-  --jn-shadow: 0 4px 12px rgba(26, 34, 51, .07), 0 12px 32px rgba(26, 34, 51, .07);
-  --jn-shadow-lg: 0 8px 24px rgba(26, 34, 51, .10), 0 24px 56px rgba(26, 34, 51, .10);
-  --jn-max: 1160px;
-  --jn-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --jn-display: 'Poppins', var(--jn-font);
+  --app-max: 1180px;
+  --app-shadow-sm: 0 1px 2px rgba(26, 34, 51, .06), 0 2px 8px rgba(26, 34, 51, .04);
+  --app-shadow-lg: 0 8px 24px rgba(26, 34, 51, .10), 0 24px 56px rgba(26, 34, 51, .10);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -59,398 +49,423 @@ h1, h2, h3, h4 { font-family: var(--jn-display); color: var(--jn-ink); line-heig
 p { margin: 0; }
 a { color: inherit; }
 
-.jn-wrap { width: 100%; max-width: var(--jn-max); margin: 0 auto; padding: 0 24px; }
+.app-wrap { width: 100%; max-width: var(--app-max); margin: 0 auto; padding: 0 22px; }
 
-/* ---------- Top bar ---------- */
-.jn-topbar {
-  position: sticky; top: 0; z-index: 50;
-  background: rgba(255, 255, 255, .88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--jn-line);
-}
-.jn-topbar-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px; min-height: 68px;
-}
-.jn-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-.jn-brand-mark {
-  width: 36px; height: 36px; border-radius: 10px; flex: 0 0 auto;
-  background: linear-gradient(135deg, var(--jn-navy) 0%, var(--jn-teal) 100%);
-  color: var(--jn-white); font-family: var(--jn-display); font-weight: 700;
-  display: inline-flex; align-items: center; justify-content: center; font-size: 1rem;
-}
-.jn-brand-name { font-family: var(--jn-display); font-weight: 700; font-size: 1.25rem; color: var(--jn-ink); letter-spacing: -.01em; }
-.jn-brand-tag { display: none; color: var(--jn-muted); font-size: .8125rem; font-weight: 500; }
-
-.jn-nav { display: flex; align-items: center; gap: 6px; }
-.jn-nav a {
-  text-decoration: none; font-weight: 600; font-size: .9375rem;
-  padding: 9px 14px; border-radius: 999px; color: var(--jn-body);
-  transition: background .18s ease, color .18s ease;
-  white-space: nowrap;
-}
-.jn-nav a:hover { background: var(--jn-bg); color: var(--jn-navy); }
-.jn-nav a.jn-nav-cta {
-  background: var(--jn-navy); color: var(--jn-white); padding: 10px 20px;
-}
-.jn-nav a.jn-nav-cta:hover { background: var(--jn-navy-dark); color: var(--jn-white); }
+.app-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* ---------- Hero ---------- */
-.jn-hero {
-  position: relative; overflow: hidden;
+
+.app-hero {
+  position: relative;
+  overflow: hidden;
   background:
     radial-gradient(1000px 460px at 12% -10%, rgba(42, 157, 143, .30), transparent 62%),
     radial-gradient(880px 420px at 92% 0%, rgba(244, 162, 97, .26), transparent 60%),
     linear-gradient(160deg, #0A2472 0%, #1E3A8A 48%, #1E7B6B 100%);
   color: var(--jn-white);
-  padding: clamp(56px, 9vw, 104px) 0 clamp(52px, 8vw, 92px);
+  padding: clamp(44px, 7vw, 88px) 0 clamp(46px, 7vw, 84px);
 }
-.jn-hero::after {
-  content: ""; position: absolute; inset: auto 0 -1px; height: 90px;
-  background: linear-gradient(to bottom, transparent, var(--jn-bg));
-  opacity: .5; pointer-events: none;
-}
-.jn-hero-inner { position: relative; z-index: 1; text-align: center; max-width: 780px; margin: 0 auto; }
-.jn-eyebrow {
+
+.app-hero-inner { max-width: 760px; }
+
+.app-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(255, 255, 255, .13);
   border: 1px solid rgba(255, 255, 255, .26);
-  padding: 7px 16px; border-radius: 999px;
-  font-size: .8125rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
-  margin-bottom: 22px;
+  padding: 7px 15px; border-radius: 999px;
+  font-size: .75rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+  color: #EAF3F1;
 }
-.jn-hero h1 {
-  color: var(--jn-white); font-size: clamp(2.1rem, 6vw, 3.5rem);
-  letter-spacing: -.02em; margin-bottom: 18px;
-}
-.jn-hero h1 span { color: var(--jn-orange); }
-.jn-hero-lead { font-size: clamp(1rem, 2.4vw, 1.1875rem); color: rgba(255,255,255,.88); max-width: 620px; margin: 0 auto 32px; }
-.jn-hero-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
-.jn-btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-  padding: 14px 26px; border-radius: 999px; text-decoration: none;
-  font-weight: 600; font-size: .9375rem; border: 1.5px solid transparent;
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-  cursor: pointer;
-}
-.jn-btn:active { transform: translateY(1px); }
-.jn-btn-solid { background: var(--jn-white); color: var(--jn-navy-dark); box-shadow: var(--jn-shadow); }
-.jn-btn-solid:hover { box-shadow: var(--jn-shadow-lg); }
-.jn-btn-ghost { background: rgba(255,255,255,.10); color: var(--jn-white); border-color: rgba(255,255,255,.34); }
-.jn-btn-ghost:hover { background: rgba(255,255,255,.18); }
-.jn-btn-arrow { font-size: 1.05em; line-height: 1; }
 
-.jn-hero-stats {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 14px; max-width: 640px; margin: 46px auto 0;
+.app-hero h1 {
+  margin: 18px 0 0;
+  font-size: clamp(2rem, 5.4vw, 3.4rem);
+  color: var(--jn-white);
+  letter-spacing: -.02em;
+  line-height: 1.08;
 }
-.jn-hero-stat {
-  background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.20);
-  border-radius: var(--jn-radius-sm); padding: 16px 12px;
-}
-.jn-hero-stat b { display: block; font-family: var(--jn-display); font-size: clamp(1.25rem, 3.4vw, 1.75rem); color: var(--jn-white); line-height: 1.2; }
-.jn-hero-stat small { display: block; color: rgba(255,255,255,.76); font-size: .8125rem; margin-top: 4px; }
 
-/* ---------- Section shell ---------- */
-.jn-section { padding: clamp(52px, 7vw, 84px) 0; }
-.jn-section-head { text-align: center; max-width: 660px; margin: 0 auto clamp(34px, 5vw, 52px); }
-.jn-section-head h2 { font-size: clamp(1.6rem, 4.4vw, 2.35rem); letter-spacing: -.015em; margin-bottom: 12px; }
-.jn-section-head p { color: var(--jn-muted); font-size: 1.0625rem; }
+.app-hero h1 em { font-style: normal; color: var(--jn-orange); }
+
+.app-lead {
+  margin-top: 16px;
+  font-size: clamp(1rem, 2.3vw, 1.1875rem);
+  color: rgba(255, 255, 255, .88);
+  max-width: 60ch;
+}
+
+.app-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+.app-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font: inherit; font-weight: 700; font-size: .9375rem;
+  padding: 13px 22px; border-radius: 999px;
+  text-decoration: none; border: 1px solid transparent;
+  min-height: 46px;
+  transition: transform .16s ease, background .16s ease, border-color .16s ease;
+}
+.app-btn:hover { transform: translateY(-1px); }
+.app-btn--primary { background: var(--jn-white); color: var(--jn-navy); }
+.app-btn--primary:hover { background: #EDF2FB; }
+.app-btn--ghost { background: rgba(255, 255, 255, .10); color: var(--jn-white); border-color: rgba(255, 255, 255, .34); }
+.app-btn--ghost:hover { background: rgba(255, 255, 255, .18); }
+
+.app-facts {
+  list-style: none; margin: 30px 0 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 10px;
+}
+.app-facts li {
+  background: rgba(255, 255, 255, .10);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 999px;
+  padding: 6px 13px;
+  font-size: .8125rem; font-weight: 600; color: rgba(255, 255, 255, .92);
+}
+
+/* ---------- Sections ---------- */
+
+.app-section { padding: clamp(42px, 6vw, 72px) 0; }
+.app-section--alt { background: var(--jn-white); border-block: 1px solid var(--jn-line); }
+
+.app-section-head { max-width: 640px; margin-bottom: 30px; }
+.app-section-head h2 { font-size: clamp(1.375rem, 3.2vw, 1.875rem); letter-spacing: -.015em; }
+.app-section-head p { margin-top: 10px; color: var(--jn-muted); font-size: 1rem; }
+
+.app-kicker {
+  display: block;
+  font-size: .6875rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--jn-teal); margin-bottom: 8px;
+}
 
 /* ---------- Service cards ---------- */
-.jn-services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 
-.jn-card {
-  background: var(--jn-white); border: 1px solid var(--jn-line);
-  border-radius: var(--jn-radius); padding: 34px 30px 30px;
-  box-shadow: var(--jn-shadow-sm); position: relative; overflow: hidden;
+.app-services { display: grid; gap: 22px; grid-template-columns: 1fr; }
+
+.app-service {
   display: flex; flex-direction: column;
-  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  background: var(--jn-white);
+  border: 1px solid var(--jn-line);
+  border-radius: 18px;
+  padding: 26px 24px 24px;
+  box-shadow: var(--app-shadow-sm);
+  position: relative; overflow: hidden;
 }
-.jn-card:hover { transform: translateY(-4px); box-shadow: var(--jn-shadow-lg); }
-.jn-card::before {
-  content: ""; position: absolute; inset: 0 0 auto 0; height: 5px;
+.app-service::before {
+  content: ""; position: absolute; inset: 0 0 auto; height: 4px;
 }
-.jn-card-career::before { background: linear-gradient(90deg, var(--jn-teal), var(--jn-teal-light)); }
-.jn-card-school::before { background: linear-gradient(90deg, var(--jn-navy), var(--jn-navy-light)); }
+.app-service--career::before { background: linear-gradient(90deg, var(--jn-teal), var(--jn-teal-light)); }
+.app-service--school::before { background: linear-gradient(90deg, var(--jn-navy), var(--jn-navy-light)); }
 
-.jn-card-icon {
-  width: 54px; height: 54px; border-radius: 14px; margin-bottom: 20px;
+.app-service__icon {
+  width: 46px; height: 46px; border-radius: 13px;
   display: inline-flex; align-items: center; justify-content: center;
-  font-size: 1.5rem;
+  margin-bottom: 14px;
 }
-.jn-card-career .jn-card-icon { background: rgba(30, 123, 107, .10); color: var(--jn-teal); }
-.jn-card-school .jn-card-icon { background: rgba(30, 58, 138, .10); color: var(--jn-navy); }
+.app-service--career .app-service__icon { background: rgba(30, 123, 107, .10); color: var(--jn-teal); }
+.app-service--school .app-service__icon { background: rgba(30, 58, 138, .09); color: var(--jn-navy); }
+.app-service__icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
 
-.jn-card-kicker {
-  display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .08em;
-  text-transform: uppercase; margin-bottom: 8px;
+.app-service h3 { font-size: 1.25rem; }
+.app-service__tag {
+  display: inline-block; margin-top: 6px;
+  font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--jn-muted);
 }
-.jn-card-career .jn-card-kicker { color: var(--jn-teal); }
-.jn-card-school .jn-card-kicker { color: var(--jn-navy); }
+.app-service > p { margin-top: 10px; font-size: .9375rem; }
 
-.jn-card h3 { font-size: 1.5rem; letter-spacing: -.01em; margin-bottom: 10px; }
-.jn-card-tag { color: var(--jn-body); font-size: .9688rem; margin-bottom: 22px; }
-
-.jn-list { list-style: none; margin: 0 0 26px; padding: 0; display: grid; gap: 11px; }
-.jn-list li { display: flex; gap: 11px; align-items: flex-start; font-size: .9375rem; color: var(--jn-body); }
-.jn-list .jn-tick {
-  flex: 0 0 auto; width: 20px; height: 20px; margin-top: 2px; border-radius: 50%;
-  display: inline-flex; align-items: center; justify-content: center;
-  font-size: .625rem; font-weight: 700; color: var(--jn-white);
+.app-links { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 8px; flex: 1 1 auto; }
+.app-links a {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+  font-weight: 600; font-size: .9375rem; color: var(--jn-ink);
+  padding: 10px 12px; border-radius: var(--jn-radius-sm);
+  background: var(--jn-bg);
+  border: 1px solid transparent;
+  transition: border-color .16s ease, background .16s ease;
 }
-.jn-card-career .jn-list .jn-tick { background: var(--jn-teal-light); }
-.jn-card-school .jn-list .jn-tick { background: var(--jn-navy-light); }
+.app-links a:hover { border-color: var(--jn-line); background: var(--jn-white); }
+.app-links svg { width: 17px; height: 17px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.app-service--career .app-links svg { color: var(--jn-teal); }
+.app-service--school .app-links svg { color: var(--jn-navy); }
+.app-links a span { margin-left: auto; color: var(--jn-muted); font-weight: 500; font-size: .8125rem; }
 
-.jn-card-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; }
-.jn-card-btn {
+.app-service__cta { margin-top: 20px; }
+.app-cta {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 12px 22px; border-radius: 999px; text-decoration: none;
-  font-weight: 600; font-size: .9375rem; color: var(--jn-white);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  font-weight: 700; font-size: .9375rem; text-decoration: none;
+  padding: 12px 20px; border-radius: 999px; color: var(--jn-white);
+  min-height: 44px;
 }
-.jn-card-btn:hover { transform: translateY(-2px); box-shadow: var(--jn-shadow); filter: brightness(1.06); }
-.jn-card-career .jn-card-btn { background: var(--jn-teal); }
-.jn-card-school .jn-card-btn { background: var(--jn-navy); }
-.jn-card-btn.jn-ghost-btn { background: transparent; color: var(--jn-ink); border: 1.5px solid var(--jn-line); }
-.jn-card-btn.jn-ghost-btn:hover { background: var(--jn-bg); box-shadow: none; filter: none; }
+.app-cta svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.app-service--career .app-cta { background: var(--jn-teal); }
+.app-service--career .app-cta:hover { background: #196055; }
+.app-service--school .app-cta { background: var(--jn-navy); }
+.app-service--school .app-cta:hover { background: var(--jn-navy-dark); }
 
-/* ---------- Steps strip ---------- */
-.jn-steps-section { background: var(--jn-white); border-top: 1px solid var(--jn-line); border-bottom: 1px solid var(--jn-line); }
-.jn-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-.jn-step { position: relative; padding-top: 6px; }
-.jn-step-num {
-  width: 40px; height: 40px; border-radius: 12px; margin-bottom: 16px;
-  background: linear-gradient(135deg, var(--jn-navy), var(--jn-teal));
-  color: var(--jn-white); font-family: var(--jn-display); font-weight: 700;
+/* ---------- Steps ---------- */
+
+.app-steps { display: grid; gap: 16px; grid-template-columns: 1fr; counter-reset: step; }
+
+.app-step {
+  background: var(--jn-white);
+  border: 1px solid var(--jn-line);
+  border-radius: 16px;
+  padding: 22px 20px;
+  position: relative;
+}
+.app-step__num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--jn-navy); color: var(--jn-white);
   display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--jn-display); font-weight: 700; font-size: .875rem;
+  margin-bottom: 12px;
 }
-.jn-step h3 { font-size: 1.125rem; margin-bottom: 7px; }
-.jn-step p { font-size: .9375rem; color: var(--jn-muted); }
+.app-step h3 { font-size: 1.0625rem; }
+.app-step p { margin-top: 8px; font-size: .9375rem; color: var(--jn-muted); }
 
-/* ---------- Closing CTA ---------- */
-.jn-closing { text-align: center; }
-.jn-closing h2 { font-size: clamp(1.55rem, 4.2vw, 2.2rem); letter-spacing: -.015em; margin-bottom: 12px; }
-.jn-closing p { color: var(--jn-muted); margin-bottom: 28px; font-size: 1.0625rem; }
-.jn-closing-actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
-.jn-btn-primary { background: var(--jn-navy); color: var(--jn-white); }
-.jn-btn-primary:hover { background: var(--jn-navy-dark); }
-.jn-btn-teal { background: var(--jn-teal); color: var(--jn-white); }
-.jn-btn-teal:hover { background: #17604f; }
+/* ---------- Install panel ---------- */
+
+.app-install {
+  background: var(--jn-ink);
+  border-radius: 20px;
+  padding: clamp(26px, 4vw, 40px);
+  color: rgba(255, 255, 255, .84);
+  display: grid; gap: 22px;
+}
+.app-install h2 { color: var(--jn-white); font-size: clamp(1.25rem, 2.8vw, 1.625rem); }
+.app-install p { font-size: .9375rem; }
+.app-install ul { margin: 16px 0 0; padding-left: 20px; display: grid; gap: 8px; font-size: .9375rem; }
+.app-install__cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.app-btn--install { background: var(--jn-orange); color: #3A2410; }
+.app-btn--install:hover { background: #F7B680; }
+.app-btn--install[hidden] { display: none; }
+.app-install__note { font-size: .8125rem; color: rgba(255, 255, 255, .62); }
 
 /* ---------- Footer ---------- */
-.jn-footer { background: #0A2472; color: rgba(255,255,255,.72); padding: 44px 0 34px; }
-.jn-footer-inner { display: flex; flex-wrap: wrap; gap: 26px; justify-content: space-between; align-items: flex-start; }
-.jn-footer-brand { max-width: 340px; }
-.jn-footer-brand .jn-brand-name { color: var(--jn-white); }
-.jn-footer-brand p { font-size: .875rem; margin-top: 12px; color: rgba(255,255,255,.66); }
-.jn-footer-links { display: flex; flex-wrap: wrap; gap: 10px 26px; }
-.jn-footer-links a {
-  color: rgba(255,255,255,.80); text-decoration: none; font-size: .9375rem; font-weight: 500;
-  transition: color .18s ease;
+
+.app-footer {
+  background: var(--jn-white);
+  border-top: 1px solid var(--jn-line);
+  padding: 30px 0 40px;
+  font-size: .875rem;
+  color: var(--jn-muted);
 }
-.jn-footer-links a:hover { color: var(--jn-orange); }
-.jn-footer-note {
-  margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.14);
-  font-size: .8125rem; color: rgba(255,255,255,.52);
-}
+.app-footer__inner { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; }
+.app-footer__brand { display: inline-flex; align-items: center; gap: 9px; font-weight: 700; color: var(--jn-ink); font-family: var(--jn-display); }
+.app-footer nav { display: flex; flex-wrap: wrap; gap: 18px; }
+.app-footer nav a { text-decoration: none; font-weight: 600; }
+.app-footer nav a:hover { color: var(--jn-navy); }
+.app-footer p.app-disclaimer { margin-top: 16px; font-size: .8125rem; max-width: 80ch; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-  .jn-services { grid-template-columns: 1fr; gap: 22px; }
-  .jn-steps { grid-template-columns: 1fr; gap: 26px; text-align: left; }
-  .jn-step { display: grid; grid-template-columns: 40px 1fr; gap: 0 16px; align-items: start; }
-  .jn-step-num { grid-row: span 2; margin-bottom: 0; }
-  .jn-brand-tag { display: none; }
+
+@media (min-width: 600px) {
+  .app-steps { grid-template-columns: repeat(3, 1fr); }
 }
 
-@media (max-width: 720px) {
-  .jn-wrap { padding: 0 18px; }
-  .jn-nav a:not(.jn-nav-cta) { display: none; }
-  .jn-hero { padding: 46px 0 54px; }
-  .jn-hero-stats { grid-template-columns: 1fr; max-width: 380px; }
-  .jn-hero-stat { display: flex; align-items: baseline; justify-content: center; gap: 8px; padding: 13px 12px; }
-  .jn-hero-stat b { font-size: 1.25rem; }
-  .jn-hero-stat small { margin-top: 0; }
-  .jn-card { padding: 28px 22px 24px; }
-  .jn-card h3 { font-size: 1.3125rem; }
-  .jn-hero-actions .jn-btn, .jn-closing-actions .jn-btn { width: 100%; }
-  .jn-card-actions .jn-card-btn { flex: 1 1 100%; justify-content: center; }
-  .jn-footer-inner { flex-direction: column; }
+@media (min-width: 860px) {
+  .app-services { grid-template-columns: repeat(2, 1fr); }
+  .app-install { grid-template-columns: 1.4fr 1fr; align-items: center; gap: 34px; }
 }
 
-@media (max-width: 400px) {
-  .jn-hero-actions .jn-btn { padding: 13px 18px; font-size: .875rem; }
-  .jn-brand-name { font-size: 1.125rem; }
+@media (max-width: 599px) {
+  .app-hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.4rem); }
+  .app-actions .app-btn { width: 100%; }
+  .app-facts li { font-size: .75rem; }
 }
 </style>
 </head>
 
-<body>
+<body data-journa-service="home" data-journa-page="home">
 
-<!-- ================= Top bar ================= -->
-<header class="jn-topbar">
-  <div class="jn-wrap jn-topbar-inner">
-    <a class="jn-brand" href="index.html">
-      <span class="jn-brand-mark">J</span>
-      <span class="jn-brand-name">Journa</span>
-      <span class="jn-brand-tag">Career &amp; School Guidance</span>
-    </a>
-    <nav class="jn-nav" aria-label="Primary">
-      <a href="#career-guidance">Career Guidance</a>
-      <a href="#school-selection">School Selection</a>
-      <a class="jn-nav-cta" href="school-selection/index.html">Open Journa</a>
-    </nav>
-  </div>
-</header>
+<main id="main">
 
-<main>
-
-<!-- ================= Hero ================= -->
-<section class="jn-hero">
-  <div class="jn-wrap jn-hero-inner">
-    <span class="jn-eyebrow">Built for Ghanaian students</span>
-    <h1>Choose your career.<br>Then choose your <span>school.</span></h1>
-    <p class="jn-hero-lead">
-      Journa brings together career guidance and school selection in one place,
-      so you can plan your future with confidence.
-    </p>
-    <div class="jn-hero-actions">
-      <a class="jn-btn jn-btn-solid" href="career-guidance/JOURNA%20-Project/index.html">
-        Explore Careers <span class="jn-btn-arrow">&#8594;</span>
-      </a>
-      <a class="jn-btn jn-btn-ghost" href="school-selection/index.html">
-        Select a School <span class="jn-btn-arrow">&#8594;</span>
-      </a>
-    </div>
-
-    <div class="jn-hero-stats">
-      <div class="jn-hero-stat"><b>76</b><small>Career paths</small></div>
-      <div class="jn-hero-stat"><b>957</b><small>Schools listed</small></div>
-      <div class="jn-hero-stat"><b>16</b><small>Regions covered</small></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= Services ================= -->
-<section class="jn-section" id="services">
-  <div class="jn-wrap">
-    <div class="jn-section-head">
-      <h2>Two tools, one journey</h2>
-      <p>Start with what you want to do, then work out where to study it.</p>
-    </div>
-
-    <div class="jn-services">
-
-      <!-- Career Guidance -->
-      <article class="jn-card jn-card-career" id="career-guidance">
-        <div class="jn-card-icon" aria-hidden="true">&#128640;</div>
-        <span class="jn-card-kicker">Step one</span>
-        <h3>Career Guidance</h3>
-        <p class="jn-card-tag">Work out which career fits you before you pick a school.</p>
-        <ul class="jn-list">
-          <li><span class="jn-tick">&#10003;</span> Browse careers and what each one involves</li>
-          <li><span class="jn-tick">&#10003;</span> Complete a 13-question career assessment</li>
-          <li><span class="jn-tick">&#10003;</span> Discover suitable SHS, TVET and STEM programmes</li>
-          <li><span class="jn-tick">&#10003;</span> See the roadmap from JHS to your career</li>
-        </ul>
-        <div class="jn-card-actions">
-          <a class="jn-card-btn" href="career-guidance/JOURNA%20-Project/index.html">
-            Open Career Guidance <span class="jn-btn-arrow">&#8594;</span>
-          </a>
-          <a class="jn-card-btn jn-ghost-btn" href="career-guidance/JOURNA%20-Project/assessment.html">Take the assessment</a>
+  <!-- ============ Hero ============ -->
+  <section class="app-hero">
+    <div class="app-wrap">
+      <div class="app-hero-inner">
+        <span class="app-eyebrow">Ghana &middot; BECE &middot; SHS</span>
+        <h1>Choose your career.<br>Then choose your <em>school</em>.</h1>
+        <p class="app-lead">
+          Journa brings career discovery and school selection into a single app.
+          Explore the careers that fit you, learn what your subjects and the
+          selection rules require, then put your school choices together and check them.
+        </p>
+        <div class="app-actions">
+          <a class="app-btn app-btn--primary" href="career-guidance/JOURNA%20-Project/assessment.html">Start the career assessment</a>
+          <a class="app-btn app-btn--ghost" href="school-selection/guidelines/index.html">Read the selection guidelines</a>
         </div>
-      </article>
-
-      <!-- School Selection -->
-      <article class="jn-card jn-card-school" id="school-selection">
-        <div class="jn-card-icon" aria-hidden="true">&#127891;</div>
-        <span class="jn-card-kicker">Step two</span>
-        <h3>School Selection</h3>
-        <p class="jn-card-tag">Apply the official selection rules with confidence.</p>
-        <ul class="jn-list">
-          <li><span class="jn-tick">&#10003;</span> Explore schools by region, programme and type</li>
-          <li><span class="jn-tick">&#10003;</span> Understand the official selection guidelines</li>
-          <li><span class="jn-tick">&#10003;</span> Prepare and rank your five main choices</li>
-          <li><span class="jn-tick">&#10003;</span> Review everything on your selection form</li>
+        <ul class="app-facts">
+          <li>76 career profiles</li>
+          <li>13-question assessment</li>
+          <li>957 schools</li>
+          <li>5 + 2 school choices</li>
+          <li>Works offline</li>
         </ul>
-        <div class="jn-card-actions">
-          <a class="jn-card-btn" href="school-selection/index.html">
-            Open School Selection <span class="jn-btn-arrow">&#8594;</span>
-          </a>
-          <a class="jn-card-btn jn-ghost-btn" href="school-selection/guidelines/index.html">Read the guidelines</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Services ============ -->
+  <section class="app-section">
+    <div class="app-wrap">
+      <div class="app-section-head">
+        <span class="app-kicker">Two services, one app</span>
+        <h2>Start with whichever one you need</h2>
+        <p>Both services sit inside the same Journa app. Nothing is hidden behind a sign-up,
+           and you can move between them at any time.</p>
+      </div>
+
+      <div class="app-services">
+
+        <article class="app-service app-service--career">
+          <span class="app-service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m14.8 9.2-1.6 4-4 1.6 1.6-4z"/></svg>
+          </span>
+          <h3>Career Guidance</h3>
+          <span class="app-service__tag">Find the direction</span>
+          <p>Work out which careers match your subjects, interests and working style — then see the
+             programmes and senior high schools that lead there.</p>
+          <ul class="app-links">
+            <li><a href="career-guidance/JOURNA%20-Project/assessment.html">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m14.8 9.2-1.6 4-4 1.6 1.6-4z"/></svg>
+              Assessment <span>13 questions</span></a></li>
+            <li><a href="career-guidance/JOURNA%20-Project/results.html">
+              <svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M21 20H3"/></svg>
+              My results <span>Top matches</span></a></li>
+            <li><a href="career-guidance/JOURNA%20-Project/career-library.html">
+              <svg viewBox="0 0 24 24"><rect x="3" y="7.5" width="18" height="12.5" rx="2"/><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5"/><path d="M3 12.5h18"/></svg>
+              Career library <span>76 careers</span></a></li>
+            <li><a href="career-guidance/JOURNA%20-Project/shs-recommendation.html">
+              <svg viewBox="0 0 24 24"><path d="m3 9 9-5 9 5"/><path d="M5 10v9M10 10v9M14 10v9M19 10v9"/><path d="M3 21h18"/></svg>
+              Programme guide <span>Subjects</span></a></li>
+            <li><a href="career-guidance/JOURNA%20-Project/schools.html">
+              <svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5z"/><path d="M6 10.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-6.5"/></svg>
+              School directory <span>957 schools</span></a></li>
+            <li><a href="career-guidance/JOURNA%20-Project/roadmap.html">
+              <svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18h5a3.5 3.5 0 0 0 0-7h-3a3.5 3.5 0 0 1 0-7h5"/></svg>
+              Career roadmaps <span>Steps</span></a></li>
+          </ul>
+          <div class="app-service__cta">
+            <a class="app-cta" href="career-guidance/JOURNA%20-Project/index.html">
+              Open Career Guidance
+              <svg viewBox="0 0 24 24"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="app-service app-service--school">
+          <span class="app-service__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 11l2.5 2.5L16 9"/><rect x="3.5" y="3.5" width="17" height="17" rx="3"/></svg>
+          </span>
+          <h3>School Selection</h3>
+          <span class="app-service__tag">Make the right choices</span>
+          <p>Learn the official selection rules, rank five main schools with two alternatives,
+             attach a programme and Day or Boarding option to each, then review the form.</p>
+          <ul class="app-links">
+            <li><a href="school-selection/guidelines/index.html">
+              <svg viewBox="0 0 24 24"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14.5 3v5.5H20"/><path d="M8.5 13h7M8.5 17h5"/></svg>
+              Guidelines <span>The rules</span></a></li>
+            <li><a href="school-selection/selection/index.html">
+              <svg viewBox="0 0 24 24"><path d="M9 11l2.5 2.5L16 9"/><rect x="3.5" y="3.5" width="17" height="17" rx="3"/></svg>
+              Select schools <span>5 + 2 choices</span></a></li>
+            <li><a href="school-selection/review/index.html">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h9"/><circle cx="18.5" cy="18" r="2.5"/></svg>
+              Review &amp; print <span>Check your form</span></a></li>
+            <li><a href="school-selection/index.html">
+              <svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>
+              Service overview <span>How it works</span></a></li>
+          </ul>
+          <div class="app-service__cta">
+            <a class="app-cta" href="school-selection/index.html">
+              Open School Selection
+              <svg viewBox="0 0 24 24"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Steps ============ -->
+  <section class="app-section app-section--alt">
+    <div class="app-wrap">
+      <div class="app-section-head">
+        <span class="app-kicker">How it works</span>
+        <h2>Three steps from unsure to decided</h2>
+      </div>
+      <div class="app-steps">
+        <div class="app-step">
+          <span class="app-step__num">1</span>
+          <h3>Take the assessment</h3>
+          <p>Answer 13 questions about your subjects, interests and strengths. Your answers are
+             saved on the device as you go, so you can stop and come back.</p>
         </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= Steps ================= -->
-<section class="jn-section jn-steps-section">
-  <div class="jn-wrap">
-    <div class="jn-section-head">
-      <h2>How it works</h2>
-      <p>Three simple steps from uncertainty to a plan.</p>
-    </div>
-    <div class="jn-steps">
-      <div class="jn-step">
-        <div class="jn-step-num">1</div>
-        <h3>Find your direction</h3>
-        <p>Take the career assessment and see which careers match your interests and strengths.</p>
-      </div>
-      <div class="jn-step">
-        <div class="jn-step-num">2</div>
-        <h3>Find your school</h3>
-        <p>Search real schools and check which ones offer the programme your career needs.</p>
-      </div>
-      <div class="jn-step">
-        <div class="jn-step-num">3</div>
-        <h3>Make your selection</h3>
-        <p>Build your five main choices and two alternatives, then review the finished form.</p>
+        <div class="app-step">
+          <span class="app-step__num">2</span>
+          <h3>Read the rules</h3>
+          <p>Understand how the selection works — the five main choices, the two alternatives,
+             programme requirements and the Day or Boarding option for each school.</p>
+        </div>
+        <div class="app-step">
+          <span class="app-step__num">3</span>
+          <h3>Build and check</h3>
+          <p>Rank your schools, attach programmes, then review everything on one screen before
+             you fill the official form.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ================= Closing ================= -->
-<section class="jn-section jn-closing">
-  <div class="jn-wrap">
-    <h2>Ready to start?</h2>
-    <p>Pick a starting point below. Everything is free and stays on your device.</p>
-    <div class="jn-closing-actions">
-      <a class="jn-btn jn-btn-teal" href="career-guidance/JOURNA%20-Project/index.html">Explore Careers</a>
-      <a class="jn-btn jn-btn-primary" href="school-selection/index.html">Explore Schools</a>
+  <!-- ============ Install ============ -->
+  <section class="app-section">
+    <div class="app-wrap">
+      <div class="app-install">
+        <div>
+          <h2>Install Journa and keep it on your phone</h2>
+          <p>Journa is a Progressive Web App. Install it from the browser menu or the button
+             below, then open it like a normal app — full screen, no address bar.</p>
+          <p class="app-install__note">Your assessment answers and school choices are stored on
+             this device, so they survive an offline session and stay put when you update.</p>
+        </div>
+        <div class="app-install__cta">
+          <button type="button" class="app-btn app-btn--install" data-journa-install hidden>
+            Install Journa
+          </button>
+          <a class="app-btn app-btn--ghost" href="career-guidance/JOURNA%20-Project/assessment.html">
+            Try the assessment first
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 </main>
 
-<!-- ================= Footer ================= -->
-<footer class="jn-footer">
-  <div class="jn-wrap">
-    <div class="jn-footer-inner">
-      <div class="jn-footer-brand">
-        <div class="jn-brand">
-          <span class="jn-brand-mark">J</span>
-          <span class="jn-brand-name">Journa</span>
-        </div>
-        <p>Career guidance and school selection for Ghanaian students. Guidance only &mdash; nothing is submitted to CSSPS.</p>
-      </div>
-      <div class="jn-footer-links">
+<footer class="app-footer">
+  <div class="app-wrap">
+    <div class="app-footer__inner">
+      <span class="app-footer__brand">
+        <svg class="jn-mark" viewBox="0 0 40 40" width="26" height="26" aria-hidden="true">
+          <rect x="1" y="1" width="38" height="38" rx="11" fill="currentColor"/>
+          <path d="M23.5 9.5v11.2c0 3.6-2.6 5.9-6.3 5.9-2.5 0-4.3-1.1-4.9-3.1l3.2-.9c.4 1 1.1 1.5 2 1.5 1.4 0 2.2-.9 2.2-2.4V9.5z" fill="#fff"/>
+          <rect x="19.4" y="7" width="4.2" height="2.4" fill="#F4A261"/>
+        </svg>
+        Journa
+      </span>
+      <nav aria-label="Footer">
         <a href="career-guidance/JOURNA%20-Project/index.html">Career Guidance</a>
-        <a href="career-guidance/JOURNA%20-Project/assessment.html">Career Assessment</a>
-        <a href="career-guidance/JOURNA%20-Project/career-library.html">Career Library</a>
         <a href="school-selection/index.html">School Selection</a>
-        <a href="school-selection/guidelines/index.html">Selection Guidelines</a>
-        <a href="school-selection/selection/index.html">Select Schools</a>
-      </div>
+        <a href="manifest.webmanifest">App manifest</a>
+      </nav>
     </div>
-    <p class="jn-footer-note">Journa &mdash; a combined prototype. Career data and school data are for guidance and are not verified by CSSPS.</p>
+    <p class="app-disclaimer">Journa is a guidance prototype. It is not affiliated with or endorsed by
+       GES or CSSPS, and nothing you enter is submitted anywhere — every answer and choice stays
+       on your own device.</p>
   </div>
 </footer>
 
+<script type="module" src="assets/journa/shell.js"></script>
 </body>
 </html>

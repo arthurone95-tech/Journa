@@ -9,9 +9,40 @@ Journa joins two products that answer two different halves of the same question:
 | **Where do I want to go?** | Career Guidance |
 | **Where do I study to get there?** | School Selection |
 
-The combined product is still two applications. The landing page at the root links
-into each one; nothing in their internal code has been merged, rewritten or
-integrated yet.
+The combined product is **one installable, offline-capable web app**. A shared shell
+gives both services the same brand, navigation, design tokens and install experience,
+and one service worker caches the whole app so it keeps working with no connection.
+
+The two applications keep their own code, pages and data. The shell wraps them — it
+does not rewrite them.
+
+---
+
+## Installable, offline-first web app
+
+| Piece | What it does |
+|---|---|
+| `manifest.webmanifest` | Name, colours, standalone display mode, icons (incl. maskable) |
+| `sw.js` | Versioned precache of the whole app + runtime cache for web fonts |
+| `offline.html` | Fallback page for a URL that was never cached |
+| `assets/journa/` | Shared shell: `config.js`, `shell.css`, `shell.js`, icons |
+
+- **Precached on install** — 87 files: every page of both services, all local CSS and
+  ES modules, the 957-school / 76-career / roadmap datasets and the UI images.
+- **Cache-first navigations** — pages open instantly and work offline.
+- **Stale-while-revalidate** for Google Fonts and Font Awesome; if they were never
+  cached the pages fall back to the system font stack.
+- **Updates** — bumping `VERSION` in `sw.js` produces a new cache and deletes the old
+  one. A page with no unsaved input updates and reloads itself; a page with unsaved
+  work shows an update notice and lets the user apply it when ready.
+- **Offline is real, not just a registered worker** — the assessment, its scoring,
+  the results page, the career library, roadmaps, the school directory and the
+  selection/review workflow all run from the cache.
+- **Nothing sensitive is cached** — user answers and school choices live only in
+  `localStorage`; no account, no server, no transmission.
+
+Installing requires a secure context: `https://` or `http://localhost`
+(`http://127.0.0.1` also counts).
 
 ---
 
@@ -19,9 +50,13 @@ integrated yet.
 
 ```text
 Journa/
-├── index.html                 ← combined-product landing page (entry point)
+├── index.html                 ← unified app home (entry point)
+├── manifest.webmanifest        ← PWA manifest
+├── sw.js                       ← service worker (precache + runtime + offline)
+├── offline.html                ← offline fallback page
+├── assets/journa/              ← shared shell: config.js, shell.css, shell.js, icons/
 ├── README.md
-├── career-guidance/           ← Career Guidance application
+├── career-guidance/           ← Career Guidance service
 │   ├── JOURNA -Project/       │   the runnable web app (HTML / CSS / ES modules)
 │   │   ├── index.html  assessment.html  results.html
 │   │   ├── career-library.html  shs-recommendation.html
@@ -30,10 +65,10 @@ Journa/
 │   │   └── js/weights/        │   13 scoring-weight files, one per question
 │   ├── the JSON files/         │   source data pipeline (verified JSON + merge script)
 │   └── *.docx                 │   handover guide, career and question notes
-└── school-selection/          ← School Selection application
+└── school-selection/          ← School Selection service
     ├── index.html             │   home
     ├── guidelines/index.html  │   24 official selection rules
-    ├── selection/index.html   │   choose and rank 5 main + 2 alternative schools
+    ├── selection/index.html  │   choose and rank 5 main + 2 alternative schools
     ├── review/index.html      │   CSSPS-style placement form preview
     ├── css/  js/              │   app code and design system
     ├── docs/                  │   product spec, official guidelines, phase reports
@@ -62,7 +97,7 @@ Any static server works (`npx serve`, VS Code Live Server, Netlify Dev, GitHub P
 
 | Page | URL |
 |---|---|
-| Landing page | `/index.html` |
+| App home | `/index.html` |
 | Career Guidance home | `/career-guidance/JOURNA%20-Project/index.html` |
 | Career assessment | `/career-guidance/JOURNA%20-Project/assessment.html` |
 | Career library | `/career-guidance/JOURNA%20-Project/career-library.html` |
@@ -72,7 +107,10 @@ Any static server works (`npx serve`, VS Code Live Server, Netlify Dev, GitHub P
 | Review form | `/school-selection/review/index.html` |
 
 > The `JOURNA -Project` folder name contains a space, so its URL must be encoded as
-> `JOURNA%20-Project`. The landing page already does this.
+> `JOURNA%20-Project`. The shared navigation already does this.
+
+Serve from the **project root**, not from inside a service folder — the service
+worker and the manifest sit at the root and must control the whole app.
 
 ---
 
@@ -125,8 +163,11 @@ schools.
   blank rather than guessed.
 - **No backend.** Both applications are entirely client-side. All user data stays in
   the browser's `localStorage` and is never transmitted.
-- **Nothing has been integrated yet.** The two applications are kept separate on
-  purpose. The shared 957-school dataset is the natural place to connect them later.
+- **Services are separate by design.** They share the same 957-school dataset and the
+  same shell, but each keeps its own pages and code. Changing one does not change
+  the other.
+- **Use HTTPS (or localhost) in production.** Service workers only run in a secure
+  context, so installing the app and using it offline requires `https://`.
 
 ---
 

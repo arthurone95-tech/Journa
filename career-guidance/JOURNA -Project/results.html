@@ -1161,8 +1161,13 @@
             /* already the default layout, no changes needed */
         }
     </style>
+    <meta name="theme-color" content="#1E3A8A">
+    <link rel="manifest" href="../../manifest.webmanifest">
+    <link rel="icon" type="image/png" href="../../assets/journa/icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="../../assets/journa/icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="../../assets/journa/shell.css">
 </head>
-<body>
+<body data-journa-service="career" data-journa-page="results">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container navbar-container">
@@ -1190,6 +1195,7 @@
     
     <!-- Mobile Overlay -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
+    <main id="main">
 
     <div class="results-container">
         <!-- Header -->
@@ -1897,7 +1903,9 @@
     </script>
 
 <!-- Footer -->
+</main>
 <div id="footer-placeholder"></div>
 <script src="js/footer.js"></script>
+    <script type="module" src="../../assets/journa/shell.js"></script>
 </body>
 </html>

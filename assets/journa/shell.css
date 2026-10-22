@@ -1,0 +1,763 @@
+/* ==========================================================================
+   JOURNA — shared application shell
+   ==========================================================================
+   Loaded by every page of every service. It provides ONE design system:
+   tokens, the application bar, the mobile tab bar, the service switcher,
+   the install prompt, the network status and the update toast.
+
+   It deliberately does not restyle the content of either service. It only
+   adds the shared chrome and a small set of targeted responsive rules for
+   layouts that previously had no breakpoint.
+
+   The two services already share the same design tokens (--primary,
+   --secondary, --accent ...) and the same 1024 / 768 / 640 breakpoints,
+   so the shell slots into both without conflict.
+   ========================================================================== */
+
+:root {
+    --jn-navy: #1E3A8A;
+    --jn-navy-dark: #0A2472;
+    --jn-navy-light: #3B5BA5;
+    --jn-teal: #1E7B6B;
+    --jn-teal-light: #2A9D8F;
+    --jn-orange: #F4A261;
+    --jn-coral: #E76F51;
+    --jn-ink: #1A2233;
+    --jn-body: #46536B;
+    --jn-muted: #5C6A85;
+    --jn-line: #E2E8F2;
+    --jn-bg: #F6F8FC;
+    --jn-white: #FFFFFF;
+
+    --jn-appbar-h: 58px;
+    --jn-tabbar-h: 60px;
+    --jn-radius: 14px;
+    --jn-radius-sm: 10px;
+    --jn-shadow: 0 4px 12px rgba(26, 34, 51, .07), 0 12px 32px rgba(26, 34, 51, .07);
+    --jn-shadow-lg: 0 8px 24px rgba(26, 34, 51, .12), 0 24px 56px rgba(26, 34, 51, .12);
+    --jn-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --jn-display: 'Poppins', var(--jn-font);
+    --jn-safe-b: env(safe-area-inset-bottom, 0px);
+    --jn-safe-t: env(safe-area-inset-top, 0px);
+}
+
+/* ---------- Shell chrome ---------- */
+
+.jn-skip {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1000;
+    background: var(--jn-navy);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 0 0 var(--jn-radius-sm) 0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.jn-skip:focus {
+    left: 0;
+}
+
+/* ---------- Application bar ---------- */
+
+.jn-appbar {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background: rgba(255, 255, 255, .92);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--jn-line);
+    padding-top: var(--jn-safe-t);
+}
+
+.jn-appbar__inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: var(--jn-appbar-h);
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 14px;
+}
+
+.jn-appbar__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--jn-navy);
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
+.jn-mark {
+    display: block;
+    flex: 0 0 auto;
+    color: var(--jn-navy);
+}
+
+.jn-appbar__titles {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    line-height: 1.15;
+}
+
+.jn-appbar__name {
+    font-family: var(--jn-display);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--jn-ink);
+    letter-spacing: -.01em;
+}
+
+.jn-appbar__service {
+    font-size: .6875rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--jn-teal);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.jn-appbar__nav {
+    display: none;
+    align-items: center;
+    gap: 2px;
+    margin-left: 8px;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.jn-appbar__nav::-webkit-scrollbar {
+    display: none;
+}
+
+.jn-appbar__link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .875rem;
+    color: var(--jn-body);
+    padding: 8px 11px;
+    border-radius: 999px;
+    white-space: nowrap;
+    transition: background .16s ease, color .16s ease;
+}
+
+.jn-appbar__link:hover {
+    background: var(--jn-bg);
+    color: var(--jn-navy);
+}
+
+.jn-appbar__link[aria-current='page'] {
+    background: rgba(30, 58, 138, .10);
+    color: var(--jn-navy);
+}
+
+.jn-appbar__tools {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    flex: 0 0 auto;
+}
+
+/* ---------- Service switcher ---------- */
+
+.jn-switch {
+    position: relative;
+}
+
+.jn-switch__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font: inherit;
+    font-size: .8125rem;
+    font-weight: 600;
+    color: var(--jn-ink);
+    background: var(--jn-bg);
+    border: 1px solid var(--jn-line);
+    border-radius: 999px;
+    padding: 7px 11px;
+    cursor: pointer;
+    min-height: 36px;
+}
+
+.jn-switch__btn:hover {
+    border-color: var(--jn-navy-light);
+}
+
+.jn-switch__btn svg {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.jn-switch__caret {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+}
+
+.jn-switch__menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    min-width: 232px;
+    background: var(--jn-white);
+    border: 1px solid var(--jn-line);
+    border-radius: var(--jn-radius);
+    box-shadow: var(--jn-shadow-lg);
+    padding: 6px;
+    margin: 0;
+    list-style: none;
+    z-index: 950;
+    display: none;
+}
+
+.jn-switch__menu[data-open='true'] {
+    display: block;
+}
+
+.jn-switch__item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: var(--jn-radius-sm);
+    text-decoration: none;
+    color: inherit;
+}
+
+.jn-switch__item:hover {
+    background: var(--jn-bg);
+}
+
+.jn-switch__item[aria-current='true'] .jn-switch__itemname {
+    color: var(--jn-navy);
+}
+
+.jn-switch__icon {
+    flex: 0 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(30, 58, 138, .09);
+    color: var(--jn-navy);
+}
+
+.jn-switch__icon svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.jn-switch__icon--teal {
+    background: rgba(30, 123, 107, .10);
+    color: var(--jn-teal);
+}
+
+.jn-switch__itemname {
+    display: block;
+    font-weight: 600;
+    font-size: .875rem;
+    color: var(--jn-ink);
+}
+
+.jn-switch__itemdesc {
+    display: block;
+    font-size: .75rem;
+    color: var(--jn-muted);
+    line-height: 1.4;
+}
+
+/* ---------- Tools: install + network status ---------- */
+
+.jn-install {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    font: inherit;
+    font-size: .8125rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--jn-navy);
+    border: 0;
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+    min-height: 36px;
+    white-space: nowrap;
+}
+
+.jn-install[data-available='true'] {
+    display: inline-flex;
+}
+
+/* Install buttons placed inside page content. */
+[data-journa-install][hidden] {
+    display: none !important;
+}
+
+.jn-install:hover {
+    background: var(--jn-navy-dark);
+}
+
+.jn-netstatus {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: .75rem;
+    font-weight: 600;
+    color: var(--jn-muted);
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--jn-bg);
+    border: 1px solid var(--jn-line);
+    white-space: nowrap;
+}
+
+.jn-netstatus::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--jn-teal-light);
+    flex: 0 0 auto;
+}
+
+.jn-netstatus[data-state='offline'] {
+    color: #8A5A12;
+    background: #FFF7E8;
+    border-color: #F3D9A6;
+}
+
+.jn-netstatus[data-state='offline']::before {
+    background: var(--jn-orange);
+}
+
+.jn-netstatus[data-state='syncing']::before {
+    background: var(--jn-navy-light);
+    animation: jn-pulse 1.1s ease-in-out infinite;
+}
+
+@keyframes jn-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .35; }
+}
+
+/* ---------- Mobile tab bar ---------- */
+
+.jn-tabbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
+    display: flex;
+    align-items: stretch;
+    background: rgba(255, 255, 255, .96);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    backdrop-filter: saturate(180%) blur(14px);
+    border-top: 1px solid var(--jn-line);
+    padding-bottom: var(--jn-safe-b);
+    box-shadow: 0 -2px 14px rgba(26, 34, 51, .06);
+}
+
+.jn-tabbar__item {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 8px 2px 7px;
+    text-decoration: none;
+    color: var(--jn-muted);
+    font-size: .625rem;
+    font-weight: 600;
+    line-height: 1.15;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    min-height: var(--jn-tabbar-h);
+}
+
+.jn-tabbar__item svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.jn-tabbar__item[aria-current='page'] {
+    color: var(--jn-navy);
+}
+
+.jn-tabbar__item[aria-current='page'] svg {
+    stroke-width: 2.3;
+}
+
+.jn-tabbar__label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.jn-tabbar__item--button {
+    background: none;
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ---------- More sheet (mobile) ---------- */
+
+.jn-sheet {
+    position: fixed;
+    inset: 0;
+    z-index: 950;
+    display: none;
+}
+
+.jn-sheet[data-open='true'] {
+    display: block;
+}
+
+.jn-sheet__scrim {
+    position: absolute;
+    inset: 0;
+    background: rgba(16, 24, 40, .48);
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.jn-sheet__panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--jn-white);
+    border-radius: 20px 20px 0 0;
+    padding: 8px 16px calc(20px + var(--jn-safe-b));
+    box-shadow: var(--jn-shadow-lg);
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: jn-sheet-in .22s ease;
+}
+
+@keyframes jn-sheet-in {
+    from { transform: translateY(18px); opacity: .4; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.jn-sheet__grip {
+    width: 38px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--jn-line);
+    margin: 4px auto 14px;
+}
+
+.jn-sheet__title {
+    font-family: var(--jn-display);
+    font-size: .9375rem;
+    color: var(--jn-ink);
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+
+.jn-sheet__group {
+    margin: 0 0 16px;
+}
+
+.jn-sheet__grouplabel {
+    font-size: .6875rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--jn-muted);
+    margin: 0 0 6px;
+}
+
+.jn-sheet__link {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 11px 10px;
+    border-radius: var(--jn-radius-sm);
+    text-decoration: none;
+    color: var(--jn-ink);
+    font-weight: 600;
+    font-size: .9375rem;
+}
+
+.jn-sheet__link:hover {
+    background: var(--jn-bg);
+}
+
+.jn-sheet__link[aria-current='page'] {
+    background: rgba(30, 58, 138, .08);
+    color: var(--jn-navy);
+}
+
+.jn-sheet__link svg {
+    width: 19px;
+    height: 19px;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ---------- Update toast ---------- */
+
+.jn-toast {
+    position: fixed;
+    left: 50%;
+    bottom: calc(var(--jn-tabbar-h) + var(--jn-safe-b) + 14px);
+    transform: translateX(-50%);
+    z-index: 980;
+    display: none;
+    align-items: center;
+    gap: 12px;
+    width: min(560px, calc(100vw - 28px));
+    background: var(--jn-ink);
+    color: #fff;
+    border-radius: var(--jn-radius);
+    padding: 12px 14px;
+    box-shadow: var(--jn-shadow-lg);
+    font-size: .875rem;
+}
+
+.jn-toast[data-open='true'] {
+    display: flex;
+}
+
+.jn-toast__text {
+    flex: 1 1 auto;
+    line-height: 1.4;
+}
+
+.jn-toast__action {
+    flex: 0 0 auto;
+    font: inherit;
+    font-size: .8125rem;
+    font-weight: 700;
+    color: var(--jn-navy);
+    background: #fff;
+    border: 0;
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+    min-height: 34px;
+}
+
+.jn-toast__action:hover {
+    background: var(--jn-bg);
+}
+
+.jn-toast__dismiss {
+    flex: 0 0 auto;
+    font: inherit;
+    background: none;
+    border: 0;
+    color: rgba(255, 255, 255, .7);
+    cursor: pointer;
+    font-size: 1.125rem;
+    line-height: 1;
+    padding: 6px;
+}
+
+/* ---------- Offline banner ---------- */
+
+.jn-offlinebar {
+    display: none;
+    background: #FFF7E8;
+    color: #8A5A12;
+    border-bottom: 1px solid #F3D9A6;
+    font-size: .8125rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 7px 14px;
+}
+
+.jn-offlinebar[data-open='true'] {
+    display: block;
+}
+
+/* ---------- Legacy chrome ---------- */
+/* The application bar replaces the per-service navigation. The old bars are
+   hidden but their scripts keep running harmlessly. */
+
+body > nav.navbar,
+body #mobileNav,
+body .mobile-overlay {
+    display: none !important;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (min-width: 900px) {
+    .jn-appbar__nav {
+        display: flex;
+    }
+
+    .jn-tabbar {
+        display: none;
+    }
+
+    .jn-toast {
+        bottom: 20px;
+        left: auto;
+        right: 20px;
+        transform: none;
+    }
+
+    body {
+        padding-bottom: 0 !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --jn-appbar-h: 64px;
+    }
+
+    .jn-appbar__inner {
+        padding: 0 22px;
+        gap: 14px;
+    }
+
+    .jn-appbar__name {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 899px) {
+    /* Keep the tab bar clear of page content. */
+    body {
+        padding-bottom: calc(var(--jn-tabbar-h) + var(--jn-safe-b)) !important;
+    }
+
+    .jn-appbar__service {
+        max-width: 42vw;
+    }
+
+    /* Comfortable touch targets for the shell's own controls. */
+    .jn-appbar__brand,
+    .jn-switch__btn,
+    .jn-install {
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 420px) {
+    .jn-appbar__inner {
+        padding: 0 10px;
+        gap: 8px;
+    }
+
+    .jn-appbar__name {
+        font-size: 1rem;
+    }
+
+    .jn-netstatus span {
+        display: none;
+    }
+
+    .jn-netstatus {
+        padding: 8px;
+    }
+}
+
+/* ---------- Targeted responsive fixes ---------- */
+/* Layouts that previously had no breakpoint and therefore overflowed on
+   narrow screens. Scoped to the elements that need it. */
+
+@media (max-width: 768px) {
+    .access-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .career-categories-compact {
+        gap: 12px !important;
+    }
+
+    .career-card-compact,
+    .category-card-compact {
+        min-width: 132px !important;
+        max-width: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .access-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ---------- Wide-screen workspace ---------- */
+/* On large screens give the dense list and comparison layouts more room
+   instead of stretching a single column across the viewport. */
+
+@media (min-width: 1280px) {
+    .jn-appbar__inner {
+        max-width: 1560px;
+    }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+    .jn-appbar,
+    .jn-tabbar,
+    .jn-sheet,
+    .jn-toast,
+    .jn-offlinebar,
+    .jn-skip {
+        display: none !important;
+    }
+
+    body {
+        padding-bottom: 0 !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .jn-sheet__panel {
+        animation: none;
+    }
+
+    .jn-netstatus[data-state='syncing']::before {
+        animation: none;
+    }
+}

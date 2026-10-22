@@ -1,0 +1,83 @@
+{
+    "id": "./",
+    "name": "Journa — Career & School Guidance",
+    "short_name": "Journa",
+    "description": "Journa helps Ghanaian students choose a career and a school: explore careers, take the assessment, find programmes, read the school-selection guidelines, rank school choices and review the form.",
+    "lang": "en-GH",
+    "dir": "ltr",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "display_override": ["standalone", "minimal-ui", "browser"],
+    "orientation": "any",
+    "background_color": "#F6F8FC",
+    "theme_color": "#1E3A8A",
+    "categories": ["education", "productivity", "utilities"],
+    "icons": [
+        {
+            "src": "./assets/journa/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./assets/journa/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./assets/journa/icons/icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "./assets/journa/icons/icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Career assessment",
+            "short_name": "Assessment",
+            "description": "Start or continue the 13-question career assessment.",
+            "url": "./career-guidance/JOURNA%20-Project/assessment.html",
+            "icons": [
+                {
+                    "src": "./assets/journa/icons/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Select schools",
+            "short_name": "Select",
+            "description": "Choose and rank your school selections.",
+            "url": "./school-selection/selection/index.html",
+            "icons": [
+                {
+                    "src": "./assets/journa/icons/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Selection guidelines",
+            "short_name": "Guidelines",
+            "description": "Read the official school-selection rules.",
+            "url": "./school-selection/guidelines/index.html",
+            "icons": [
+                {
+                    "src": "./assets/journa/icons/icon-192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ]
+}

@@ -60,6 +60,13 @@ body.nav-open {
     color: var(--secondary-light);
 }
 
+/* The shared Journa product mark used by the footer. */
+.footer-logo .jn-mark {
+    color: var(--secondary-light);
+    width: 26px;
+    height: 26px;
+}
+
 /* ----------------------------------------
    Hero (welcome)
 ---------------------------------------- */
@@ -525,7 +532,8 @@ body.nav-open {
     margin-bottom: 0;
 }
 
-.footer-links h3 {
+.footer-links h3,
+.footer-links h2 {
     color: var(--white);
     font-size: var(--text-base);
     margin-bottom: var(--space-md);

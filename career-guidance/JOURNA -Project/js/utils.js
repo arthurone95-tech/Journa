@@ -35,7 +35,7 @@ export const showNotification = (message, type = 'info', duration = 3000) => {
         border-radius: 8px;
         font-weight: 500;
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        animation: slideIn 0.3s ease;
+        animation: jnToastIn 0.3s ease;
         max-width: 350px;
         min-width: 250px;
         position: relative;
@@ -80,7 +80,7 @@ export const showNotification = (message, type = 'info', duration = 3000) => {
 
     // Auto remove after duration
     setTimeout(() => {
-        notification.style.animation = 'slideOut 0.3s ease';
+        notification.style.animation = 'jnToastOut 0.3s ease';
         setTimeout(() => notification.remove(), 300);
     }, duration);
 };
@@ -319,9 +319,15 @@ export const scrollToElement = (element, offset = 80) => {
 };
 
 // Add CSS animations
+// NOTE: the keyframe names are namespaced (jnToast*) on purpose. Previously
+// this block injected a global `slideIn` / `fadeIn` / `pulse`, which
+// overrode the keyframes defined by the page that loaded this module. On
+// assessment.html that made the question card animate in from the right
+// (translateX(100%)), pushing it off-screen and creating a horizontal
+// scrollbar. Namespacing keeps the toast animation self-contained.
 const style = document.createElement('style');
 style.textContent = `
-    @keyframes slideIn {
+    @keyframes jnToastIn {
         from {
             transform: translateX(100%);
             opacity: 0;
@@ -332,7 +338,7 @@ style.textContent = `
         }
     }
     
-    @keyframes slideOut {
+    @keyframes jnToastOut {
         from {
             transform: translateX(0);
             opacity: 1;
@@ -340,27 +346,6 @@ style.textContent = `
         to {
             transform: translateX(100%);
             opacity: 0;
-        }
-    }
-    
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.05);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-    
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
         }
     }
 `;

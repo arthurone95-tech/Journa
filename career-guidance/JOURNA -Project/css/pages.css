@@ -441,6 +441,15 @@
     margin-bottom: var(--space-md);
 }
 
+/* The footer section headings are level 2 so the heading order stays
+   continuous after the page heading; keep the original h4 look. */
+.footer-about h2,
+.footer-contact h2 {
+    color: var(--white);
+    font-size: var(--text-base);
+    margin-bottom: var(--space-md);
+}
+
 .footer-links ul li {
     margin-bottom: var(--space-xs);
 }
