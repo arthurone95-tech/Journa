@@ -324,43 +324,7 @@
     background: var(--jn-navy-dark);
 }
 
-.jn-netstatus {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: .75rem;
-    font-weight: 600;
-    color: var(--jn-muted);
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: var(--jn-bg);
-    border: 1px solid var(--jn-line);
-    white-space: nowrap;
-}
-
-.jn-netstatus::before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--jn-teal-light);
-    flex: 0 0 auto;
-}
-
-.jn-netstatus[data-state='offline'] {
-    color: #8A5A12;
-    background: #FFF7E8;
-    border-color: #F3D9A6;
-}
-
-.jn-netstatus[data-state='offline']::before {
-    background: var(--jn-orange);
-}
-
-.jn-netstatus[data-state='syncing']::before {
-    background: var(--jn-navy-light);
-    animation: jn-pulse 1.1s ease-in-out infinite;
-}
+/* (network status badge removed; offline state is announced by .jn-offlinebar) */
 
 @keyframes jn-pulse {
     0%, 100% { opacity: 1; }
@@ -689,14 +653,6 @@ body .mobile-overlay {
     .jn-appbar__name {
         font-size: 1rem;
     }
-
-    .jn-netstatus span {
-        display: none;
-    }
-
-    .jn-netstatus {
-        padding: 8px;
-    }
 }
 
 /* ---------- Targeted responsive fixes ---------- */
@@ -754,10 +710,6 @@ body .mobile-overlay {
 
 @media (prefers-reduced-motion: reduce) {
     .jn-sheet__panel {
-        animation: none;
-    }
-
-    .jn-netstatus[data-state='syncing']::before {
         animation: none;
     }
 }

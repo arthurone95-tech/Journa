@@ -102,9 +102,6 @@ function appBarMarkup() {
                     <button type="button" class="jn-install" id="jnInstall" data-available="false">
                         <span aria-hidden="true">&#x2193;</span><span>Install</span>
                     </button>
-                    <span class="jn-netstatus" id="jnNetStatus" data-state="online" role="status" aria-live="polite">
-                        <span id="jnNetLabel">Online</span>
-                    </span>
                 </div>
             </div>
         </header>`;
@@ -277,26 +274,19 @@ function setupSheet() {
 // ---------------------------------------------------------------------------
 
 function setupNetworkStatus() {
-    const status = document.getElementById('jnNetStatus');
-    const label = document.getElementById('jnNetLabel');
     const bar = document.getElementById('jnOfflineBar');
-    if (!status || !label) return;
+    if (!bar) return;
 
-    const paint = (state) => {
-        status.dataset.state = state;
-        label.textContent = state === 'offline' ? 'Offline' : (state === 'syncing' ? 'Syncing' : 'Online');
-        if (bar) bar.dataset.open = state === 'offline' ? 'true' : 'false';
+    const paint = (offline) => {
+        bar.dataset.open = offline ? 'true' : 'false';
     };
 
     const isOnline = () => navigator.onLine !== false;
 
-    paint(isOnline() ? 'online' : 'offline');
+    paint(!isOnline());
 
-    window.addEventListener('offline', () => paint('offline'));
-    window.addEventListener('online', () => {
-        paint('syncing');
-        setTimeout(() => paint('online'), 1200);
-    });
+    window.addEventListener('offline', () => paint(true));
+    window.addEventListener('online', () => paint(false));
 }
 
 // ---------------------------------------------------------------------------
