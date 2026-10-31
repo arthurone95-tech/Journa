@@ -21,13 +21,14 @@
 <style>
 /* ============================================================
    JOURNA — application home.
-   Page styles only. The design tokens, colours, spacing rhythm
-   and chrome come from the shared shell (assets/journa/shell.css)
-   so the home page and the two services read as one product.
+   This page is a launcher, not a third version of the two
+   service home pages: it introduces the app, opens either
+   service in one tap and explains installation. Everything
+   else lives inside the service it belongs to.
    ============================================================ */
 
 :root {
-  --app-max: 1180px;
+  --app-max: 1120px;
   --app-shadow-sm: 0 1px 2px rgba(26, 34, 51, .06), 0 2px 8px rgba(26, 34, 51, .04);
   --app-shadow-lg: 0 8px 24px rgba(26, 34, 51, .10), 0 24px 56px rgba(26, 34, 51, .10);
 }
@@ -63,10 +64,10 @@ a { color: inherit; }
     radial-gradient(880px 420px at 92% 0%, rgba(244, 162, 97, .26), transparent 60%),
     linear-gradient(160deg, #0A2472 0%, #1E3A8A 48%, #1E7B6B 100%);
   color: var(--jn-white);
-  padding: clamp(44px, 7vw, 88px) 0 clamp(46px, 7vw, 84px);
+  padding: clamp(48px, 7vw, 86px) 0 clamp(44px, 6vw, 70px);
 }
 
-.app-hero-inner { max-width: 760px; }
+.app-hero-inner { max-width: 720px; }
 
 .app-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
@@ -91,65 +92,32 @@ a { color: inherit; }
   margin-top: 16px;
   font-size: clamp(1rem, 2.3vw, 1.1875rem);
   color: rgba(255, 255, 255, .88);
-  max-width: 60ch;
+  max-width: 58ch;
 }
 
-.app-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+/* ---------- Services ---------- */
 
-.app-btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  font: inherit; font-weight: 700; font-size: .9375rem;
-  padding: 13px 22px; border-radius: 999px;
-  text-decoration: none; border: 1px solid transparent;
-  min-height: 46px;
-  transition: transform .16s ease, background .16s ease, border-color .16s ease;
-}
-.app-btn:hover { transform: translateY(-1px); }
-.app-btn--primary { background: var(--jn-white); color: var(--jn-navy); }
-.app-btn--primary:hover { background: #EDF2FB; }
-.app-btn--ghost { background: rgba(255, 255, 255, .10); color: var(--jn-white); border-color: rgba(255, 255, 255, .34); }
-.app-btn--ghost:hover { background: rgba(255, 255, 255, .18); }
-
-.app-facts {
-  list-style: none; margin: 30px 0 0; padding: 0;
-  display: flex; flex-wrap: wrap; gap: 10px;
-}
-.app-facts li {
-  background: rgba(255, 255, 255, .10);
-  border: 1px solid rgba(255, 255, 255, .18);
-  border-radius: 999px;
-  padding: 6px 13px;
-  font-size: .8125rem; font-weight: 600; color: rgba(255, 255, 255, .92);
-}
-
-/* ---------- Sections ---------- */
-
-.app-section { padding: clamp(42px, 6vw, 72px) 0; }
-.app-section--alt { background: var(--jn-white); border-block: 1px solid var(--jn-line); }
-
-.app-section-head { max-width: 640px; margin-bottom: 30px; }
-.app-section-head h2 { font-size: clamp(1.375rem, 3.2vw, 1.875rem); letter-spacing: -.015em; }
-.app-section-head p { margin-top: 10px; color: var(--jn-muted); font-size: 1rem; }
+.app-section { padding: clamp(40px, 5.5vw, 64px) 0; }
 
 .app-kicker {
   display: block;
   font-size: .6875rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--jn-teal); margin-bottom: 8px;
+  color: var(--jn-teal); margin-bottom: 14px;
 }
 
-/* ---------- Service cards ---------- */
-
-.app-services { display: grid; gap: 22px; grid-template-columns: 1fr; }
+.app-services { display: grid; gap: 20px; grid-template-columns: 1fr; }
 
 .app-service {
   display: flex; flex-direction: column;
   background: var(--jn-white);
   border: 1px solid var(--jn-line);
   border-radius: 18px;
-  padding: 26px 24px 24px;
+  padding: 28px 26px 26px;
   box-shadow: var(--app-shadow-sm);
   position: relative; overflow: hidden;
+  transition: box-shadow .2s ease, transform .2s ease;
 }
+.app-service:hover { box-shadow: var(--app-shadow-lg); transform: translateY(-2px); }
 .app-service::before {
   content: ""; position: absolute; inset: 0 0 auto; height: 4px;
 }
@@ -157,44 +125,34 @@ a { color: inherit; }
 .app-service--school::before { background: linear-gradient(90deg, var(--jn-navy), var(--jn-navy-light)); }
 
 .app-service__icon {
-  width: 46px; height: 46px; border-radius: 13px;
+  width: 48px; height: 48px; border-radius: 14px;
   display: inline-flex; align-items: center; justify-content: center;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .app-service--career .app-service__icon { background: rgba(30, 123, 107, .10); color: var(--jn-teal); }
 .app-service--school .app-service__icon { background: rgba(30, 58, 138, .09); color: var(--jn-navy); }
-.app-service__icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.app-service__icon svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
 
-.app-service h3 { font-size: 1.25rem; }
+.app-service h3 { font-size: clamp(1.25rem, 2.6vw, 1.4rem); }
 .app-service__tag {
-  display: inline-block; margin-top: 6px;
+  display: inline-block; margin-top: 5px;
   font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
   color: var(--jn-muted);
 }
-.app-service > p { margin-top: 10px; font-size: .9375rem; }
+.app-service > p { margin-top: 12px; font-size: .9375rem; max-width: 44ch; }
 
-.app-links { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 8px; flex: 1 1 auto; }
-.app-links a {
-  display: flex; align-items: center; gap: 10px;
-  text-decoration: none;
-  font-weight: 600; font-size: .9375rem; color: var(--jn-ink);
-  padding: 10px 12px; border-radius: var(--jn-radius-sm);
-  background: var(--jn-bg);
-  border: 1px solid transparent;
-  transition: border-color .16s ease, background .16s ease;
+.app-service p.app-service__meta {
+  margin-top: 16px; max-width: none;
+  font-size: .8125rem; font-weight: 600; color: var(--jn-muted);
 }
-.app-links a:hover { border-color: var(--jn-line); background: var(--jn-white); }
-.app-links svg { width: 17px; height: 17px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.app-service--career .app-links svg { color: var(--jn-teal); }
-.app-service--school .app-links svg { color: var(--jn-navy); }
-.app-links a span { margin-left: auto; color: var(--jn-muted); font-weight: 500; font-size: .8125rem; }
 
-.app-service__cta { margin-top: 20px; }
+.app-service__cta { margin-top: auto; padding-top: 24px; }
 .app-cta {
   display: inline-flex; align-items: center; gap: 8px;
   font-weight: 700; font-size: .9375rem; text-decoration: none;
   padding: 12px 20px; border-radius: 999px; color: var(--jn-white);
   min-height: 44px;
+  transition: background .16s ease;
 }
 .app-cta svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .app-service--career .app-cta { background: var(--jn-teal); }
@@ -202,28 +160,7 @@ a { color: inherit; }
 .app-service--school .app-cta { background: var(--jn-navy); }
 .app-service--school .app-cta:hover { background: var(--jn-navy-dark); }
 
-/* ---------- Steps ---------- */
-
-.app-steps { display: grid; gap: 16px; grid-template-columns: 1fr; counter-reset: step; }
-
-.app-step {
-  background: var(--jn-white);
-  border: 1px solid var(--jn-line);
-  border-radius: 16px;
-  padding: 22px 20px;
-  position: relative;
-}
-.app-step__num {
-  width: 32px; height: 32px; border-radius: 50%;
-  background: var(--jn-navy); color: var(--jn-white);
-  display: inline-flex; align-items: center; justify-content: center;
-  font-family: var(--jn-display); font-weight: 700; font-size: .875rem;
-  margin-bottom: 12px;
-}
-.app-step h3 { font-size: 1.0625rem; }
-.app-step p { margin-top: 8px; font-size: .9375rem; color: var(--jn-muted); }
-
-/* ---------- Install panel ---------- */
+/* ---------- Install ---------- */
 
 .app-install {
   background: var(--jn-ink);
@@ -233,13 +170,20 @@ a { color: inherit; }
   display: grid; gap: 22px;
 }
 .app-install h2 { color: var(--jn-white); font-size: clamp(1.25rem, 2.8vw, 1.625rem); }
-.app-install p { font-size: .9375rem; }
-.app-install ul { margin: 16px 0 0; padding-left: 20px; display: grid; gap: 8px; font-size: .9375rem; }
+.app-install p { font-size: .9375rem; max-width: 52ch; }
 .app-install__cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.app-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font: inherit; font-weight: 700; font-size: .9375rem;
+  padding: 12px 22px; border-radius: 999px;
+  text-decoration: none; border: 1px solid transparent;
+  min-height: 46px; cursor: pointer;
+  transition: background .16s ease;
+}
 .app-btn--install { background: var(--jn-orange); color: #3A2410; }
 .app-btn--install:hover { background: #F7B680; }
 .app-btn--install[hidden] { display: none; }
-.app-install__note { font-size: .8125rem; color: rgba(255, 255, 255, .62); }
+.app-install__note { font-size: .8125rem; color: rgba(255, 255, 255, .62); max-width: 30ch; }
 
 /* ---------- Footer ---------- */
 
@@ -259,19 +203,20 @@ a { color: inherit; }
 
 /* ---------- Responsive ---------- */
 
-@media (min-width: 600px) {
-  .app-steps { grid-template-columns: repeat(3, 1fr); }
-}
-
 @media (min-width: 860px) {
-  .app-services { grid-template-columns: repeat(2, 1fr); }
-  .app-install { grid-template-columns: 1.4fr 1fr; align-items: center; gap: 34px; }
+  .app-services { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .app-install { grid-template-columns: 1.5fr 1fr; align-items: center; gap: 34px; }
 }
 
 @media (max-width: 599px) {
   .app-hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.4rem); }
-  .app-actions .app-btn { width: 100%; }
-  .app-facts li { font-size: .75rem; }
+  .app-cta { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 359px) {
+  .app-service { padding: 24px 20px 22px; }
+  .app-cta { padding: 11px 16px; font-size: .875rem; }
+  .app-cta svg { width: 15px; height: 15px; }
 }
 </style>
 </head>
@@ -287,34 +232,17 @@ a { color: inherit; }
         <span class="app-eyebrow">Ghana &middot; BECE &middot; SHS</span>
         <h1>Choose your career.<br>Then choose your <em>school</em>.</h1>
         <p class="app-lead">
-          Journa brings career discovery and school selection into a single app.
-          Explore the careers that fit you, learn what your subjects and the
-          selection rules require, then put your school choices together and check them.
+          Two services in one app: career guidance that helps you find your direction,
+          and school selection that helps you make your choices. Both work offline.
         </p>
-        <div class="app-actions">
-          <a class="app-btn app-btn--primary" href="career-guidance/JOURNA%20-Project/assessment.html">Start the career assessment</a>
-          <a class="app-btn app-btn--ghost" href="school-selection/guidelines/index.html">Read the selection guidelines</a>
-        </div>
-        <ul class="app-facts">
-          <li>76 career profiles</li>
-          <li>13-question assessment</li>
-          <li>957 schools</li>
-          <li>5 + 2 school choices</li>
-          <li>Works offline</li>
-        </ul>
       </div>
     </div>
   </section>
 
   <!-- ============ Services ============ -->
-  <section class="app-section">
+  <section class="app-section" aria-labelledby="services-title">
     <div class="app-wrap">
-      <div class="app-section-head">
-        <span class="app-kicker">Two services, one app</span>
-        <h2>Start with whichever one you need</h2>
-        <p>Both services sit inside the same Journa app. Nothing is hidden behind a sign-up,
-           and you can move between them at any time.</p>
-      </div>
+      <h2 class="app-kicker" id="services-title">Choose a service</h2>
 
       <div class="app-services">
 
@@ -324,32 +252,13 @@ a { color: inherit; }
           </span>
           <h3>Career Guidance</h3>
           <span class="app-service__tag">Find the direction</span>
-          <p>Work out which careers match your subjects, interests and working style — then see the
-             programmes and senior high schools that lead there.</p>
-          <ul class="app-links">
-            <li><a href="career-guidance/JOURNA%20-Project/assessment.html">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m14.8 9.2-1.6 4-4 1.6 1.6-4z"/></svg>
-              Assessment <span>13 questions</span></a></li>
-            <li><a href="career-guidance/JOURNA%20-Project/results.html">
-              <svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M21 20H3"/></svg>
-              My results <span>Top matches</span></a></li>
-            <li><a href="career-guidance/JOURNA%20-Project/career-library.html">
-              <svg viewBox="0 0 24 24"><rect x="3" y="7.5" width="18" height="12.5" rx="2"/><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5"/><path d="M3 12.5h18"/></svg>
-              Career library <span>76 careers</span></a></li>
-            <li><a href="career-guidance/JOURNA%20-Project/shs-recommendation.html">
-              <svg viewBox="0 0 24 24"><path d="m3 9 9-5 9 5"/><path d="M5 10v9M10 10v9M14 10v9M19 10v9"/><path d="M3 21h18"/></svg>
-              Programme guide <span>Subjects</span></a></li>
-            <li><a href="career-guidance/JOURNA%20-Project/schools.html">
-              <svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5z"/><path d="M6 10.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-6.5"/></svg>
-              School directory <span>957 schools</span></a></li>
-            <li><a href="career-guidance/JOURNA%20-Project/roadmap.html">
-              <svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18h5a3.5 3.5 0 0 0 0-7h-3a3.5 3.5 0 0 1 0-7h5"/></svg>
-              Career roadmaps <span>Steps</span></a></li>
-          </ul>
+          <p>Find careers that fit your subjects and interests, see the programmes and
+             schools that lead there, and follow a roadmap from JHS to the job.</p>
+          <p class="app-service__meta">13-question assessment &middot; 76 careers &middot; roadmaps</p>
           <div class="app-service__cta">
             <a class="app-cta" href="career-guidance/JOURNA%20-Project/index.html">
               Open Career Guidance
-              <svg viewBox="0 0 24 24"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
         </article>
@@ -360,26 +269,13 @@ a { color: inherit; }
           </span>
           <h3>School Selection</h3>
           <span class="app-service__tag">Make the right choices</span>
-          <p>Learn the official selection rules, rank five main schools with two alternatives,
-             attach a programme and Day or Boarding option to each, then review the form.</p>
-          <ul class="app-links">
-            <li><a href="school-selection/guidelines/index.html">
-              <svg viewBox="0 0 24 24"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14.5 3v5.5H20"/><path d="M8.5 13h7M8.5 17h5"/></svg>
-              Guidelines <span>The rules</span></a></li>
-            <li><a href="school-selection/selection/index.html">
-              <svg viewBox="0 0 24 24"><path d="M9 11l2.5 2.5L16 9"/><rect x="3.5" y="3.5" width="17" height="17" rx="3"/></svg>
-              Select schools <span>5 + 2 choices</span></a></li>
-            <li><a href="school-selection/review/index.html">
-              <svg viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h9"/><circle cx="18.5" cy="18" r="2.5"/></svg>
-              Review &amp; print <span>Check your form</span></a></li>
-            <li><a href="school-selection/index.html">
-              <svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>
-              Service overview <span>How it works</span></a></li>
-          </ul>
+          <p>Learn the selection rules, rank five schools with two alternatives, add a
+             programme and Day or Boarding option to each, then review the form.</p>
+          <p class="app-service__meta">957 schools &middot; 5 + 2 choices &middot; guidelines &amp; review</p>
           <div class="app-service__cta">
             <a class="app-cta" href="school-selection/index.html">
               Open School Selection
-              <svg viewBox="0 0 24 24"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
         </article>
@@ -388,54 +284,22 @@ a { color: inherit; }
     </div>
   </section>
 
-  <!-- ============ Steps ============ -->
-  <section class="app-section app-section--alt">
-    <div class="app-wrap">
-      <div class="app-section-head">
-        <span class="app-kicker">How it works</span>
-        <h2>Three steps from unsure to decided</h2>
-      </div>
-      <div class="app-steps">
-        <div class="app-step">
-          <span class="app-step__num">1</span>
-          <h3>Take the assessment</h3>
-          <p>Answer 13 questions about your subjects, interests and strengths. Your answers are
-             saved on the device as you go, so you can stop and come back.</p>
-        </div>
-        <div class="app-step">
-          <span class="app-step__num">2</span>
-          <h3>Read the rules</h3>
-          <p>Understand how the selection works — the five main choices, the two alternatives,
-             programme requirements and the Day or Boarding option for each school.</p>
-        </div>
-        <div class="app-step">
-          <span class="app-step__num">3</span>
-          <h3>Build and check</h3>
-          <p>Rank your schools, attach programmes, then review everything on one screen before
-             you fill the official form.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ Install ============ -->
-  <section class="app-section">
+  <section class="app-section" aria-labelledby="install-title">
     <div class="app-wrap">
       <div class="app-install">
         <div>
-          <h2>Install Journa and keep it on your phone</h2>
-          <p>Journa is a Progressive Web App. Install it from the browser menu or the button
-             below, then open it like a normal app — full screen, no address bar.</p>
-          <p class="app-install__note">Your assessment answers and school choices are stored on
-             this device, so they survive an offline session and stay put when you update.</p>
+          <h2 id="install-title">Install Journa</h2>
+          <p>Add Journa to your home screen and open it like a normal app — full screen,
+             no address bar. Your answers and choices are stored on this device, so they
+             survive an offline session and stay put when the app updates.</p>
         </div>
         <div class="app-install__cta">
           <button type="button" class="app-btn app-btn--install" data-journa-install hidden>
             Install Journa
           </button>
-          <a class="app-btn app-btn--ghost" href="career-guidance/JOURNA%20-Project/assessment.html">
-            Try the assessment first
-          </a>
+          <p class="app-install__note">Use the Install button, or your browser&rsquo;s
+             &ldquo;Add to Home Screen&rdquo; option.</p>
         </div>
       </div>
     </div>
@@ -457,7 +321,6 @@ a { color: inherit; }
       <nav aria-label="Footer">
         <a href="career-guidance/JOURNA%20-Project/index.html">Career Guidance</a>
         <a href="school-selection/index.html">School Selection</a>
-        <a href="manifest.webmanifest">App manifest</a>
       </nav>
     </div>
     <p class="app-disclaimer">Journa is a guidance prototype. It is not affiliated with or endorsed by

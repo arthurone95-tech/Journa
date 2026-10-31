@@ -30,7 +30,7 @@
 // 1. To ship a new version → change VERSION below and commit.
 // 2. To add files to the offline bundle → add them to PRECACHE.
 
-const VERSION = '1.0.0';
+const VERSION = '1.0.1';
 const CACHE_PREFIX = 'journa-';
 const PRECACHE = `${CACHE_PREFIX}precache-v${VERSION}`;
 const RUNTIME = `${CACHE_PREFIX}runtime-v${VERSION}`;
