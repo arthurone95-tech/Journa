@@ -50,6 +50,7 @@
 .btn-primary:hover {
     background-color: var(--primary-dark);
     border-color: var(--primary-dark);
+    color: var(--white);
 }
 
 .btn-secondary {
@@ -59,6 +60,7 @@
 
 .btn-secondary:hover {
     background-color: var(--secondary-light);
+    color: var(--white);
 }
 
 .btn-outline {
@@ -79,6 +81,7 @@
 
 .btn-light:hover {
     background-color: var(--gray-100);
+    color: var(--primary);
 }
 
 .btn-danger {
@@ -88,6 +91,7 @@
 
 .btn-danger:hover {
     background-color: #B02A37;
+    color: var(--white);
 }
 
 .btn:disabled,

@@ -45,7 +45,10 @@ a {
     transition: color var(--transition-fast);
 }
 
-a:hover {
+/* Only plain text links change colour on hover. Anchors that are styled as
+   buttons (or other interactive surfaces) keep their own colour, otherwise
+   white text on a coloured button becomes invisible on hover. */
+a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-outline):not(.btn-outline-light):not(.btn-light):not(.btn-danger):not(.btn-browse):not(.app-cta):not(.app-btn):not(.access-card):not(.action-btn):not(.helper-btn):not(.process-item):not(.view-details-btn):not(.offline-link):hover {
     color: var(--primary-dark);
 }
 
