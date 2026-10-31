@@ -330,5 +330,16 @@ a { color: inherit; }
 </footer>
 
 <script type="module" src="assets/journa/shell.js"></script>
+<script type="module">
+  import { showNotification } from './career-guidance/JOURNA -Project/js/utils.js';
+
+  // Welcome the user only on a fresh visit. Once shown in this browser session,
+  // the flag persists, so navigating away and back (or reloading) does not
+  // re-trigger the welcome.
+  if (!sessionStorage.getItem('journa_welcome_shown')) {
+    showNotification('Welcome to Journa! Find your career path and choose your school.', 'info', 4000);
+    sessionStorage.setItem('journa_welcome_shown', 'true');
+  }
+</script>
 </body>
 </html>

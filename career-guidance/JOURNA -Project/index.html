@@ -950,16 +950,9 @@
     <!-- JavaScript - Module for header -->
     <script type="module">
         import { initHeader } from './js/header-renderer.js';
-        import { showNotification } from './js/utils.js';
-        
+
         // Initialize header
         initHeader();
-        
-        // Show welcome notification only once per browser session
-        if (!sessionStorage.getItem('journa_welcome_shown')) {
-            showNotification('Welcome to JOURNA! Find your career path today.', 'info', 4000);
-            sessionStorage.setItem('journa_welcome_shown', 'true');
-        }
     </script>
     
     <!-- JavaScript - Regular script for modal functions -->
